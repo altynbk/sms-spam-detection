@@ -4,7 +4,7 @@ Four classical classifiers — Naive Bayes, Logistic Regression, linear SVM and 
 of the [SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection), followed by an adversarial test in which
 spam messages are obfuscated with look-alike characters (`free → fr33`, `call → c@ll`).
 
-The full experiment is in one notebook: [`ML_Spam_Detector.ipynb`](ML_Spam_Detector.ipynb).
+The full experiment is in one notebook: [`ML_Spam_Detector.ipynb`](ML_Spam_Detector.ipynb) A write-up is in paper/..
 ## Results
 
 Stratified 80/20 split (1,115 test messages, 149 spam), seed 42. Precision / recall / F1 are for the spam class.
@@ -49,6 +49,7 @@ ML_Spam_Detector.ipynb   experiment (run top to bottom, outputs included)
 data/smshamspam.csv      dataset: columns `sms`, `label` (0 = ham, 1 = spam)
 results/                 metric tables and confusion matrices (CSV / JSON)
 figures/                 plots produced by the notebook
+paper/    write-up (docx and pdf)
 requirements.txt
 ```
 
