@@ -4,8 +4,7 @@ Four classical classifiers — Naive Bayes, Logistic Regression, linear SVM and 
 of the [SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection), followed by an adversarial test in which
 spam messages are obfuscated with look-alike characters (`free → fr33`, `call → c@ll`).
 
-The full experiment is in one notebook: [`ML_Spam_Detector.ipynb`](ML_Spam_Detector.ipynb). A write-up is in [`paper/`](paper/).
-
+The full experiment is in one notebook: [`ML_Spam_Detector.ipynb`](ML_Spam_Detector.ipynb).
 ## Results
 
 Stratified 80/20 split (1,115 test messages, 149 spam), seed 42. Precision / recall / F1 are for the spam class.
@@ -50,21 +49,19 @@ ML_Spam_Detector.ipynb   experiment (run top to bottom, outputs included)
 data/smshamspam.csv      dataset: columns `sms`, `label` (0 = ham, 1 = spam)
 results/                 metric tables and confusion matrices (CSV / JSON)
 figures/                 plots produced by the notebook
-paper/                   write-up (docx and pdf)
 requirements.txt
 ```
 
 ## Run it
 
 ```bash
-git clone <this-repo-url> && cd <repo-name>
+git clone https://github.com/altynbk/sms-spam-detection.git && cd sms-spam-detection
 python -m venv .venv && source .venv/bin/activate      # optional
 pip install -r requirements.txt
 jupyter notebook ML_Spam_Detector.ipynb
 ```
 
-Run from the repository root (the notebook reads `data/smshamspam.csv`). On Google Colab: `!git clone <this-repo-url>`,
-`%cd <repo-name>`, `!pip install -q wordcloud`, then run all cells. Trained pipelines are written to `models/` (git-ignored).
+Run from the repository root (the notebook reads `data/smshamspam.csv`). On Google Colab: `!git clone https://github.com/altynbk/sms-spam-detection.git`, `%cd sms-spam-detection`, `!pip install -q wordcloud`, then run all cells. Trained pipelines are written to `models/` (git-ignored).
 Everything is seeded, so results are reproducible.
 
 ## Data
