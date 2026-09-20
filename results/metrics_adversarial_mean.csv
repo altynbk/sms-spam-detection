@@ -1,0 +1,5 @@
+Model,Accuracy,Precision,Recall,F1,ROC-AUC
+Naive Bayes,0.9607,0.9646,0.7326,0.8325,0.9821
+Logistic Regression,0.9229,1.0,0.4228,0.5936,0.9739
+SVM,0.9501,0.9794,0.6403,0.7737,0.9738
+Random Forest,0.9236,0.9704,0.4416,0.6066,0.9442
