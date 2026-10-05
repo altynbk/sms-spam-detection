@@ -1,5 +1,11 @@
-# trained models are re-created by the notebook
+# Trained artifacts are reproducible and kept locally (never mixed with historical models).
 models/
+*.joblib
+_cv_cache/
+results/quick/
+results/verification-*/
+work/
+.pytest_cache/
 
 # python / jupyter
 __pycache__/

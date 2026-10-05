@@ -1,0 +1,767 @@
+model,classifier,feature_type,preprocessing,threshold_mode,threshold,message_id,source_row,text,label,prediction,score,score_kind,error_type
+nb_word_legacy,nb,word,legacy,default,0.5,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,0.06558109953880749,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.12854358248672015,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.09782510057102818,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,0.09474774881557664,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,638b97b0d1d94061c5260ae979f4d8904dfea0a9d3b45c00e4359ebbc850c41d,2079,"85233 FREE>Ringtone!Reply REAL
+",1,0,0.24937257749233357,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.5260558900572657,probability,FP
+nb_word_legacy,nb,word,legacy,default,0.5,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,0.003974325922192938,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,0.019204124596653736,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,0.26675075632327033,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,0.0024408793857176557,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,76369594478575133b413572a2212c412b07f9cb7e691d4b3d26dda3cf1b0a4a,3564,"Auction round 4. The highest bid is now £54. Next maximum bid is £71. To bid, send BIDS e. g. 10 (to bid £10) to 83383. Good luck.
+",1,0,0.28964661172116163,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,d5248cc8c69260ecc5c16ae5df7bda904a1153452acd16f585e81361a955d873,3890,"Unlimited texts. Limited minutes.
+",0,1,0.5192547168070645,probability,FP
+nb_word_legacy,nb,word,legacy,default,0.5,8e5dcbe1332e300caea1dea28f0f0e7d62d2f96305f2069abf38a6ad814176e3,4200,"cmon babe, make me horny, *turn* me on! Txt me your fantasy now babe -) Im hot, sticky and need you now. All replies cost £1.50. 2 cancel send STOP
+",1,0,0.29275133913627277,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,0.1497202982453137,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,d8f15c9488f16fa3f21fb15d41044428552e31da8eb48619a1676b38a85c32da,4298,"thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???
+",1,0,0.09279626059871723,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,bd6df6f3ab40c1b22ac438674a63c6db70a96affcadcc7950568f6169eb69fea,4527,"I want some cock! My hubby's away, I need a real man 2 satisfy me. Txt WIFE to 89938 for no strings action. (Txt STOP 2 end, txt rec £1.50ea. OTBox 731 LA1 7WS. )
+",1,0,0.2530641059513155,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,0.10770644530989718,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,6cb354a44694597c6774e28ce8ac59714388f4e08977a01bf4d82e31b4031ad7,4862,"Nokia phone is lovly..
+",0,1,0.8740410289316681,probability,FP
+nb_word_legacy,nb,word,legacy,default,0.5,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,0.020125353454130926,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.008738254350326352,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,0.09043459057584528,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,0.32782893015282194,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.39912335759016404,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.3447984877221326,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,0.06558109953880749,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.41515156190494296,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.12854358248672015,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.09782510057102818,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,0.09474774881557664,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.5260558900572657,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,0.003974325922192938,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,0.019204124596653736,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,0.0024408793857176557,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,dc6ffa98537d38e6df72f9d57a730ea0c8abd6abd9bcc1900b89c0ad187fcfac,3375,"Also andros ice etc etc
+",0,1,0.4020810418536407,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,76ac46570a470881613928025ef532dd46fd96cef5118f93d1defa3c794c29a5,3603,"Cps is causing the outages to conserve energy.
+",0,1,0.23006951051443303,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,d5248cc8c69260ecc5c16ae5df7bda904a1153452acd16f585e81361a955d873,3890,"Unlimited texts. Limited minutes.
+",0,1,0.5192547168070645,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,0.1497202982453137,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,d8f15c9488f16fa3f21fb15d41044428552e31da8eb48619a1676b38a85c32da,4298,"thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???
+",1,0,0.09279626059871723,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,0.10770644530989718,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,6cb354a44694597c6774e28ce8ac59714388f4e08977a01bf4d82e31b4031ad7,4862,"Nokia phone is lovly..
+",0,1,0.8740410289316681,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,0.020125353454130926,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.008738254350326352,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.21467459696015545,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,0.09043459057584528,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.8780512486027319,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,0.4117336749964786,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.6614813667744771,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,c9561baaec4278a78ecc2aff5fff33a5788cfeac3a1baab7005fff1f3e38ff6e,1425,"Yes.. now only saw your message..
+",0,1,0.5719236250380934,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.43892470690497115,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.6046250240832127,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,0.39388322293397,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,638b97b0d1d94061c5260ae979f4d8904dfea0a9d3b45c00e4359ebbc850c41d,2079,"85233 FREE>Ringtone!Reply REAL
+",1,0,0.4687146255055525,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.6187048441004558,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,0.24507531222578083,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,0.4032156497233529,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,27349a26edad7fe9a3286db146cd058d9f1b88c78b5bae7f3c1f1e36cbacca1c,2683,"I got a call from a landline number. . . I am asked to come to anna nagar . . . I will go in the afternoon
+",0,1,0.5330552688410339,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,0.38815881402432817,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,0.27321988461269575,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,925aa8a5008e7d8e6eea73ab6479e49b96514bb026260bff74f85d3581ef5bb0,3367,"I am waiting for your call sir.
+",0,1,0.5917639093928416,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,0.7819637502468686,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,0.5721177230819251,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,2b1fe4bd8463518a7bd5d5dee568ad9540b0b86d6e16a3cd6938253691ae661d,4006,", ow u dey.i paid 60,400thousad.i told  u would call . 
+",0,1,0.5105221847831408,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,0.5662483039448587,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,0.3318569739689078,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,6cb354a44694597c6774e28ce8ac59714388f4e08977a01bf4d82e31b4031ad7,4862,"Nokia phone is lovly..
+",0,1,0.5215740831147517,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,0.34301025144962677,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.332242265092726,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,0.21927855396920942,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.2935805331911343,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.8780512486027319,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,0.4117336749964786,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.6614813667744771,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.5205789308692715,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.43892470690497115,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.6046250240832127,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,0.39388322293397,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,638b97b0d1d94061c5260ae979f4d8904dfea0a9d3b45c00e4359ebbc850c41d,2079,"85233 FREE>Ringtone!Reply REAL
+",1,0,0.4687146255055525,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.6187048441004558,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,0.24507531222578083,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,0.4032156497233529,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,0.38815881402432817,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,0.504262051281044,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,0.27321988461269575,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,925aa8a5008e7d8e6eea73ab6479e49b96514bb026260bff74f85d3581ef5bb0,3367,"I am waiting for your call sir.
+",0,1,0.5917639093928416,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,0.7819637502468686,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,0.5001346139943944,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,0.3318569739689078,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,0.34301025144962677,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.332242265092726,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,0.21927855396920942,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5850080873562014,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.2935805331911343,probability,FN
+svc_word_legacy,svc,word,legacy,default,0.0,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.33100909756463026,decision_function,FP
+svc_word_legacy,svc,word,legacy,default,0.0,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,-0.3592824043793096,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.052195592550322134,decision_function,FP
+svc_word_legacy,svc,word,legacy,default,0.0,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,-0.07790833457550372,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.3451200114717955,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,-0.05395558965472058,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,638b97b0d1d94061c5260ae979f4d8904dfea0a9d3b45c00e4359ebbc850c41d,2079,"85233 FREE>Ringtone!Reply REAL
+",1,0,-0.21004691474835346,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.4637807159567888,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.6920643380599645,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.27235838075107055,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,-0.20628164253942438,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.1810202636291762,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,76369594478575133b413572a2212c412b07f9cb7e691d4b3d26dda3cf1b0a4a,3564,"Auction round 4. The highest bid is now £54. Next maximum bid is £71. To bid, send BIDS e. g. 10 (to bid £10) to 83383. Good luck.
+",1,0,-0.06974662840288337,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,417804cfa65eb791efad3ec3219187986186d5a680683662e94e3629c98a1a64,3862,"Free Msg: Ringtone!From: http://tms. widelive.com/index. wml?id=1b6a5ecef91ff9*37819&first=true18:0430-JUL-05
+",1,0,-0.1815281953905391,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,-0.12799125230213826,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,d8f15c9488f16fa3f21fb15d41044428552e31da8eb48619a1676b38a85c32da,4298,"thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???
+",1,0,-0.028846771715620334,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.8043200812584044,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.7745921621092555,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.8269757707021312,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.07024238497200797,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,-0.7363879082356544,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.3466135939646019,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.33100909756463026,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,-0.3592824043793096,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.052195592550322134,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.3451200114717955,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,-0.0751985994274309,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.4637807159567888,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.6920643380599645,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,27349a26edad7fe9a3286db146cd058d9f1b88c78b5bae7f3c1f1e36cbacca1c,2683,"I got a call from a landline number. . . I am asked to come to anna nagar . . . I will go in the afternoon
+",0,1,-0.20703334834833342,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.1810202636291762,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,2b1fe4bd8463518a7bd5d5dee568ad9540b0b86d6e16a3cd6938253691ae661d,4006,", ow u dey.i paid 60,400thousad.i told  u would call . 
+",0,1,-0.2564234408827262,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.8043200812584044,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,6cb354a44694597c6774e28ce8ac59714388f4e08977a01bf4d82e31b4031ad7,4862,"Nokia phone is lovly..
+",0,1,-0.18988953648853346,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.7745921621092555,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,5a75b1277b6ba03b4fae6c84896398427b8b8294c766276b569388bbf0890511,5096,"Hi Shanil,Rakhesh here.thanks,i have exchanged the uncut diamond stuff.leaving back. Excellent service by Dino and Prem.
+",0,1,-0.1978106580811353,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.8269757707021312,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,-0.7363879082356544,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.2747240527533328,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.3466135939646019,decision_function,FN
+rf_word_legacy,rf,word,legacy,default,0.5,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.23,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.26,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,c0f76bc4a631360905136f84350d66c7f864d0d3f342ce30e1cc6110e13413e0,1674,"Monthly password for wap. mobsi.com is 391784. Use your wap phone not PC.
+",1,0,0.14,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,b5ba1fcb8d0f9e942cabec630a535cc84d592591ba0220ba014000c8cee2ba00,1765,"Hi 07734396839 IBH Customer Loyalty Offer: The NEW NOKIA6600 Mobile from ONLY £10 at TXTAUCTION!Txt word:START to No:81151 & get Yours Now!4T&
+",1,0,0.45,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,638b97b0d1d94061c5260ae979f4d8904dfea0a9d3b45c00e4359ebbc850c41d,2079,"85233 FREE>Ringtone!Reply REAL
+",1,0,0.35222877810765935,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,0.46,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,0.1,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,0.45,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,0237896879dcdd2adbd5e4185f9af8662396f4d4a9942abe4f80a0d67bf2cdcf,3067,"Get a brand new mobile phone by being an agent of The Mob! Plus loads more goodies! For more info just text MAT to 87021.
+",1,0,0.44,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,0.24,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,0.27,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,f29bd5f51ca6fb60fdc9de3c218acd24f8ef21458601a1897d92a05bd5deaad1,3548,"Rock yr chik. Get 100's of filthy films &XXX pics on yr phone now. rply FILTH to 69669. Saristar Ltd, E14 9YT 08701752560. 450p per 5 days. Stop2 cancel
+",1,0,0.35,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,76369594478575133b413572a2212c412b07f9cb7e691d4b3d26dda3cf1b0a4a,3564,"Auction round 4. The highest bid is now £54. Next maximum bid is £71. To bid, send BIDS e. g. 10 (to bid £10) to 83383. Good luck.
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,f754cacaa8f3df440a7a2580ccee8d9e3c8eb8475563a27deb7c3bdc9f5d7d52,3738,"Plz note: if anyone calling from a mobile Co. &amp; asks u to type # &lt;#&gt;  or # &lt;#&gt; . Do not do so. Disconnect the call,coz it iz an attempt of 'terrorist' to make use of the sim card no. Itz confirmd by nokia n motorola n has been verified by CNN IBN.
+",0,1,0.6,probability,FP
+rf_word_legacy,rf,word,legacy,default,0.5,417804cfa65eb791efad3ec3219187986186d5a680683662e94e3629c98a1a64,3862,"Free Msg: Ringtone!From: http://tms. widelive.com/index. wml?id=1b6a5ecef91ff9*37819&first=true18:0430-JUL-05
+",1,0,0.18346060634308403,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,9965f96b9982049208a3e41abb0d855a7baa109e1a40ce8bd7ecf32cf91009ba,3998,"Bored housewives! Chat n date now! 0871750.77.11! BT-national rate 10p/min only from landlines!
+",1,0,0.39,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,dd3792dacb7c277e49e537f6db4af0ac05361b63eabf680d09d1f50813c609bd,4206,"IMPORTANT INFORMATION 4 ORANGE USER 0796XXXXXX. TODAY IS UR LUCKY DAY!2 FIND OUT WHY LOG ONTO http://www.urawinner.com THERE'S A FANTASTIC PRIZEAWAITING YOU!
+",1,0,0.26,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,0.2,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,d8f15c9488f16fa3f21fb15d41044428552e31da8eb48619a1676b38a85c32da,4298,"thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???
+",1,0,0.38,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,0.07,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,0.32,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,5a75b1277b6ba03b4fae6c84896398427b8b8294c766276b569388bbf0890511,5096,"Hi Shanil,Rakhesh here.thanks,i have exchanged the uncut diamond stuff.leaving back. Excellent service by Dino and Prem.
+",0,1,0.69,probability,FP
+rf_word_legacy,rf,word,legacy,default,0.5,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,0.36,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,0.0,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.29,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,a6e28eb473ebc43b97f529909133de83fdb67a0e6fc16060a78cb058b3ff237f,400,"Hmmm...k...but i want to change the field quickly da:-)i wanna get system administrator or network administrator..
+",0,1,0.32,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.3,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,25500e026c633fb772dff67c83a3fdc488cce7d201ab0f17377b4a1299364a1d,822,"On the road so cant txt
+",0,1,0.5,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,1c9895b2c485f08ee219257f5b441d6622e6bf533017e947422c384bad054894,994,"The Xmas story is peace.. The Xmas msg is love.. The Xmas miracle is jesus.. Hav a blessed month ahead &amp; wish U Merry Xmas...
+",0,1,0.32,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,1516ae2d70b4e5d84cdab440832299aec524138360aade6eaae9dff3c3d307a5,1056,"I'm at work. Please call
+",0,1,0.43,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,5eed77ec2f9eceb2b909c6633b6e69d6927842c1468967ff9894e1c657ebe771,1271,"Sorry chikku, my cell got some problem thts y i was nt able to reply u or msg u..
+",0,1,0.37,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.41,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.23,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.26,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,c0f76bc4a631360905136f84350d66c7f864d0d3f342ce30e1cc6110e13413e0,1674,"Monthly password for wap. mobsi.com is 391784. Use your wap phone not PC.
+",1,0,0.14,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.4,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,0.1,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,27349a26edad7fe9a3286db146cd058d9f1b88c78b5bae7f3c1f1e36cbacca1c,2683,"I got a call from a landline number. . . I am asked to come to anna nagar . . . I will go in the afternoon
+",0,1,0.45,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,0.24,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,0.27,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,6ce4d13b831f2bbdf32aea936a25c6d73b2ed8cf229902c04d432b947501e890,3536,"I'm at home. Please call
+",0,1,0.43,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,76369594478575133b413572a2212c412b07f9cb7e691d4b3d26dda3cf1b0a4a,3564,"Auction round 4. The highest bid is now £54. Next maximum bid is £71. To bid, send BIDS e. g. 10 (to bid £10) to 83383. Good luck.
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,0.43,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,f754cacaa8f3df440a7a2580ccee8d9e3c8eb8475563a27deb7c3bdc9f5d7d52,3738,"Plz note: if anyone calling from a mobile Co. &amp; asks u to type # &lt;#&gt;  or # &lt;#&gt; . Do not do so. Disconnect the call,coz it iz an attempt of 'terrorist' to make use of the sim card no. Itz confirmd by nokia n motorola n has been verified by CNN IBN.
+",0,1,0.6,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,417804cfa65eb791efad3ec3219187986186d5a680683662e94e3629c98a1a64,3862,"Free Msg: Ringtone!From: http://tms. widelive.com/index. wml?id=1b6a5ecef91ff9*37819&first=true18:0430-JUL-05
+",1,0,0.18346060634308403,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,db08462c065dde165947cc3f097398b883bc99c11fc7ff3cba6901eb1d838163,4035,"Wot u up 2? Thout u were gonna call me!! Txt bak luv K
+",0,1,0.4,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,dd3792dacb7c277e49e537f6db4af0ac05361b63eabf680d09d1f50813c609bd,4206,"IMPORTANT INFORMATION 4 ORANGE USER 0796XXXXXX. TODAY IS UR LUCKY DAY!2 FIND OUT WHY LOG ONTO http://www.urawinner.com THERE'S A FANTASTIC PRIZEAWAITING YOU!
+",1,0,0.26,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,0.2,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,c20c800b7e6cc4318ea743906f624a89dcf420fd7a4a78bd2fe71b310b99efec,4551,"""Hey! do u fancy meetin me at 4 at cha  hav a lil beverage on me. if not txt or ring me and we can meet up l8r. quite tired got in at 3 v.pist ;) love Pete x x x""
+",0,1,0.31,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,0.07,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,6cb354a44694597c6774e28ce8ac59714388f4e08977a01bf4d82e31b4031ad7,4862,"Nokia phone is lovly..
+",0,1,0.43,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,5a75b1277b6ba03b4fae6c84896398427b8b8294c766276b569388bbf0890511,5096,"Hi Shanil,Rakhesh here.thanks,i have exchanged the uncut diamond stuff.leaving back. Excellent service by Dino and Prem.
+",0,1,0.69,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.3,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,0.0,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.3,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.29,probability,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.5861926181580992,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,-0.2516792880426466,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.16773661046598431,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,-0.10066432740217446,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.23887383044255506,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.2417604315350218,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.510293411360482,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.16271722889875018,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,-0.0169251529192459,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.0253795713457838,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,0.09473985119968542,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,-0.10107863794561633,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.5743288913892759,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.6033160080458118,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.6684347438913876,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,-0.6458317701181248,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.4419108576961102,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.5861926181580992,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,-0.2516792880426466,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.16773661046598431,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,-0.10066432740217446,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.23887383044255506,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.2417604315350218,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.510293411360482,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.16271722889875018,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,-0.0169251529192459,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.0253795713457838,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,0.09473985119968542,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,2b1fe4bd8463518a7bd5d5dee568ad9540b0b86d6e16a3cd6938253691ae661d,4006,", ow u dey.i paid 60,400thousad.i told  u would call . 
+",0,1,-0.005868004847028985,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,-0.10107863794561633,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.5743288913892759,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.6033160080458118,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.6684347438913876,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,-0.6458317701181248,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.01138322287111726,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.4419108576961102,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.1434329611254337,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.16926652475148662,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,c0f76bc4a631360905136f84350d66c7f864d0d3f342ce30e1cc6110e13413e0,1674,"Monthly password for wap. mobsi.com is 391784. Use your wap phone not PC.
+",1,0,-0.27157119407409247,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.13370345535847616,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.5577911804738358,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.0219390253965943,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,76369594478575133b413572a2212c412b07f9cb7e691d4b3d26dda3cf1b0a4a,3564,"Auction round 4. The highest bid is now £54. Next maximum bid is £71. To bid, send BIDS e. g. 10 (to bid £10) to 83383. Good luck.
+",1,0,-0.10611661025869212,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,d8f15c9488f16fa3f21fb15d41044428552e31da8eb48619a1676b38a85c32da,4298,"thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???
+",1,0,-0.10517349710193247,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.3742156792699962,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.7783981510911153,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.5057258980016742,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.2383578694405606,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,c2e64aa2a7d03c0984b4e157e556cc0ebcdeb4a527d34f948822be1b85ba3902,271,"Come to mu, we're sorting out our narcotics situation
+",0,1,-0.4058196775429046,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,1f34d47c811b38229f3ec55afdb98118ac9572105ae83baf4786e852e619a8e6,334,"Any chance you might have had with me evaporated as soon as you violated my privacy by stealing my phone number from your employer's paperwork. Not cool at all. Please do not contact me again or I will report you to your supervisor.
+",0,1,-0.32037885891570694,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,-0.004845750006021277,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,79b4e3ff9512d490127faedd620c8e9e3a5bf26e6e57deb6693db405c5e57248,1117,"Hey... What time is your driving on fri? We go for evaluation on fri?
+",0,1,-0.4329437947323703,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,-0.06924310607286599,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,2510c7ca60ec7f0f293562336d6b5d424581228a90c9a2788c486381310c34f3,1384,"Please reserve ticket on saturday eve from chennai to thirunelvali and again from tirunelvali to chennai on sunday eve...i already see in net..no ticket available..i want to book ticket through tackle ..
+",0,1,-0.4394401445486126,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,c9561baaec4278a78ecc2aff5fff33a5788cfeac3a1baab7005fff1f3e38ff6e,1425,"Yes.. now only saw your message..
+",0,1,-0.482002118582478,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.16926652475148662,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,-0.3980174425538786,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,-0.3411555615446844,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.5577911804738358,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,e706f2fda1bba2942d565a27d9a29be0cf9a5f9adc861a528788581ab5e2ebf4,2754,"Derp. Which is worse, a dude who always wants to party or a dude who files a complaint about the three drug abusers he lives with
+",0,1,-0.4817285192613242,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,7c8efa84f2b203218132ed9c5ef789834db01087cc0aa26243a24e76ceac964a,3030,"What is your record for one night? :)
+",0,1,-0.2996460039518354,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,13714439132510dff3aec7d219ad44357572263127a97d913e5f9b8c6081ac13,3082,"Have a great trip to India. And bring the light to everyone not just with the project but with everyone that is lucky to see you smile. Bye. Abiola
+",0,1,-0.37585577770305245,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,70f2c5296429a57bdaa8c32fac048adae1019ba718884530fc1770f7ad9852a9,3288,"The gas station is like a block away from my house, you'll drive right by it since armenia ends at swann and you have to take howard
+",0,1,-0.39793394272136184,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.0219390253965943,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,f754cacaa8f3df440a7a2580ccee8d9e3c8eb8475563a27deb7c3bdc9f5d7d52,3738,"Plz note: if anyone calling from a mobile Co. &amp; asks u to type # &lt;#&gt;  or # &lt;#&gt; . Do not do so. Disconnect the call,coz it iz an attempt of 'terrorist' to make use of the sim card no. Itz confirmd by nokia n motorola n has been verified by CNN IBN.
+",0,1,-0.45646367326515624,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,-0.2901806540737524,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,db08462c065dde165947cc3f097398b883bc99c11fc7ff3cba6901eb1d838163,4035,"Wot u up 2? Thout u were gonna call me!! Txt bak luv K
+",0,1,-0.4679514904437022,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,61120dec1a52ea69c0ec472121694a8875c750cf922d1545cacd44f9e915f806,4393,"what are your new years plans?
+",0,1,-0.4408665709412234,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,-0.3201545120753484,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.7783981510911153,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.4834079289758465,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.5057258980016742,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,1516ae2d70b4e5d84cdab440832299aec524138360aade6eaae9dff3c3d307a5,1056,"I'm at work. Please call
+",0,1,0.047968772179173835,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.018979831498578736,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.14008435545386777,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.36203032990749867,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.1818891827229725,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,-0.3305330556601619,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-0.8183833960239639,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,-0.02282598732489205,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,d8f15c9488f16fa3f21fb15d41044428552e31da8eb48619a1676b38a85c32da,4298,"thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???
+",1,0,-0.061006103179448656,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.5037355979165133,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.5838842666099439,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,-0.6932345339822401,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.644858713649904,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,1516ae2d70b4e5d84cdab440832299aec524138360aade6eaae9dff3c3d307a5,1056,"I'm at work. Please call
+",0,1,0.047968772179173835,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.018979831498578736,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.14008435545386777,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.36203032990749867,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.1818891827229725,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,-0.3305330556601619,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-0.8183833960239639,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,-0.009007332853002148,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.5037355979165133,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.5838842666099439,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,-0.6932345339822401,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.08620419778818611,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.644858713649904,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.24721320592698048,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.38454263134902633,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.17621900359540277,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,13714439132510dff3aec7d219ad44357572263127a97d913e5f9b8c6081ac13,3082,"Have a great trip to India. And bring the light to everyone not just with the project but with everyone that is lucky to see you smile. Bye. Abiola
+",0,1,0.0002235441786786474,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-0.9336472348514021,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.02241895482530154,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.5747725972247141,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.28637373934744814,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,1f34d47c811b38229f3ec55afdb98118ac9572105ae83baf4786e852e619a8e6,334,"Any chance you might have had with me evaporated as soon as you violated my privacy by stealing my phone number from your employer's paperwork. Not cool at all. Please do not contact me again or I will report you to your supervisor.
+",0,1,-0.10608314981255029,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,-0.18932806466964547,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,9e40d2d16ab0a6b8df9a77a6ee4289ca297c2f56fa65f4ec38353b7a879a3f92,974,"what is your account number?
+",0,1,-0.20055432636352122,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,89f4e60cc31ceed44708ab72d74f675e278de736c460c9b47f54dffa577b7647,1235,"""Hello-/@drivby-:0quit edrunk sorry iff pthis makes no senrd-dnot no how ^ dancce 2 drum n basq!ihave fun 2nhite x ros xxxxxxx""
+",0,1,-0.1973135597495761,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.24721320592698048,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.38454263134902633,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,-0.10276875819006259,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,-0.049163073068141605,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,cdf4c5b2991911c45d2f0580c4921b2fb5df89d7fd737dcfc88cf4214a65868c,2541,"They said if its gonna snow, it will start around 8 or 9 pm tonite! They are predicting an inch of accumulation.
+",0,1,-0.1895482949104479,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,7c8efa84f2b203218132ed9c5ef789834db01087cc0aa26243a24e76ceac964a,3030,"What is your record for one night? :)
+",0,1,-0.19056070700967798,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,13714439132510dff3aec7d219ad44357572263127a97d913e5f9b8c6081ac13,3082,"Have a great trip to India. And bring the light to everyone not just with the project but with everyone that is lucky to see you smile. Bye. Abiola
+",0,1,0.0002235441786786474,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,70f2c5296429a57bdaa8c32fac048adae1019ba718884530fc1770f7ad9852a9,3288,"The gas station is like a block away from my house, you'll drive right by it since armenia ends at swann and you have to take howard
+",0,1,-0.05776046098772203,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-0.9336472348514021,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,925aa8a5008e7d8e6eea73ab6479e49b96514bb026260bff74f85d3581ef5bb0,3367,"I am waiting for your call sir.
+",0,1,-0.21310986018474332,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,-0.13134774490769496,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,-0.12528699798519027,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,db08462c065dde165947cc3f097398b883bc99c11fc7ff3cba6901eb1d838163,4035,"Wot u up 2? Thout u were gonna call me!! Txt bak luv K
+",0,1,-0.09464526886739666,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,61120dec1a52ea69c0ec472121694a8875c750cf922d1545cacd44f9e915f806,4393,"what are your new years plans?
+",0,1,-0.076892580939808,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,-0.025687441236438957,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,71d642425ca6cfc2da531be9af2724eb74b7e37676ba16ec25762589498911a9,4855,"Also north carolina and texas atm, you would just go to the gre site and pay for the test results to be sent.
+",0,1,-0.18970671521871263,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.5747725972247141,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.2250355566435991,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.28637373934744814,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,-0.004624068164052586,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.020021372662933468,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.3975243818938188,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.1185014005297973,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,7d72561555ec910c7673b729a14f84660293dbce9c675ee9d8a273dfb227c82f,2863,"Adult 18 Content Your video will be with you shortly
+",1,0,-0.00013113995922098276,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.13970253895902252,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,-0.33514148978805924,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.0747421638539516,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,76369594478575133b413572a2212c412b07f9cb7e691d4b3d26dda3cf1b0a4a,3564,"Auction round 4. The highest bid is now £54. Next maximum bid is £71. To bid, send BIDS e. g. 10 (to bid £10) to 83383. Good luck.
+",1,0,-0.010743989824381517,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,fcc3448b9a10bad1b8bbe3ae316f87dd97273b66827573ff26ee83ee0f4dc422,4256,"Block Breaker now comes in deluxe format with new features and great graphics from T-Mobile. Buy for just £5 by replying GET BBDELUXE and take the challenge
+",1,0,-0.088958209414149,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,d8f15c9488f16fa3f21fb15d41044428552e31da8eb48619a1676b38a85c32da,4298,"thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???
+",1,0,-0.17022312404197915,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.5459141811237903,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.5512253260768537,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,-0.34105806742180966,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.10817026980708055,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,-0.11663127858647249,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.020021372662933468,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,-0.15909278474891209,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,-0.052515751927840304,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.3975243818938188,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,-0.33514148978805924,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.0747421638539516,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,-0.15261423564163157,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.5459141811237903,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.5512253260768537,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.3065284775005198,d9fc7969c6a6efc788688627f1e62dc9856533608d7624fddaa3076f2c19dc40,5539,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min Gsex POBOX 2667 WC1N 3XX
+",1,0,-0.34105806742180966,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.14023545549241523,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.16984207488943204,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,c0f76bc4a631360905136f84350d66c7f864d0d3f342ce30e1cc6110e13413e0,1674,"Monthly password for wap. mobsi.com is 391784. Use your wap phone not PC.
+",1,0,-0.28703195735176257,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,885e607db7f8d2a07d11268319a785cde7e772679553fcbbb664e20864d7e39a,2402,"Babe: U want me dont u baby! Im nasty and have a thing 4 filthyguys. Fancy a rude time with a sexy bitch. How about we go slo n hard! Txt XXX SLO(4msgs)
+",1,0,-0.13515224200166331,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.5393054036674562,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,063d1fe84e2e75039aa8be848966650b4f0d81bae6b85cac453b3ca957caad50,3132,"LookAtMe!: Thanks for your purchase of a video clip from LookAtMe!, you've been charged 35p. Think you can do better? Why not send a video in a MMSto 32323.
+",1,0,-0.019081048438043924,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.0385602070796067,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,76369594478575133b413572a2212c412b07f9cb7e691d4b3d26dda3cf1b0a4a,3564,"Auction round 4. The highest bid is now £54. Next maximum bid is £71. To bid, send BIDS e. g. 10 (to bid £10) to 83383. Good luck.
+",1,0,-0.027562934146919238,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,d8f15c9488f16fa3f21fb15d41044428552e31da8eb48619a1676b38a85c32da,4298,"thesmszone.com lets you send free anonymous and masked messages..im sending this message from there..do you see the potential for abuse???
+",1,0,-0.10586961268143269,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.38026581555801353,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.7697255467602953,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.5161882365754469,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.23841518180263854,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,-0.005682805456635132,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,-0.07381636474102393,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.16984207488943204,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.5393054036674562,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,7c8efa84f2b203218132ed9c5ef789834db01087cc0aa26243a24e76ceac964a,3030,"What is your record for one night? :)
+",0,1,-0.28844034732784885,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-1.0385602070796067,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,-0.2947911204794851,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.38026581555801353,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.7697255467602953,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.30636217174234126,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.5161882365754469,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.23749603776450723,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.3665430071223006,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.2138280782027897,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,13714439132510dff3aec7d219ad44357572263127a97d913e5f9b8c6081ac13,3082,"Have a great trip to India. And bring the light to everyone not just with the project but with everyone that is lucky to see you smile. Bye. Abiola
+",0,1,0.004368424324721509,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-0.9434228434215609,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,12308a4eabacdbdeeb446c3e0ac9be27046d53ba0a7c0034150ed29a3bc59dcf,4754,"Cashbin.co.uk (Get lots of cash this weekend!) www.cashbin.co.uk Dear Welcome to the weekend We have got our biggest and best EVER cash give away!! These..
+",1,0,-0.03372498548270131,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.5563309111866405,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.3027027918011903,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,1f34d47c811b38229f3ec55afdb98118ac9572105ae83baf4786e852e619a8e6,334,"Any chance you might have had with me evaporated as soon as you violated my privacy by stealing my phone number from your employer's paperwork. Not cool at all. Please do not contact me again or I will report you to your supervisor.
+",0,1,-0.1051136270144849,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.23749603776450723,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.3665430071223006,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,-0.10832577993834092,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,-0.04731043359872111,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,c0f6d5f072b668ee10babdb5b75dbec1bc94d9aec07328d5db806fc09f47e866,2430,"Guess who am I?This is the first time I created a web page WWW.ASJESUS.COM read all I wrote. I'm waiting for your opinions. I want to be your friend 1/1
+",1,0,-0.2138280782027897,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,13714439132510dff3aec7d219ad44357572263127a97d913e5f9b8c6081ac13,3082,"Have a great trip to India. And bring the light to everyone not just with the project but with everyone that is lucky to see you smile. Bye. Abiola
+",0,1,0.004368424324721509,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,70f2c5296429a57bdaa8c32fac048adae1019ba718884530fc1770f7ad9852a9,3288,"The gas station is like a block away from my house, you'll drive right by it since armenia ends at swann and you have to take howard
+",0,1,-0.06075767900102824,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,da9f5112639d31567937f0aeac7924a62752478c72ce73526b2e120d3415bbdc,3360,"Sorry I missed your call let's talk when you have the time. I'm on 07090201529
+",1,0,-0.9434228434215609,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,-0.13552263354223892,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,-0.1261799063141572,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,db08462c065dde165947cc3f097398b883bc99c11fc7ff3cba6901eb1d838163,4035,"Wot u up 2? Thout u were gonna call me!! Txt bak luv K
+",0,1,-0.08617799529909143,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,61120dec1a52ea69c0ec472121694a8875c750cf922d1545cacd44f9e915f806,4393,"what are your new years plans?
+",0,1,-0.10418293970798509,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,-0.054184990233159036,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,fe319d3a9bf4f37188c32f9b0284ccf38a20e0fedd5e6dbbe7223c89cc1543cc,4949,"Hi this is Amy, we will be sending you a free phone number in a couple of days, which will give you an access to all the adult parties...
+",1,0,-0.5563309111866405,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.1748680226902114,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.3027027918011903,decision_function,FN

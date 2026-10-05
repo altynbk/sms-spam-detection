@@ -1,0 +1,1709 @@
+{
+  "protocol": "deduplicated-grouped-v2",
+  "evaluation_revision": 2,
+  "status": "complete",
+  "started_utc": "2026-10-05T06:17:05.188863+00:00",
+  "config": {
+    "mode": "full",
+    "data": "data/smshamspam.csv",
+    "output": "results/full",
+    "seed": 42,
+    "validation_size": 0.2,
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "max_fpr": 0.01,
+    "jobs": 2,
+    "intensities": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "repeats": 20,
+    "attacks": [
+      "leet",
+      "separators",
+      "unicode"
+    ],
+    "export_error_text": false
+  },
+  "python": "3.12.14 (main, Aug 12 2026, 13:57:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "pytest": "9.1.1"
+  },
+  "dataset": {
+    "source": "https://archive.ics.uci.edu/dataset/228/sms+spam+collection",
+    "path": "data/smshamspam.csv",
+    "sha256": "bbcb13af6558d89e007094a1d62a982ce2b03ce679f89cd88625de3c71cea76a",
+    "error_text_exported": true
+  },
+  "git": {
+    "commit": "8a47f22ab76061b07a9ba54cbb548588d826fa41",
+    "working_tree_dirty": true
+  },
+  "source_sha256": {
+    "spam_detector/__init__.py": "ca1388ed55263c83873207fdbd3714243cd768af3127125886ed57cf57c4057b",
+    "spam_detector/attacks.py": "99b7ae6098f858b6f64ecf9e89f81de0d26876be507769933075e9261c0c93f0",
+    "spam_detector/data.py": "de269627b34152dc5304169f5b5412c3432e736ae8726b0d224c10ad51a69eea",
+    "spam_detector/evaluation.py": "f035a8f85e7d9b109d4f754abf0c8d0526d479aa506371c2f666de11e41d8411",
+    "spam_detector/modeling.py": "e8a9610b766c01d872f09a2db37ca57a9060f600b78af1b75298cb9e20025586",
+    "spam_detector/preprocessing.py": "f25e755261f52866cee2aadea2d81f952eb79667438c4d191cc4302d303e933b",
+    "spam_detector/train.py": "56b10a19d79503bbc97c4086182ba6b79602f1231e8db7abb534ddb5f832a52e",
+    "requirements.txt": "e8022f4a41dd856c1994d548b9cbad9522ee581d6a3e37939c078a715ae7a46d"
+  },
+  "data_audit": {
+    "input_rows": 5574,
+    "exact_duplicates_removed": 403,
+    "deduplicated_rows": 5171,
+    "normalized_groups": 5159,
+    "normalized_groups_with_multiple_raw_texts": 12,
+    "additional_normalized_duplicates": 12,
+    "conflicting_exact_groups": 0,
+    "conflicting_normalized_groups": 0,
+    "class_counts": {
+      "0": 4518,
+      "1": 653
+    }
+  },
+  "labels": {
+    "ham": 0,
+    "spam": 1
+  },
+  "split_method": "Stratified unique normalized groups, 2-stage split (seed, seed+1)",
+  "split_counts": {
+    "test": {
+      "total": 1034,
+      "ham": 904,
+      "spam": 130
+    },
+    "train": {
+      "total": 3102,
+      "ham": 2710,
+      "spam": 392
+    },
+    "validation": {
+      "total": 1035,
+      "ham": 904,
+      "spam": 131
+    }
+  },
+  "split_manifest_sha256": "f8a07310b5815e64d559797952f6db340d61d485b664e620ecfc9e2bde210ded",
+  "cv": {
+    "method": "StratifiedGroupKFold",
+    "folds": 5,
+    "shared_folds": true,
+    "scoring": "f1 (spam=1)",
+    "selection": "highest mean CV F1; ties by model_id alphabetically",
+    "note": "Best searched CV score is not an independent quality estimate"
+  },
+  "attack_seeds": [
+    10042,
+    10043,
+    10044,
+    10045,
+    10046,
+    10047,
+    10048,
+    10049,
+    10050,
+    10051,
+    10052,
+    10053,
+    10054,
+    10055,
+    10056,
+    10057,
+    10058,
+    10059,
+    10060,
+    10061
+  ],
+  "threshold_ties": {
+    "default": "native pipeline.predict, including estimator-specific ties",
+    "validation": "score >= threshold predicts spam"
+  },
+  "search_spaces": {
+    "nb_word_legacy": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__alpha": [
+          0.1,
+          1.0
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__alpha": [
+          0.1,
+          1.0
+        ]
+      }
+    ],
+    "lr_word_legacy": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ],
+    "svc_word_legacy": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ],
+    "rf_word_legacy": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__max_depth": [
+          null,
+          20
+        ],
+        "clf__min_samples_leaf": [
+          1,
+          2
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__max_depth": [
+          null,
+          20
+        ],
+        "clf__min_samples_leaf": [
+          1,
+          2
+        ]
+      }
+    ],
+    "linear_svc_word_legacy": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ],
+    "linear_svc_char_legacy": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ],
+    "linear_svc_word_gentle": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ],
+    "linear_svc_char_gentle": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ],
+    "linear_svc_word_char_gentle": [
+      {
+        "features__union__word__max_features": [
+          500
+        ],
+        "features__union__char__max_features": [
+          500
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__union__word__max_features": [
+          2500
+        ],
+        "features__union__char__max_features": [
+          2500
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ],
+    "linear_svc_char_no_punctuation": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ],
+    "linear_svc_char_no_currency": [
+      {
+        "features__max_features": [
+          1000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      },
+      {
+        "features__max_features": [
+          5000
+        ],
+        "clf__C": [
+          0.5,
+          1.0
+        ],
+        "clf__class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    ]
+  },
+  "models": {
+    "nb_word_legacy": {
+      "model": "nb_word_legacy",
+      "classifier": "nb",
+      "feature_type": "word",
+      "preprocessing": "legacy",
+      "best_params": {
+        "clf__alpha": 0.1,
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9099189808974337,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner()"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))"
+          ],
+          [
+            "clf",
+            "MultinomialNB(alpha=0.1)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner()",
+        "features": "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))",
+        "clf": "MultinomialNB(alpha=0.1)",
+        "clean__mode": "legacy",
+        "features__analyzer": "word",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          1,
+          2
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__alpha": 0.1,
+        "clf__class_prior": null,
+        "clf__fit_prior": true,
+        "clf__force_alpha": true
+      },
+      "score_kind": "probability",
+      "default_threshold": 0.5,
+      "threshold_selection": {
+        "threshold": 0.21467459696015545,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9354838709677419,
+          "recall": 0.8854961832061069,
+          "f1": 0.9098039215686274,
+          "accuracy": 0.9777777777777777,
+          "roc_auc": 0.9818280078362495,
+          "average_precision": 0.9539255241968474,
+          "tn": 896,
+          "fp": 8,
+          "fn": 15,
+          "tp": 116,
+          "fpr": 0.008849557522123894,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              896,
+              8
+            ],
+            [
+              15,
+              116
+            ]
+          ]
+        }
+      },
+      "artifact": "models/nb_word_legacy.joblib",
+      "artifact_sha256": "57177236610c42bf8a7a4af80e5c1244b7866d28f3d7674bdd91ad3ad2f78d52",
+      "refit_after_threshold": false
+    },
+    "lr_word_legacy": {
+      "model": "lr_word_legacy",
+      "classifier": "lr",
+      "feature_type": "word",
+      "preprocessing": "legacy",
+      "best_params": {
+        "clf__C": 1.0,
+        "clf__class_weight": "balanced",
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9111041959948988,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner()"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))"
+          ],
+          [
+            "clf",
+            "LogisticRegression(class_weight='balanced', max_iter=2000, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner()",
+        "features": "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))",
+        "clf": "LogisticRegression(class_weight='balanced', max_iter=2000, random_state=42)",
+        "clean__mode": "legacy",
+        "features__analyzer": "word",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          1,
+          2
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__C": 1.0,
+        "clf__class_weight": "balanced",
+        "clf__dual": false,
+        "clf__fit_intercept": true,
+        "clf__intercept_scaling": 1,
+        "clf__l1_ratio": 0.0,
+        "clf__max_iter": 2000,
+        "clf__n_jobs": null,
+        "clf__penalty": "deprecated",
+        "clf__random_state": 42,
+        "clf__solver": "lbfgs",
+        "clf__tol": 0.0001,
+        "clf__verbose": 0,
+        "clf__warm_start": false
+      },
+      "score_kind": "probability",
+      "default_threshold": 0.5,
+      "threshold_selection": {
+        "threshold": 0.5850080873562014,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9333333333333333,
+          "recall": 0.8549618320610687,
+          "f1": 0.8924302788844621,
+          "accuracy": 0.9739130434782609,
+          "roc_auc": 0.9806204823346618,
+          "average_precision": 0.9470636157476939,
+          "tn": 896,
+          "fp": 8,
+          "fn": 19,
+          "tp": 112,
+          "fpr": 0.008849557522123894,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              896,
+              8
+            ],
+            [
+              19,
+              112
+            ]
+          ]
+        }
+      },
+      "artifact": "models/lr_word_legacy.joblib",
+      "artifact_sha256": "ab550e1557623a2a4876b97acd253d6c436d3eab090a0dd47ff8e51ca78d31bc",
+      "refit_after_threshold": false
+    },
+    "svc_word_legacy": {
+      "model": "svc_word_legacy",
+      "classifier": "svc",
+      "feature_type": "word",
+      "preprocessing": "legacy",
+      "best_params": {
+        "clf__C": 1.0,
+        "clf__class_weight": null,
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9248537494055551,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner()"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))"
+          ],
+          [
+            "clf",
+            "SVC(kernel='linear', random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner()",
+        "features": "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))",
+        "clf": "SVC(kernel='linear', random_state=42)",
+        "clean__mode": "legacy",
+        "features__analyzer": "word",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          1,
+          2
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__C": 1.0,
+        "clf__break_ties": false,
+        "clf__cache_size": 200,
+        "clf__class_weight": null,
+        "clf__coef0": 0.0,
+        "clf__decision_function_shape": "ovr",
+        "clf__degree": 3,
+        "clf__gamma": "scale",
+        "clf__kernel": "linear",
+        "clf__max_iter": -1,
+        "clf__probability": "deprecated",
+        "clf__random_state": 42,
+        "clf__shrinking": true,
+        "clf__tol": 0.001,
+        "clf__verbose": false
+      },
+      "score_kind": "decision_function",
+      "default_threshold": 0.0,
+      "threshold_selection": {
+        "threshold": -0.2747240527533328,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.96,
+          "recall": 0.916030534351145,
+          "f1": 0.9375,
+          "accuracy": 0.9845410628019323,
+          "roc_auc": 0.9787331959737892,
+          "average_precision": 0.954541900309844,
+          "tn": 899,
+          "fp": 5,
+          "fn": 11,
+          "tp": 120,
+          "fpr": 0.0055309734513274336,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              899,
+              5
+            ],
+            [
+              11,
+              120
+            ]
+          ]
+        }
+      },
+      "artifact": "models/svc_word_legacy.joblib",
+      "artifact_sha256": "615da0612447935af53dd736b5b6f400412e699131084a6979e31f60a16b422b",
+      "refit_after_threshold": false
+    },
+    "rf_word_legacy": {
+      "model": "rf_word_legacy",
+      "classifier": "rf",
+      "feature_type": "word",
+      "preprocessing": "legacy",
+      "best_params": {
+        "clf__max_depth": null,
+        "clf__min_samples_leaf": 1,
+        "features__max_features": 1000
+      },
+      "best_cv_f1": 0.8706781563590473,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner()"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(lowercase=False, max_features=1000, ngram_range=(1, 2))"
+          ],
+          [
+            "clf",
+            "RandomForestClassifier(n_jobs=1, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner()",
+        "features": "TfidfVectorizer(lowercase=False, max_features=1000, ngram_range=(1, 2))",
+        "clf": "RandomForestClassifier(n_jobs=1, random_state=42)",
+        "clean__mode": "legacy",
+        "features__analyzer": "word",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 1000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          1,
+          2
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__bootstrap": true,
+        "clf__ccp_alpha": 0.0,
+        "clf__class_weight": null,
+        "clf__criterion": "gini",
+        "clf__max_depth": null,
+        "clf__max_features": "sqrt",
+        "clf__max_leaf_nodes": null,
+        "clf__max_samples": null,
+        "clf__min_impurity_decrease": 0.0,
+        "clf__min_samples_leaf": 1,
+        "clf__min_samples_split": 2,
+        "clf__min_weight_fraction_leaf": 0.0,
+        "clf__monotonic_cst": null,
+        "clf__n_estimators": 100,
+        "clf__n_jobs": 1,
+        "clf__oob_score": false,
+        "clf__random_state": 42,
+        "clf__verbose": 0,
+        "clf__warm_start": false
+      },
+      "score_kind": "probability",
+      "default_threshold": 0.5,
+      "threshold_selection": {
+        "threshold": 0.3,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9354838709677419,
+          "recall": 0.8854961832061069,
+          "f1": 0.9098039215686274,
+          "accuracy": 0.9777777777777777,
+          "roc_auc": 0.9796873944470715,
+          "average_precision": 0.9520637538305498,
+          "tn": 896,
+          "fp": 8,
+          "fn": 15,
+          "tp": 116,
+          "fpr": 0.008849557522123894,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              896,
+              8
+            ],
+            [
+              15,
+              116
+            ]
+          ]
+        }
+      },
+      "artifact": "models/rf_word_legacy.joblib",
+      "artifact_sha256": "ff68f4a07c1e788b714ef6a7dd10b3674bf00731d5bfa7e2fef9c3f4e097d2fb",
+      "refit_after_threshold": false
+    },
+    "linear_svc_word_legacy": {
+      "model": "linear_svc_word_legacy",
+      "classifier": "linear_svc",
+      "feature_type": "word",
+      "preprocessing": "legacy",
+      "best_params": {
+        "clf__C": 1.0,
+        "clf__class_weight": "balanced",
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9283492901730771,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner()"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))"
+          ],
+          [
+            "clf",
+            "LinearSVC(class_weight='balanced', max_iter=10000, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner()",
+        "features": "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))",
+        "clf": "LinearSVC(class_weight='balanced', max_iter=10000, random_state=42)",
+        "clean__mode": "legacy",
+        "features__analyzer": "word",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          1,
+          2
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__C": 1.0,
+        "clf__class_weight": "balanced",
+        "clf__dual": "auto",
+        "clf__fit_intercept": true,
+        "clf__intercept_scaling": 1,
+        "clf__loss": "squared_hinge",
+        "clf__max_iter": 10000,
+        "clf__multi_class": "ovr",
+        "clf__penalty": "l2",
+        "clf__random_state": 42,
+        "clf__tol": 0.0001,
+        "clf__verbose": 0
+      },
+      "score_kind": "decision_function",
+      "default_threshold": 0.0,
+      "threshold_selection": {
+        "threshold": -0.01138322287111726,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9302325581395349,
+          "recall": 0.916030534351145,
+          "f1": 0.9230769230769231,
+          "accuracy": 0.9806763285024155,
+          "roc_auc": 0.9748108491521988,
+          "average_precision": 0.9505630017524491,
+          "tn": 895,
+          "fp": 9,
+          "fn": 11,
+          "tp": 120,
+          "fpr": 0.00995575221238938,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              895,
+              9
+            ],
+            [
+              11,
+              120
+            ]
+          ]
+        }
+      },
+      "artifact": "models/linear_svc_word_legacy.joblib",
+      "artifact_sha256": "24b2e8d438f07eacde2ed62f4a019a7229b4c7f8e05317c1716545c8db337197",
+      "refit_after_threshold": false
+    },
+    "linear_svc_char_legacy": {
+      "model": "linear_svc_char_legacy",
+      "classifier": "linear_svc",
+      "feature_type": "char",
+      "preprocessing": "legacy",
+      "best_params": {
+        "clf__C": 1.0,
+        "clf__class_weight": null,
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9407314036994043,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner()"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=5000,\n                ngram_range=(3, 5))"
+          ],
+          [
+            "clf",
+            "LinearSVC(max_iter=10000, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner()",
+        "features": "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=5000,\n                ngram_range=(3, 5))",
+        "clf": "LinearSVC(max_iter=10000, random_state=42)",
+        "clean__mode": "legacy",
+        "features__analyzer": "char_wb",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          3,
+          5
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__C": 1.0,
+        "clf__class_weight": null,
+        "clf__dual": "auto",
+        "clf__fit_intercept": true,
+        "clf__intercept_scaling": 1,
+        "clf__loss": "squared_hinge",
+        "clf__max_iter": 10000,
+        "clf__multi_class": "ovr",
+        "clf__penalty": "l2",
+        "clf__random_state": 42,
+        "clf__tol": 0.0001,
+        "clf__verbose": 0
+      },
+      "score_kind": "decision_function",
+      "default_threshold": 0.0,
+      "threshold_selection": {
+        "threshold": -0.4834079289758465,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9402985074626866,
+          "recall": 0.9618320610687023,
+          "f1": 0.9509433962264151,
+          "accuracy": 0.9874396135265701,
+          "roc_auc": 0.9902046882388705,
+          "average_precision": 0.9792925753488267,
+          "tn": 896,
+          "fp": 8,
+          "fn": 5,
+          "tp": 126,
+          "fpr": 0.008849557522123894,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              896,
+              8
+            ],
+            [
+              5,
+              126
+            ]
+          ]
+        }
+      },
+      "artifact": "models/linear_svc_char_legacy.joblib",
+      "artifact_sha256": "a468411d44a780b70ed21d50b547bd6c449dd6a77fceb42d81156f35f82697ba",
+      "refit_after_threshold": false
+    },
+    "linear_svc_word_gentle": {
+      "model": "linear_svc_word_gentle",
+      "classifier": "linear_svc",
+      "feature_type": "word",
+      "preprocessing": "gentle",
+      "best_params": {
+        "clf__C": 1.0,
+        "clf__class_weight": "balanced",
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9459581540237538,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner(mode='gentle')"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))"
+          ],
+          [
+            "clf",
+            "LinearSVC(class_weight='balanced', max_iter=10000, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner(mode='gentle')",
+        "features": "TfidfVectorizer(lowercase=False, max_features=5000, ngram_range=(1, 2))",
+        "clf": "LinearSVC(class_weight='balanced', max_iter=10000, random_state=42)",
+        "clean__mode": "gentle",
+        "features__analyzer": "word",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          1,
+          2
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__C": 1.0,
+        "clf__class_weight": "balanced",
+        "clf__dual": "auto",
+        "clf__fit_intercept": true,
+        "clf__intercept_scaling": 1,
+        "clf__loss": "squared_hinge",
+        "clf__max_iter": 10000,
+        "clf__multi_class": "ovr",
+        "clf__penalty": "l2",
+        "clf__random_state": 42,
+        "clf__tol": 0.0001,
+        "clf__verbose": 0
+      },
+      "score_kind": "decision_function",
+      "default_threshold": 0.0,
+      "threshold_selection": {
+        "threshold": -0.08620419778818611,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9375,
+          "recall": 0.916030534351145,
+          "f1": 0.9266409266409267,
+          "accuracy": 0.9816425120772947,
+          "roc_auc": 0.9846399378504357,
+          "average_precision": 0.9581657324751819,
+          "tn": 896,
+          "fp": 8,
+          "fn": 11,
+          "tp": 120,
+          "fpr": 0.008849557522123894,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              896,
+              8
+            ],
+            [
+              11,
+              120
+            ]
+          ]
+        }
+      },
+      "artifact": "models/linear_svc_word_gentle.joblib",
+      "artifact_sha256": "4cf48de15761b129cf8f6b0d6981fd2f982a5b9789e4f93bc584a4302ffad761",
+      "refit_after_threshold": false
+    },
+    "linear_svc_char_gentle": {
+      "model": "linear_svc_char_gentle",
+      "classifier": "linear_svc",
+      "feature_type": "char",
+      "preprocessing": "gentle",
+      "best_params": {
+        "clf__C": 0.5,
+        "clf__class_weight": "balanced",
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9432942147312551,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner(mode='gentle')"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=5000,\n                ngram_range=(3, 5))"
+          ],
+          [
+            "clf",
+            "LinearSVC(C=0.5, class_weight='balanced', max_iter=10000, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner(mode='gentle')",
+        "features": "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=5000,\n                ngram_range=(3, 5))",
+        "clf": "LinearSVC(C=0.5, class_weight='balanced', max_iter=10000, random_state=42)",
+        "clean__mode": "gentle",
+        "features__analyzer": "char_wb",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          3,
+          5
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__C": 0.5,
+        "clf__class_weight": "balanced",
+        "clf__dual": "auto",
+        "clf__fit_intercept": true,
+        "clf__intercept_scaling": 1,
+        "clf__loss": "squared_hinge",
+        "clf__max_iter": 10000,
+        "clf__multi_class": "ovr",
+        "clf__penalty": "l2",
+        "clf__random_state": 42,
+        "clf__tol": 0.0001,
+        "clf__verbose": 0
+      },
+      "score_kind": "decision_function",
+      "default_threshold": 0.0,
+      "threshold_selection": {
+        "threshold": -0.2250355566435991,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9618320610687023,
+          "recall": 0.9618320610687023,
+          "f1": 0.9618320610687023,
+          "accuracy": 0.9903381642512077,
+          "roc_auc": 0.9924086333851246,
+          "average_precision": 0.9769851294644223,
+          "tn": 899,
+          "fp": 5,
+          "fn": 5,
+          "tp": 126,
+          "fpr": 0.0055309734513274336,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              899,
+              5
+            ],
+            [
+              5,
+              126
+            ]
+          ]
+        }
+      },
+      "artifact": "models/linear_svc_char_gentle.joblib",
+      "artifact_sha256": "b4da6309c6745c5dd1e3a95fdcd3b30294efe38348de69a67ed5d565a14fe4f5",
+      "refit_after_threshold": false
+    },
+    "linear_svc_word_char_gentle": {
+      "model": "linear_svc_word_char_gentle",
+      "classifier": "linear_svc",
+      "feature_type": "word_char",
+      "preprocessing": "gentle",
+      "best_params": {
+        "clf__C": 1.0,
+        "clf__class_weight": null,
+        "features__union__char__max_features": 2500,
+        "features__union__word__max_features": 2500
+      },
+      "best_cv_f1": 0.9435435787476163,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner(mode='gentle')"
+          ],
+          [
+            "features",
+            "Pipeline(steps=[('union',\n                 FeatureUnion(transformer_list=[('word',\n                                                 TfidfVectorizer(lowercase=False,\n                                                                 max_features=2500,\n                                                                 ngram_range=(1,\n                                                                              2))),\n                                                ('char',\n                                                 TfidfVectorizer(analyzer='char_wb',\n                                                                 lowercase=False,\n                                                                 max_features=2500,\n                                                                 ngram_range=(3,\n                                                                              5)))])),\n                ('normalize', Normalizer())])"
+          ],
+          [
+            "clf",
+            "LinearSVC(max_iter=10000, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner(mode='gentle')",
+        "features": "Pipeline(steps=[('union',\n                 FeatureUnion(transformer_list=[('word',\n                                                 TfidfVectorizer(lowercase=False,\n                                                                 max_features=2500,\n                                                                 ngram_range=(1,\n                                                                              2))),\n                                                ('char',\n                                                 TfidfVectorizer(analyzer='char_wb',\n                                                                 lowercase=False,\n                                                                 max_features=2500,\n                                                                 ngram_range=(3,\n                                                                              5)))])),\n                ('normalize', Normalizer())])",
+        "clf": "LinearSVC(max_iter=10000, random_state=42)",
+        "clean__mode": "gentle",
+        "features__memory": null,
+        "features__steps": [
+          [
+            "union",
+            "FeatureUnion(transformer_list=[('word',\n                                TfidfVectorizer(lowercase=False,\n                                                max_features=2500,\n                                                ngram_range=(1, 2))),\n                               ('char',\n                                TfidfVectorizer(analyzer='char_wb',\n                                                lowercase=False,\n                                                max_features=2500,\n                                                ngram_range=(3, 5)))])"
+          ],
+          [
+            "normalize",
+            "Normalizer()"
+          ]
+        ],
+        "features__transform_input": null,
+        "features__verbose": false,
+        "features__union": "FeatureUnion(transformer_list=[('word',\n                                TfidfVectorizer(lowercase=False,\n                                                max_features=2500,\n                                                ngram_range=(1, 2))),\n                               ('char',\n                                TfidfVectorizer(analyzer='char_wb',\n                                                lowercase=False,\n                                                max_features=2500,\n                                                ngram_range=(3, 5)))])",
+        "features__normalize": "Normalizer()",
+        "features__union__n_jobs": null,
+        "features__union__transformer_list": [
+          [
+            "word",
+            "TfidfVectorizer(lowercase=False, max_features=2500, ngram_range=(1, 2))"
+          ],
+          [
+            "char",
+            "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=2500,\n                ngram_range=(3, 5))"
+          ]
+        ],
+        "features__union__transformer_weights": null,
+        "features__union__verbose": false,
+        "features__union__verbose_feature_names_out": true,
+        "features__union__word": "TfidfVectorizer(lowercase=False, max_features=2500, ngram_range=(1, 2))",
+        "features__union__char": "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=2500,\n                ngram_range=(3, 5))",
+        "features__union__word__analyzer": "word",
+        "features__union__word__binary": false,
+        "features__union__word__decode_error": "strict",
+        "features__union__word__dtype": "<class 'numpy.float64'>",
+        "features__union__word__encoding": "utf-8",
+        "features__union__word__input": "content",
+        "features__union__word__lowercase": false,
+        "features__union__word__max_df": 1.0,
+        "features__union__word__max_features": 2500,
+        "features__union__word__min_df": 1,
+        "features__union__word__ngram_range": [
+          1,
+          2
+        ],
+        "features__union__word__norm": "l2",
+        "features__union__word__preprocessor": null,
+        "features__union__word__smooth_idf": true,
+        "features__union__word__stop_words": null,
+        "features__union__word__strip_accents": null,
+        "features__union__word__sublinear_tf": false,
+        "features__union__word__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__union__word__tokenizer": null,
+        "features__union__word__use_idf": true,
+        "features__union__word__vocabulary": null,
+        "features__union__char__analyzer": "char_wb",
+        "features__union__char__binary": false,
+        "features__union__char__decode_error": "strict",
+        "features__union__char__dtype": "<class 'numpy.float64'>",
+        "features__union__char__encoding": "utf-8",
+        "features__union__char__input": "content",
+        "features__union__char__lowercase": false,
+        "features__union__char__max_df": 1.0,
+        "features__union__char__max_features": 2500,
+        "features__union__char__min_df": 1,
+        "features__union__char__ngram_range": [
+          3,
+          5
+        ],
+        "features__union__char__norm": "l2",
+        "features__union__char__preprocessor": null,
+        "features__union__char__smooth_idf": true,
+        "features__union__char__stop_words": null,
+        "features__union__char__strip_accents": null,
+        "features__union__char__sublinear_tf": false,
+        "features__union__char__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__union__char__tokenizer": null,
+        "features__union__char__use_idf": true,
+        "features__union__char__vocabulary": null,
+        "features__normalize__copy": true,
+        "features__normalize__norm": "l2",
+        "clf__C": 1.0,
+        "clf__class_weight": null,
+        "clf__dual": "auto",
+        "clf__fit_intercept": true,
+        "clf__intercept_scaling": 1,
+        "clf__loss": "squared_hinge",
+        "clf__max_iter": 10000,
+        "clf__multi_class": "ovr",
+        "clf__penalty": "l2",
+        "clf__random_state": 42,
+        "clf__tol": 0.0001,
+        "clf__verbose": 0
+      },
+      "score_kind": "decision_function",
+      "default_threshold": 0.0,
+      "threshold_selection": {
+        "threshold": -0.3065284775005198,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.984251968503937,
+          "recall": 0.9541984732824428,
+          "f1": 0.9689922480620154,
+          "accuracy": 0.9922705314009662,
+          "roc_auc": 0.9932108356414241,
+          "average_precision": 0.9776983338029367,
+          "tn": 902,
+          "fp": 2,
+          "fn": 6,
+          "tp": 125,
+          "fpr": 0.0022123893805309734,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              902,
+              2
+            ],
+            [
+              6,
+              125
+            ]
+          ]
+        }
+      },
+      "artifact": "models/linear_svc_word_char_gentle.joblib",
+      "artifact_sha256": "13c0fafe17fe7f36b4abc4cedfd9b64512a677f54c825179309e74713b43d7d3",
+      "refit_after_threshold": false
+    },
+    "linear_svc_char_no_punctuation": {
+      "model": "linear_svc_char_no_punctuation",
+      "classifier": "linear_svc",
+      "feature_type": "char",
+      "preprocessing": "no_punctuation",
+      "best_params": {
+        "clf__C": 1.0,
+        "clf__class_weight": null,
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9408674695247627,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner(mode='no_punctuation')"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=5000,\n                ngram_range=(3, 5))"
+          ],
+          [
+            "clf",
+            "LinearSVC(max_iter=10000, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner(mode='no_punctuation')",
+        "features": "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=5000,\n                ngram_range=(3, 5))",
+        "clf": "LinearSVC(max_iter=10000, random_state=42)",
+        "clean__mode": "no_punctuation",
+        "features__analyzer": "char_wb",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          3,
+          5
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__C": 1.0,
+        "clf__class_weight": null,
+        "clf__dual": "auto",
+        "clf__fit_intercept": true,
+        "clf__intercept_scaling": 1,
+        "clf__loss": "squared_hinge",
+        "clf__max_iter": 10000,
+        "clf__multi_class": "ovr",
+        "clf__penalty": "l2",
+        "clf__random_state": 42,
+        "clf__tol": 0.0001,
+        "clf__verbose": 0
+      },
+      "score_kind": "decision_function",
+      "default_threshold": 0.0,
+      "threshold_selection": {
+        "threshold": -0.30636217174234126,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9615384615384616,
+          "recall": 0.9541984732824428,
+          "f1": 0.9578544061302682,
+          "accuracy": 0.9893719806763285,
+          "roc_auc": 0.9901709113017632,
+          "average_precision": 0.9792206612485775,
+          "tn": 899,
+          "fp": 5,
+          "fn": 6,
+          "tp": 125,
+          "fpr": 0.0055309734513274336,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              899,
+              5
+            ],
+            [
+              6,
+              125
+            ]
+          ]
+        }
+      },
+      "artifact": "models/linear_svc_char_no_punctuation.joblib",
+      "artifact_sha256": "e2d07a36f1da45a9e20046896a0308e225808066a1d8953d91bf12aaf5d68857",
+      "refit_after_threshold": false
+    },
+    "linear_svc_char_no_currency": {
+      "model": "linear_svc_char_no_currency",
+      "classifier": "linear_svc",
+      "feature_type": "char",
+      "preprocessing": "no_currency",
+      "best_params": {
+        "clf__C": 0.5,
+        "clf__class_weight": "balanced",
+        "features__max_features": 5000
+      },
+      "best_cv_f1": 0.9433924042701504,
+      "pipeline_params": {
+        "memory": null,
+        "steps": [
+          [
+            "clean",
+            "TextCleaner(mode='no_currency')"
+          ],
+          [
+            "features",
+            "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=5000,\n                ngram_range=(3, 5))"
+          ],
+          [
+            "clf",
+            "LinearSVC(C=0.5, class_weight='balanced', max_iter=10000, random_state=42)"
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false,
+        "clean": "TextCleaner(mode='no_currency')",
+        "features": "TfidfVectorizer(analyzer='char_wb', lowercase=False, max_features=5000,\n                ngram_range=(3, 5))",
+        "clf": "LinearSVC(C=0.5, class_weight='balanced', max_iter=10000, random_state=42)",
+        "clean__mode": "no_currency",
+        "features__analyzer": "char_wb",
+        "features__binary": false,
+        "features__decode_error": "strict",
+        "features__dtype": "<class 'numpy.float64'>",
+        "features__encoding": "utf-8",
+        "features__input": "content",
+        "features__lowercase": false,
+        "features__max_df": 1.0,
+        "features__max_features": 5000,
+        "features__min_df": 1,
+        "features__ngram_range": [
+          3,
+          5
+        ],
+        "features__norm": "l2",
+        "features__preprocessor": null,
+        "features__smooth_idf": true,
+        "features__stop_words": null,
+        "features__strip_accents": null,
+        "features__sublinear_tf": false,
+        "features__token_pattern": "(?u)\\b\\w\\w+\\b",
+        "features__tokenizer": null,
+        "features__use_idf": true,
+        "features__vocabulary": null,
+        "clf__C": 0.5,
+        "clf__class_weight": "balanced",
+        "clf__dual": "auto",
+        "clf__fit_intercept": true,
+        "clf__intercept_scaling": 1,
+        "clf__loss": "squared_hinge",
+        "clf__max_iter": 10000,
+        "clf__multi_class": "ovr",
+        "clf__penalty": "l2",
+        "clf__random_state": 42,
+        "clf__tol": 0.0001,
+        "clf__verbose": 0
+      },
+      "score_kind": "decision_function",
+      "default_threshold": 0.0,
+      "threshold_selection": {
+        "threshold": -0.1748680226902114,
+        "max_fpr": 0.01,
+        "n_ham": 904,
+        "fpr_resolution": 0.0011061946902654867,
+        "allowed_false_positives": 9,
+        "rule": "maximize recall; ties minimize FP, then maximize threshold; score >= threshold",
+        "validation_metrics": {
+          "precision": 0.9615384615384616,
+          "recall": 0.9541984732824428,
+          "f1": 0.9578544061302682,
+          "accuracy": 0.9893719806763285,
+          "roc_auc": 0.9920201986083902,
+          "average_precision": 0.9760627934949901,
+          "tn": 899,
+          "fp": 5,
+          "fn": 6,
+          "tp": 125,
+          "fpr": 0.0055309734513274336,
+          "n_ham": 904,
+          "n_spam": 131,
+          "confusion_matrix": [
+            [
+              899,
+              5
+            ],
+            [
+              6,
+              125
+            ]
+          ]
+        }
+      },
+      "artifact": "models/linear_svc_char_no_currency.joblib",
+      "artifact_sha256": "127b993031c78801424a9fb7de93cd80d3a67f90c0b4cb91c43ab40aeef3e3a8",
+      "refit_after_threshold": false
+    }
+  },
+  "selected_model": "linear_svc_word_gentle",
+  "elapsed_seconds": 73.63720662496053,
+  "completed_utc": "2026-10-05T06:18:18.606236+00:00",
+  "robustness_rows": 7920,
+  "attack_datasets": 360
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "evaluation_revision": 2,
+  "models_loaded": 11,
+  "clean_metric_rows_recomputed": 22,
+  "attack_rows_checked_for_invariants": 7920,
+  "attack_metric_rows_recomputed": 7920,
+  "attack_dataset_hashes_recomputed": 360,
+  "all_attacks": true,
+  "source_and_model_hashes_match": true,
+  "validation_thresholds_recomputed": true,
+  "split_and_cv_membership_recomputed": true,
+  "verifier_sha256": "8ba0d19465891e622fabaf01217fd907170b451c5e8af2be4a5c3e4a2a36047e",
+  "scope": "No fitting, parameter changes, or model selection based on test results."
+}

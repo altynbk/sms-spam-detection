@@ -1,0 +1,3 @@
+-r requirements.txt
+jupyterlab>=4
+nbclient>=0.10

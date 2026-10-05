@@ -1,0 +1,2 @@
+# Preserve original SMS whitespace in error-analysis exports.
+results/**/errors.csv -whitespace

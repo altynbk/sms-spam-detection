@@ -1,72 +1,321 @@
-# SMS Spam Detection: classical ML and robustness to obfuscation
+# SMS Spam Detection: Reproducible Experiments and Robustness
 
-Four classical classifiers — Naive Bayes, Logistic Regression, linear SVM and Random Forest — trained on TF-IDF features
-of the [SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection), followed by an adversarial test in which
-spam messages are obfuscated with look-alike characters (`free → fr33`, `call → c@ll`).
+Classical machine learning on the [SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection),
+with controlled preprocessing/feature comparisons and character-level attacks.
+**Labels: ham = 0, spam = 1.** Saved models accept original SMS strings.
 
-The full experiment is in one notebook: [`ML_Spam_Detector.ipynb`](ML_Spam_Detector.ipynb) A write-up is in paper/..
-## Results
+This is a reproducible educational/portfolio study of a historical English corpus.
+It does not establish performance on modern SMS, Russian/Kazakh, mobile devices,
+or production traffic. The original NB, Logistic Regression, linear-kernel SVC,
+Random Forest and obfuscation experiment remain the foundation.
 
-Stratified 80/20 split (1,115 test messages, 149 spam), seed 42. Precision / recall / F1 are for the spam class.
+- [Executed notebook](ML_Spam_Detector.ipynb): explanation, figures and error analysis.
+- [Original-code audit](docs/AUDIT.md): confirmed issues and claims that did not hold up.
+- [Validation report](docs/VALIDATION.md): commands and actual checks.
 
-| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
-|---|---|---|---|---|---|
-| Naive Bayes | 0.976 | 0.969 | 0.846 | 0.903 | 0.984 |
-| Logistic Regression | 0.979 | 1.000 | 0.839 | 0.912 | 0.990 |
-| **SVM (linear)** | **0.985** | 0.985 | **0.899** | **0.940** | **0.990** |
-| Random Forest | 0.982 | 0.985 | 0.879 | 0.929 | 0.988 |
+## Install and run
 
-**Adversarial test.** Letters in the spam messages of the test set are replaced by look-alike symbols with probability 0.3
-(models are not retrained). The perturbation is random, so it is repeated 20 times; the table shows the mean.
+Tested in a dedicated **Python 3.12.14 environment on macOS arm64**.
+The exact runtime/test dependencies in `requirements.txt` were resolved and installed
+in that environment, not copied from an unrelated global installation. Other OS/Python
+combinations have not been separately tested.
 
-| Model | Recall clean → adv. | F1 clean → adv. | F1 drop (points) |
-|---|---|---|---|
-| **Naive Bayes** | 0.846 → 0.733 | 0.903 → 0.833 | **7.1** |
-| SVM (linear) | 0.899 → 0.640 | 0.940 → 0.774 | 16.7 |
-| Logistic Regression | 0.839 → 0.423 | 0.912 → 0.594 | 31.9 |
-| Random Forest | 0.879 → 0.442 | 0.929 → 0.607 | 32.3 |
-
-The SVM is the best model on clean data, but Naive Bayes is the most robust to obfuscation. Precision barely changes
-(only spam is modified, so the extra errors are missed spam).
-
-![Confusion matrices](figures/confusion_matrices.png)
-![Performance drop after obfuscation](figures/adversarial_drop.png)
-
-All numbers are also saved in [`results/`](results/) (CSV / JSON), all plots in [`figures/`](figures/).
-
-### Caveats
-
-- The dataset contains 403 exact duplicate messages that can land on both sides of the split. After removing them
-  (5,171 messages) F1 becomes 0.880 (NB), 0.846 (LR), 0.913 (SVM), 0.914 (RF) — SVM and Random Forest are practically tied.
-  This check is the last section of the notebook.
-- No cross-validation and no hyperparameter search; one substitution scheme for the adversarial test.
-- TF-IDF is fitted on the training set only (inside a scikit-learn `Pipeline`), so there is no vocabulary leakage from the test set.
-
-## Repository layout
-
-```
-ML_Spam_Detector.ipynb   experiment (run top to bottom, outputs included)
-data/smshamspam.csv      dataset: columns `sms`, `label` (0 = ham, 1 = spam)
-results/                 metric tables and confusion matrices (CSV / JSON)
-figures/                 plots produced by the notebook
-paper/    write-up (docx and pdf)
-requirements.txt
-```
-
-## Run it
+From the repository root:
 
 ```bash
-git clone https://github.com/altynbk/sms-spam-detection.git && cd sms-spam-detection
-python -m venv .venv && source .venv/bin/activate      # optional
-pip install -r requirements.txt
-jupyter notebook ML_Spam_Detector.ipynb
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pytest -q
+
+# Smoke run on the real CSV: same splits, 11 variants and 5 folds;
+# one parameter setting per variant, 2 intensities and 2 attack seeds.
+python -m spam_detector.train --mode quick --jobs 2 --output results/quick-new
+
+# Full protocol: 84 parameter combinations, 420 CV fits, 11 train-only refits;
+# 3 attacks × 6 intensities × 20 seeds.
+python -m spam_detector.train --mode full --jobs 2 --output results/full-new
+
+# Independently recompute saved results without fitting/selecting anything.
+python scripts/verify_results.py --run results/full-new --all-attacks
 ```
 
-Run from the repository root (the notebook reads `data/smshamspam.csv`). On Google Colab: `!git clone https://github.com/altynbk/sms-spam-detection.git`, `%cd sms-spam-detection`, `!pip install -q wordcloud`, then run all cells. Trained pipelines are written to `models/` (git-ignored).
-Everything is seeded, so results are reproducible.
+`--seed 42`, `--max-fpr 0.01`, `--validation-size 0.2`, and `--test-size 0.2`
+are explicit configurable parameters. Use `--jobs 1` to limit parallelism.
+Default output directories are `results/full` and `results/quick`. A nonempty output
+is never overwritten; choose another path for another run. Current complete results
+are in `results/full/`. Quick is a smoke check and does not replace the full study.
 
-## Data
+### Why retain Jupyter?
 
-SMS Spam Collection: T. A. Almeida, J. M. Gómez Hidalgo, A. Yamakami, *Contributions to the study of SMS spam filtering:
-new collection and results*, ACM DocEng 2011. Dataset page: <https://archive.ics.uci.edu/dataset/228/sms+spam+collection>
-(CC BY 4.0).
+The notebook is the readable research report: narrative, comparisons, visualizations
+and error examples. Reusable data preparation, fitting, evaluation and inference live
+in ordinary Python modules, and the CLI reproduces the experiment without notebook
+state. The notebook reads those outputs rather than duplicating training logic.
+
+```bash
+python -m pip install -r requirements-notebook.txt
+python -m jupyterlab ML_Spam_Detector.ipynb
+```
+
+Update `RUN` in the notebook to inspect another output directory. All nine code
+cells have been executed in a fresh kernel. The separate notebook dependency lock
+was also installed and tested. Non-English strings in Unicode test cases and attack
+mappings are intentional data, not project documentation or evidence of language accuracy.
+
+## Data preparation and evaluation protocol
+
+The bundled `data/smshamspam.csv` has columns `sms,label`, with 5,574 rows.
+Source: T. A. Almeida, J. M. Gómez Hidalgo and A. Yamakami, *Contributions to the
+study of SMS spam filtering: new collection and results*, DocEng 2011.
+[UCI / DOI 10.24432/C5CC84](https://doi.org/10.24432/C5CC84), CC BY 4.0.
+Project code is MIT licensed. SHA-256 of this specific repository CSV:
+
+```text
+bbcb13af6558d89e007094a1d62a982ce2b03ce679f89cd88625de3c71cea76a
+```
+
+Before splitting, validate text types, blank values, labels and conflicting labels
+for exact or normalized messages. Conflicts raise a diagnostic `ValueError` with
+source row identifiers; labels are never silently chosen.
+
+Remove 403 exact duplicate rows, retaining original strings: **5,171 messages
+(4,518 ham / 653 spam)**. There are no label conflicts. Normalize grouping keys using
+lowercase, trim and whitespace collapse only; preserve punctuation and Unicode.
+This gives 5,159 groups, including 12 groups of two distinct raw texts each.
+
+Stratify **unique homogeneous groups**, first holding out 20% test (seed 42), then
+25% of the remainder for validation (seed 43). Assign all members to their group's
+split. Fractions apply to groups and are approximate by row count.
+
+| Split | Messages | Ham | Spam | Purpose |
+|---|---:|---:|---:|---|
+| Train | 3102 | 2710 | 392 | Cross-validation and fitting |
+| Validation | 1035 | 904 | 131 | Threshold selection only |
+| Test | 1034 | 904 | 130 | Final clean and attacked evaluation |
+
+[The split manifest](results/full/splits.csv) records raw-text hashes, normalized
+group hashes, labels, split, CV fold and all original `source_rows` (zero-based,
+excluding the CSV header). No raw or normalized group crosses splits.
+Five shared `StratifiedGroupKFold` folds inside train use seed 42. Every fold fits
+its own vocabulary and IDF inside its pipeline. Group stratification only approximates
+class balance by message count.
+
+## Controlled comparisons and selection
+
+- **Classifiers:** original NB (alpha), LR (C/class_weight), linear-kernel SVC
+  (C/class_weight), RF (100 trees, max_depth/min_samples_leaf), with legacy cleanup
+  and word features.
+- **Features:** one LinearSVC and gentle cleanup, comparing word TF-IDF (1–2 grams),
+  char_wb TF-IDF (3–5 grams), and their FeatureUnion. Same folds and C=0.5/1,
+  class_weight=None/balanced grid. Total max_features is 1,000/5,000, split equally
+  between union branches with equal weights and joint L2 normalization.
+- **Preprocessing:** legacy exactly reproduces lowercase plus removal of
+  `[^a-z0-9\s]`; gentle only changes case/whitespace. Both have word and char
+  variants. Additional char ablations remove Unicode punctuation (P*) or currency
+  symbols (Sc). The notebook also pairs CV rows at identical hyperparameters.
+
+A word tokenizer itself excludes much punctuation; preserving symbols during cleanup
+alone does not ensure word features contain them. Character features are a tested
+hypothesis, not a guarantee of better accuracy or robustness.
+
+[All parameter grids and fitted settings](results/full/metadata.json) and
+[every candidate/fold score](results/full/cv_results.csv) are saved.
+Primary criterion: mean spam-class F1 under **native classifier predictions** on
+train-CV. Select the highest mean score; exact ties use alphabetical model_id order.
+Best searched CV scores are optimistic, not independent final estimates.
+Test does not select models, features, preprocessing, parameters, thresholds or defenses.
+[selection.json](results/full/selection.json) is written before test scoring.
+
+## Validation-only thresholds
+
+Compare native `pipeline.predict` decisions against a validation-selected threshold:
+maximize recall subject to empirical FPR ≤ `max_fpr`; ties prefer fewer FP, then a
+higher threshold. The tuned rule is **score ≥ threshold predicts spam**.
+The default setting uses the estimator's own tie-breaking (including probability=0.5),
+consistent with CV. Nominal defaults are 0.5 for probabilities and 0 for margins.
+SVC/LinearSVC `decision_function` outputs are scores, **not probabilities**.
+
+With 904 validation ham messages, one FP changes FPR by 1/904 ≈ 0.11 percentage
+points; at most 9 FP satisfy the 1% limit. This is an empirical validation constraint,
+not a statistical guarantee on test or future traffic. Thresholds are saved with
+models and in metadata, and held fixed for clean/attacked test. **No model is
+refitted after threshold selection.** ROC-AUC/AP use continuous scores.
+
+## Actual full-run results
+
+Seed 42; test = 904 ham / 130 spam. Precision, recall and F1 concern spam.
+Default and tuned settings use the same fitted model. FP counts blocked legitimate
+messages; FN counts missed spam.
+
+| Model / features / cleanup | Best CV F1* | Test F1: default → tuned | Tuned precision | Tuned recall | Tuned FP / FN | Tuned FPR |
+|---|---:|---:|---:|---:|---:|---:|
+| NB / word / legacy | 0.9099 | 0.9053 → 0.9213 | 0.9435 | 0.9000 | 7 / 13 | 0.77% |
+| LR / word / legacy | 0.9111 | 0.9035 → 0.9120 | 0.9500 | 0.8769 | 6 / 16 | 0.66% |
+| SVC / word / legacy | 0.9249 | 0.9091 → 0.9339 | 0.9449 | 0.9231 | 7 / 10 | 0.77% |
+| RF / word / legacy | 0.8707 | 0.8908 → 0.8855 | 0.8788 | 0.8923 | 16 / 14 | 1.77% |
+| LinearSVC / word / legacy | 0.9283 | 0.9323 → 0.9286 | 0.9590 | 0.9000 | 5 / 13 | 0.55% |
+| LinearSVC / char / legacy | 0.9407 | 0.9520 → 0.9164 | 0.8690 | 0.9692 | 19 / 4 | 2.10% |
+| **LinearSVC / word / gentle (CV choice)** | 0.9460 | 0.9486 → 0.9531 | 0.9683 | 0.9385 | 4 / 8 | 0.44% |
+| LinearSVC / char / gentle | 0.9433 | 0.9690 → 0.9203 | 0.8699 | 0.9769 | 19 / 3 | 2.10% |
+| LinearSVC / word+char / gentle | 0.9435 | 0.9393 → 0.9575 | 0.9612 | 0.9538 | 5 / 6 | 0.55% |
+| LinearSVC / char / no punctuation | 0.9409 | 0.9478 → 0.9615 | 0.9615 | 0.9615 | 5 / 5 | 0.55% |
+| LinearSVC / char / no currency | 0.9434 | 0.9690 → 0.9403 | 0.9130 | 0.9692 | 12 / 4 | 1.33% |
+
+*Best CV F1 is after search, not an independent estimate. Accuracy, ROC-AUC, average
+precision, confusion matrices, counts and FPR for **both** settings are in
+[clean_metrics.csv](results/full/clean_metrics.csv); validation is reported
+[separately](results/full/validation_metrics.csv).
+
+CV selected **linear_svc_word_gentle**, even though some alternatives score higher
+on test under particular thresholds. Its tuned threshold is −0.08620419778818611:
+precision 0.9683, recall 0.9385, F1 0.9531, accuracy 0.9884, ROC-AUC 0.9957,
+AP 0.9817; confusion matrix `[[900, 4], [8, 122]]`. Native default: 3 FP / 10 FN,
+F1 0.9486. Tuning trades one additional FP for two fewer FN on this test.
+
+Tuning **reduced** test F1 for several variants. Char legacy/gentle reached
+19/904=2.10% test FPR, RF 16/904=1.77%, and char without currency signs 12/904=1.33%.
+Thresholds were not adjusted to repair these test outcomes. The objective constrains
+validation FPR and maximizes recall, not test F1; small validation samples and differing
+empirical score distributions can produce worse test tradeoffs.
+
+## Robustness evaluation
+
+Attacks modify **raw spam**, which then passes through the full pipeline. Ham is
+unchanged. Every model receives the same set for `(attack_type, intensity, seed)`.
+[Attack manifests](results/full/attack_manifest.csv) record each set's hash and
+numbers of changed ham/spam messages.
+
+| Scenario | Rule | Meaning of intensity |
+|---|---|---|
+| Leet | a→@/4, e→3, i→1/!, o→0, s→$/5, l→1, t→7, c→(/<, u→v, b→8; uppercase supported; unrelated characters unchanged | Replacement probability per eligible ASCII letter |
+| Separators | Insert '.', '-' or '_' between adjacent ASCII letters; retain all original characters | Insertion probability per eligible boundary |
+| Unicode | Fixed case-aware Latin-to-Cyrillic lookalike table; other characters unchanged | Replacement probability per eligible character |
+
+Intensities: 0.0, 0.1, 0.2, 0.3, 0.4, 0.5. Twenty seeds: 10042–10061.
+There are **360 attack datasets and 7,920 metric rows** (11 models × 2 decisions).
+Intensity is not the fraction of all changed characters, and eligible positions
+vary by scenario. Human readability and semantic preservation are not evaluated.
+
+ASR = clean-correct spam that becomes missed after attack / clean-correct spam.
+With a zero denominator it is undefined: Python None/JSON null, `undefined` in CSV.
+Numerator and denominator are retained. All draws and mean/SD summaries are saved:
+[raw runs](results/full/robustness_runs.csv), [summary](results/full/robustness_summary.csv).
+
+Gentle cleanup + LinearSVC, intensity 0.3, means over 20 seeds. Each model retains
+its own fixed validation threshold:
+
+| Attack | Word: recall / F1 / ASR | Char: recall / F1 / ASR | Word+char: recall / F1 / ASR |
+|---|---:|---:|---:|
+| leet | 0.7696 / 0.8547 / 0.1820 | 0.9400 / 0.9011 / 0.0390 | 0.8900 / 0.9230 / 0.0698 |
+| separators | 0.6035 / 0.7376 / 0.3582 | 0.9173 / 0.8890 / 0.0614 | 0.8350 / 0.8913 / 0.1278 |
+| unicode | 0.8473 / 0.9021 / 0.0984 | 0.9385 / 0.9003 / 0.0398 | 0.9035 / 0.9304 / 0.0552 |
+
+Character features lose less recall here, but their tuned threshold also produces
+more clean false positives. This is not unconditional superiority. Native-default
+comparisons are available in the same CSV. The CV choice is unchanged after attacks.
+Legacy/no_punctuation remove the inserted '.', '-' and '_', so this particular
+separator attack is neutralized for those variants; it is not a general defense.
+
+![Leet recall, F1 and ASR](results/full/figures/leet.png)
+![Separator recall, F1 and ASR](results/full/figures/separators.png)
+![Unicode recall, F1 and ASR](results/full/figures/unicode.png)
+
+Bands show ±1 SD over **random perturbations only**. They exclude new splits,
+parameter selection and refitting, and do not quantify overall model uncertainty.
+
+## Saved-model use and input contract
+
+Run from the project root so `spam_detector` is importable:
+
+```python
+import json
+from pathlib import Path
+import joblib
+
+run = Path("results/full")
+meta = json.loads((run / "metadata.json").read_text())
+name = meta["selected_model"]
+model = joblib.load(run / meta["models"][name]["artifact"])
+raw_sms = ["FREE entry! Call NOW to claim £100", "Are we meeting for lunch?"]
+print(model.predict(raw_sms))           # fixed validation threshold
+print(model.score(raw_sms))             # continuous scores
+print(model.score_kind, model.threshold)
+print(model.pipeline.predict(raw_sms))  # native default classifier decisions
+```
+
+`SpamModel` stores the fitted raw-text pipeline and tuned threshold in one joblib.
+A single string is accepted as one SMS. Empty strings, whitespace, punctuation and
+Unicode are valid inference inputs and return finite scores and 0/1 decisions;
+this does not imply accuracy on unsupported languages. An empty batch raises
+ValueError; None/numbers/mixed non-string inputs raise TypeError. One-shot iterables
+are materialized once during preprocessing.
+
+Training datasets reject blank/whitespace-only messages. Accepted labels are ham/spam,
+string '0'/'1', or integer 0/1; floats, booleans and unknown values are not silently
+coerced in the Python API. From another working directory, put the project root on
+PYTHONPATH. Only load trusted joblib files. Local deliveries include all 11 current
+models; Git ignores them, so regenerate them after a source-only clone.
+
+## Files and reproducibility
+
+| Location | Role |
+|---|---|
+| `spam_detector/preprocessing.py` | Shared importable text cleanup and raw-input contract |
+| `spam_detector/data.py` | Validation, exact deduplication, grouped splits and CV |
+| `spam_detector/modeling.py` | Original estimators, feature variants and limited search grids |
+| `spam_detector/evaluation.py` | Scores, native/tuned decisions, metrics, ASR and saved model |
+| `spam_detector/attacks.py` | Three deterministic-seed raw-spam attacks |
+| `spam_detector/train.py` | CLI and fit → validation → frozen choice → final test workflow |
+| `tests/`, `pytest.ini` | Regression and integration tests; warnings are errors |
+| `scripts/verify_results.py` | Independently recompute artifact hashes, splits, thresholds and metrics |
+| `ML_Spam_Detector.ipynb` | English analysis using the package and saved CSV outputs |
+| `requirements*.in/txt`, `.python-version` | Tested runtime/test and optional notebook dependencies |
+| `results/full/` | Current metrics, metadata, membership, errors, figures and local model artifacts |
+| `results/historical/`, `figures/historical/` | Original saved results, clearly separated |
+| `docs/` | Original-code audit and actual validation |
+
+**61 pytest tests passed.** Coverage includes grouped split/fold isolation, conflicting
+labels, zero-intensity identity, unchanged ham/ineligible characters, uppercase and
+Unicode, reproducible attacks, ASR including an empty denominator, threshold ties,
+vocabulary/IDF isolation, invalid inputs, generator inputs, joblib round trips and
+fresh-process loading for all 11 model variants. A synthetic integration test checks
+orchestration only. Quick/full runs use the real CSV. All notebook cells were executed.
+Global warning suppression is removed.
+
+[metadata.json](results/full/metadata.json) records Python/library versions, platform,
+seed/split settings, dataset source/hash, base commit and dirty flag, source hashes,
+configuration, all fitted parameters, CV selection, thresholds and artifact hashes.
+`working_tree_dirty=true` identifies local modifications; it is not a fabricated new
+commit ID. Evaluation revision 2 uses native default predictions, correcting an exact
+RF tie from the initial implementation without changing tuned thresholds or selection.
+
+[verification.json](results/full/verification.json) records the actual scope of independent
+recomputation. `--all-attacks` recomputes every one of the 7,920 rows by feeding complete
+raw attacked sets through loaded pipelines, without the training runner's ham-score cache.
+No verification step fits models or changes parameters based on test outcomes.
+
+[errors.csv](results/full/errors.csv) contains raw text, truth, prediction, score and
+FP/FN type for each model/decision setting. Raw text is exported by default only for
+the recognized public bundled dataset hash. For other CSVs it is withheld unless
+`--export-error-text` explicitly permits local export. No additional private SMS
+were introduced.
+
+## Limitations
+
+The old ML experiment was **not retrained**. Historical files are retained, not used
+as a controlled before/after result. Changes in splits, grouping, search, thresholds,
+preprocessing order and software prevent attributing metric differences solely to leakage.
+
+Only one grouped split is studied. Near-duplicate templates and source/sender effects
+can remain. Modern SMS, multilingual accuracy, temporal/source transfer, adaptive attacks
+and attacks on ham have not been evaluated. Spam-only attacks keep FPR fixed by construction.
+Repeated attack seeds do not replace repeated independent training/evaluation splits.
+
+The project does not need a rewrite or a web interface. Jupyter plus a small tested
+Python package is appropriate for this educational research scope. Stronger generalization
+or publication claims would need additional evidence, not simply more complex models.
+
+The original DOCX/PDF in `paper/` describe the historical experiment and are
+unchanged by this update. Use this README, the notebook and `results/full/` for
+the current protocol and results.
