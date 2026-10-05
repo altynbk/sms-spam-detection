@@ -1,5 +1,7 @@
 # SMS Spam Detection: Reproducible Experiments and Robustness
 
+[![Tests and reproducibility](https://github.com/altynbk/sms-spam-detection/actions/workflows/tests.yml/badge.svg)](https://github.com/altynbk/sms-spam-detection/actions/workflows/tests.yml)
+
 Classical machine learning on the [SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection),
 with controlled preprocessing/feature comparisons and character-level attacks.
 **Labels: ham = 0, spam = 1.** Saved models accept original SMS strings.
@@ -14,13 +16,17 @@ Random Forest and obfuscation experiment remain the foundation.
 - [Validation report](docs/VALIDATION.md): commands and actual checks.
 - [Reference comparison](docs/REFERENCE_COMPARISON.md): scikit-learn examples,
   the UCI corpus and SpamDam; findings and corrections from a further review.
+- [Model card](docs/MODEL_CARD.md): intended use, score semantics and limitations.
+- [Development roadmap](docs/ROADMAP.md): comparable demos, a proposed interactive
+  SMS Spam Lab, and priorities for stronger evaluation.
 
 ## Install and run
 
 Tested in a dedicated **Python 3.12.14 environment on macOS arm64**.
 The exact runtime/test dependencies in `requirements.txt` were resolved and installed
 in that environment, not copied from an unrelated global installation. Other OS/Python
-combinations have not been separately tested.
+combinations should be checked separately. GitHub Actions targets Python 3.12 on
+Ubuntu and macOS; its current results are linked in the badge above.
 
 From the repository root:
 
@@ -284,6 +290,7 @@ models; Git ignores them, so regenerate them after a source-only clone.
 | `spam_detector/attacks.py` | Three deterministic-seed raw-spam attacks |
 | `spam_detector/train.py` | CLI and fit → validation → frozen choice → final test workflow |
 | `tests/`, `pytest.ini` | Regression and integration tests; warnings are errors |
+| `.github/workflows/tests.yml` | Linux/macOS tests, dependency check, real-data quick run and independent verification |
 | `scripts/verify_results.py` | Check hashes, complete scenario grids, CV aggregates, thresholds, predictions and summaries |
 | `ML_Spam_Detector.ipynb` | English analysis using the package and saved CSV outputs |
 | `requirements*.in/txt`, `.python-version` | Tested runtime/test and optional notebook dependencies |
@@ -299,6 +306,11 @@ fresh-process loading for all 11 model variants, train-only majority baselines, 
 rejection of malformed manifests or altered CV/summary tables. A synthetic integration test checks
 orchestration only. Quick/full runs use the real CSV. All notebook cells were executed.
 Global warning suppression is removed.
+
+GitHub Actions performs these regression checks on pushes, pull requests and
+manual runs. Each runner trains a quick experiment in a temporary directory and
+independently recomputes every one of its 264 attack rows. The workflow does not
+overwrite committed full-run results or require committed model files.
 
 [metadata.json](results/full/metadata.json) records Python/library versions, platform,
 seed/split settings, dataset source/hash, base commit and dirty flag, source hashes,
@@ -332,9 +344,11 @@ can remain. Modern SMS, multilingual accuracy, temporal/source transfer, adaptiv
 and attacks on ham have not been evaluated. Spam-only attacks keep FPR fixed by construction.
 Repeated attack seeds do not replace repeated independent training/evaluation splits.
 
-The project does not need a rewrite or a web interface. Jupyter plus a small tested
-Python package is appropriate for this educational research scope. Stronger generalization
-or publication claims would need additional evidence, not simply more complex models.
+Jupyter plus a small tested Python package is appropriate for this educational
+research scope. A proposed Streamlit lab would make inference, controlled attacks
+and saved results interactive; see the [roadmap](docs/ROADMAP.md). Stronger
+generalization claims need additional evidence, not simply a web interface or more
+complex models.
 
 The original DOCX/PDF in `paper/` describe the historical experiment and are
 unchanged by this update. Use this README, the notebook and `results/full/` for

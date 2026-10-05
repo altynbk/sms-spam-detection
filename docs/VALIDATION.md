@@ -1,6 +1,32 @@
 # Executed validation and review history
 
-## Reference review: latest checks
+## Readiness and development-roadmap review
+
+Further review on 5 October 2026, starting from
+`6257f462a63f36a7bc7970117901e9b7c6be02de`. Re-read data validation/grouping,
+preprocessing, feature grids, attacks, evaluation, verification and input-contract
+tests. No additional calculation defect was identified in this review.
+
+- **70 tests passed in 12.52 seconds** in the existing dedicated environment.
+- `uv pip check --python <environment>/bin/python` confirmed that the 109 installed
+  runtime, test and notebook packages are compatible. This uv-created environment
+  has no pip module; the standard-venv README and GitHub setup-python workflow use pip.
+- A new quick run on the real bundled CSV completed. The verifier independently
+  recomputed **all 264 attack rows**, 12 dataset hashes, 22 clean and 22 validation
+  rows, plus baseline/error/summary tables and CV aggregates.
+- Full-run training-source hashes, all 11 saved artifact hashes and the verifier
+  hash still match the earlier complete verification record. Training code,
+  thresholds and the committed full results were not modified or regenerated.
+- Added GitHub Actions with Python 3.12 on Ubuntu/macOS: locked dependencies,
+  dependency check, pytest, a real-data quick run and all-attack verification.
+  The YAML structure and pinned official action commit references were checked.
+  Actual hosted executions are recorded in
+  [GitHub Actions](https://github.com/altynbk/sms-spam-detection/actions/workflows/tests.yml).
+- Added an English [model card](MODEL_CARD.md) and [development roadmap](ROADMAP.md),
+  based on inspected public demo implementations and official framework docs.
+  Website/API/mobile features in the roadmap are proposals, not implemented features.
+
+## Reference review
 
 Reviewed on 5 October 2026, starting from commit
 `bb8e308d6365984d4a07b74e0a9814651122f77e`. See
