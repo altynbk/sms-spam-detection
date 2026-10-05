@@ -12,6 +12,8 @@ Random Forest and obfuscation experiment remain the foundation.
 - [Executed notebook](ML_Spam_Detector.ipynb): explanation, figures and error analysis.
 - [Original-code audit](docs/AUDIT.md): confirmed issues and claims that did not hold up.
 - [Validation report](docs/VALIDATION.md): commands and actual checks.
+- [Reference comparison](docs/REFERENCE_COMPARISON.md): scikit-learn examples,
+  the UCI corpus and SpamDam; findings and corrections from a further review.
 
 ## Install and run
 
@@ -58,7 +60,10 @@ python -m pip install -r requirements-notebook.txt
 python -m jupyterlab ML_Spam_Detector.ipynb
 ```
 
-Update `RUN` in the notebook to inspect another output directory. All nine code
+The committed report runs after a source-only clone using `results/full`, without
+training or model files. Its optional inference cell gives instructions if models
+are absent. After training, set `RUN = Path("results/full-new")` to inspect that run.
+All nine code
 cells have been executed in a fresh kernel. The separate notebook dependency lock
 was also installed and tested. Non-English strings in Unicode test cases and attack
 mappings are intentional data, not project documentation or evidence of language accuracy.
@@ -148,6 +153,12 @@ Seed 42; test = 904 ham / 130 spam. Precision, recall and F1 concern spam.
 Default and tuned settings use the same fitted model. FP counts blocked legitimate
 messages; FN counts missed spam.
 
+As a class-imbalance reference, a `DummyClassifier(strategy="prior")` learns the
+majority and class prior from **train only**, then always predicts ham here:
+**87.43% test accuracy, 0 spam recall/F1, 0 FP and 130 FN**. See
+[baseline_metrics.csv](results/full/baseline_metrics.csv). This no-text reference
+is excluded from the 11-model search and threshold selection.
+
 | Model / features / cleanup | Best CV F1* | Test F1: default → tuned | Tuned precision | Tuned recall | Tuned FP / FN | Tuned FPR |
 |---|---:|---:|---:|---:|---:|---:|
 | NB / word / legacy | 0.9099 | 0.9053 → 0.9213 | 0.9435 | 0.9000 | 7 / 13 | 0.77% |
@@ -221,19 +232,24 @@ separator attack is neutralized for those variants; it is not a general defense.
 ![Separator recall, F1 and ASR](results/full/figures/separators.png)
 ![Unicode recall, F1 and ASR](results/full/figures/unicode.png)
 
-Bands show ±1 SD over **random perturbations only**. They exclude new splits,
+Each figure shows native decisions in the top row and fixed validation thresholds
+in the bottom row. All 11 models use distinct, consistent colors; neither row holds
+test FPR equal across models. Bands show ±1 SD over **random perturbations only**. They exclude new splits,
 parameter selection and refitting, and do not quantify overall model uncertainty.
 
 ## Saved-model use and input contract
 
 Run from the project root so `spam_detector` is importable:
 
+First run the full training command above. Git does not include joblib models;
+this example loads the newly generated run:
+
 ```python
 import json
 from pathlib import Path
 import joblib
 
-run = Path("results/full")
+run = Path("results/full-new")
 meta = json.loads((run / "metadata.json").read_text())
 name = meta["selected_model"]
 model = joblib.load(run / meta["models"][name]["artifact"])
@@ -268,18 +284,19 @@ models; Git ignores them, so regenerate them after a source-only clone.
 | `spam_detector/attacks.py` | Three deterministic-seed raw-spam attacks |
 | `spam_detector/train.py` | CLI and fit → validation → frozen choice → final test workflow |
 | `tests/`, `pytest.ini` | Regression and integration tests; warnings are errors |
-| `scripts/verify_results.py` | Independently recompute artifact hashes, splits, thresholds and metrics |
+| `scripts/verify_results.py` | Check hashes, complete scenario grids, CV aggregates, thresholds, predictions and summaries |
 | `ML_Spam_Detector.ipynb` | English analysis using the package and saved CSV outputs |
 | `requirements*.in/txt`, `.python-version` | Tested runtime/test and optional notebook dependencies |
 | `results/full/` | Current metrics, metadata, membership, errors, figures and local model artifacts |
 | `results/historical/`, `figures/historical/` | Original saved results, clearly separated |
 | `docs/` | Original-code audit and actual validation |
 
-**61 pytest tests passed.** Coverage includes grouped split/fold isolation, conflicting
+**70 pytest tests passed.** Coverage includes grouped split/fold isolation, conflicting
 labels, zero-intensity identity, unchanged ham/ineligible characters, uppercase and
 Unicode, reproducible attacks, ASR including an empty denominator, threshold ties,
 vocabulary/IDF isolation, invalid inputs, generator inputs, joblib round trips and
-fresh-process loading for all 11 model variants. A synthetic integration test checks
+fresh-process loading for all 11 model variants, train-only majority baselines, and
+rejection of malformed manifests or altered CV/summary tables. A synthetic integration test checks
 orchestration only. Quick/full runs use the real CSV. All notebook cells were executed.
 Global warning suppression is removed.
 
@@ -293,7 +310,10 @@ RF tie from the initial implementation without changing tuned thresholds or sele
 [verification.json](results/full/verification.json) records the actual scope of independent
 recomputation. `--all-attacks` recomputes every one of the 7,920 rows by feeding complete
 raw attacked sets through loaded pipelines, without the training runner's ham-score cache.
-No verification step fits models or changes parameters based on test outcomes.
+It also checks all validation/error rows, baseline results, CV aggregates and
+robustness summaries, including missing/duplicate/unexpected scenario keys. It does
+not refit text models or change parameters based on test outcomes. The dummy reference
+uses training label counts only.
 
 [errors.csv](results/full/errors.csv) contains raw text, truth, prediction, score and
 FP/FN type for each model/decision setting. Raw text is exported by default only for

@@ -20,7 +20,7 @@ from sklearn.model_selection import GridSearchCV, ParameterGrid
 
 from .attacks import ATTACK_TYPES, attack_messages
 from .data import load_data, make_cv_folds, split_data
-from .evaluation import (SpamModel, attack_success_rate, default_threshold, metrics,
+from .evaluation import (SpamModel, attack_success_rate, default_threshold, majority_baseline, metrics,
                          predictions, score_kind, select_threshold, spam_scores)
 from .modeling import experiments
 
@@ -84,24 +84,28 @@ def plot_robustness(runs, output):
 
     output = Path(output)
     output.mkdir(exist_ok=True)
-    selected = runs[runs.threshold_mode == "validation"]
-    for attack_type, attack in selected.groupby("attack_type", sort=False):
-        fig, axes = plt.subplots(1, 3, figsize=(17, 6))
-        for name, part in attack.groupby("model", sort=False):
-            grouped = part.groupby("intensity")[["recall", "f1", "asr"]].agg(["mean", "std"])
-            for ax, metric in zip(axes, ["recall", "f1", "asr"]):
-                x = grouped.index.to_numpy(float)
-                mean = grouped[(metric, "mean")].to_numpy(float)
-                std = grouped[(metric, "std")].fillna(0).to_numpy(float)
-                line, = ax.plot(x, mean, marker=".", label=name, linewidth=1.2)
-                ax.fill_between(x, np.clip(mean - std, 0, 1), np.clip(mean + std, 0, 1),
-                                color=line.get_color(), alpha=0.07)
-                ax.set(xlabel="Intensity", ylabel=metric.upper(), ylim=(-0.02, 1.02))
-                ax.grid(alpha=0.2)
-        handles, labels = axes[0].get_legend_handles_labels()
+    names = list(runs.model.unique())
+    colors = {name: plt.get_cmap("tab20")(i) for i, name in enumerate(names)}
+    for attack_type, attack in runs.groupby("attack_type", sort=False):
+        fig, axes = plt.subplots(2, 3, figsize=(17, 10))
+        for row, mode in enumerate(["default", "validation"]):
+            for name, part in attack[attack.threshold_mode == mode].groupby("model", sort=False):
+                grouped = part.groupby("intensity")[["recall", "f1", "asr"]].agg(["mean", "std"])
+                for ax, metric in zip(axes[row], ["recall", "f1", "asr"]):
+                    x = grouped.index.to_numpy(float)
+                    mean = grouped[(metric, "mean")].to_numpy(float)
+                    std = grouped[(metric, "std")].fillna(0).to_numpy(float)
+                    ax.plot(x, mean, marker=".", label=name, linewidth=1.2, color=colors[name])
+                    ax.fill_between(x, np.clip(mean - std, 0, 1), np.clip(mean + std, 0, 1),
+                                    color=colors[name], alpha=0.07)
+                    decision = "Native default" if mode == "default" else "Fixed validation threshold"
+                    ax.set(title=f"{decision}: {metric.upper()}", xlabel="Intensity",
+                           ylabel=metric.upper(), ylim=(-0.02, 1.02))
+                    ax.grid(alpha=0.2)
+        handles, labels = axes[0, 0].get_legend_handles_labels()
         fig.legend(handles, labels, loc="lower center", ncol=3, fontsize=8)
-        fig.suptitle(f"{attack_type}: fixed validation thresholds; mean ± SD over attack seeds only")
-        fig.tight_layout(rect=(0, 0.20, 1, 0.95))
+        fig.suptitle(f"{attack_type}: both decision settings; mean ± SD over attack seeds only")
+        fig.tight_layout(rect=(0, 0.12, 1, 0.95))
         fig.savefig(output / f"{attack_type}.png", dpi=150)
         plt.close(fig)
 
@@ -220,6 +224,12 @@ def run(config):
                                        "thresholds": {n: b.threshold for n, b in fitted.items()}})
     write_json(out / "metadata.json", metadata)
     print(f"Frozen CV choice: {selected_model}. Starting final test evaluation.", flush=True)
+    # A no-text reference for class imbalance, excluded from model/threshold selection.
+    baseline_rows = [{"split": name, **majority_baseline(train.label, part.label)}
+                     for name, part in [("validation", validation), ("test", test)]]
+    pd.DataFrame(baseline_rows).to_csv(out / "baseline_metrics.csv", index=False)
+    metadata["baseline"] = {"strategy": "DummyClassifier(strategy='prior')", "fit_split": "train",
+                            "purpose": "class-imbalance reference; excluded from model selection"}
     clean_rows, errors, clean_scores, clean_predictions = [], [], {}, {}
     ytest = test.label.to_numpy()
     for spec in specs:

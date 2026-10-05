@@ -10,6 +10,12 @@
   "source_and_model_hashes_match": true,
   "validation_thresholds_recomputed": true,
   "split_and_cv_membership_recomputed": true,
-  "verifier_sha256": "8ba0d19465891e622fabaf01217fd907170b451c5e8af2be4a5c3e4a2a36047e",
-  "scope": "No fitting, parameter changes, or model selection based on test results."
+  "validation_metric_rows_recomputed": 22,
+  "baseline_metric_rows_recomputed": 2,
+  "cv_rows_checked_against_folds_and_selection": 84,
+  "error_rows_recomputed": 383,
+  "summary_rows_recomputed": 396,
+  "complete_scenario_key_sets_checked": true,
+  "verifier_sha256": "22d219e08cbda17c95a64e96004f444f416f6f7b5be45ff413954fbb5690422e",
+  "scope": "No text-model fitting, parameter changes, or model selection based on test results. The dummy reference uses training label counts only."
 }

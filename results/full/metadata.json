@@ -2,7 +2,7 @@
   "protocol": "deduplicated-grouped-v2",
   "evaluation_revision": 2,
   "status": "complete",
-  "started_utc": "2026-10-05T06:17:05.188863+00:00",
+  "started_utc": "2026-10-05T06:54:06.846629+00:00",
   "config": {
     "mode": "full",
     "data": "data/smshamspam.csv",
@@ -47,17 +47,17 @@
     "error_text_exported": true
   },
   "git": {
-    "commit": "8a47f22ab76061b07a9ba54cbb548588d826fa41",
+    "commit": "bb8e308d6365984d4a07b74e0a9814651122f77e",
     "working_tree_dirty": true
   },
   "source_sha256": {
     "spam_detector/__init__.py": "ca1388ed55263c83873207fdbd3714243cd768af3127125886ed57cf57c4057b",
     "spam_detector/attacks.py": "99b7ae6098f858b6f64ecf9e89f81de0d26876be507769933075e9261c0c93f0",
     "spam_detector/data.py": "de269627b34152dc5304169f5b5412c3432e736ae8726b0d224c10ad51a69eea",
-    "spam_detector/evaluation.py": "f035a8f85e7d9b109d4f754abf0c8d0526d479aa506371c2f666de11e41d8411",
+    "spam_detector/evaluation.py": "7c6c3e17f11f35543211ae86ad5327dc4f82479c358e988b53f8e684c5092a2c",
     "spam_detector/modeling.py": "e8a9610b766c01d872f09a2db37ca57a9060f600b78af1b75298cb9e20025586",
     "spam_detector/preprocessing.py": "f25e755261f52866cee2aadea2d81f952eb79667438c4d191cc4302d303e933b",
-    "spam_detector/train.py": "56b10a19d79503bbc97c4086182ba6b79602f1231e8db7abb534ddb5f832a52e",
+    "spam_detector/train.py": "5fb87eb0a2313ee5b53d966dfeebc05b587fe590ef5abc587d14d654f84cec0b",
     "requirements.txt": "e8022f4a41dd856c1994d548b9cbad9522ee581d6a3e37939c078a715ae7a46d"
   },
   "data_audit": {
@@ -537,7 +537,7 @@
         }
       },
       "artifact": "models/nb_word_legacy.joblib",
-      "artifact_sha256": "57177236610c42bf8a7a4af80e5c1244b7866d28f3d7674bdd91ad3ad2f78d52",
+      "artifact_sha256": "c2b2d17cfb91193d4bb9b6fc953408350df534d0c4b3f8aad3ff476ab5467b95",
       "refit_after_threshold": false
     },
     "lr_word_legacy": {
@@ -648,7 +648,7 @@
         }
       },
       "artifact": "models/lr_word_legacy.joblib",
-      "artifact_sha256": "ab550e1557623a2a4876b97acd253d6c436d3eab090a0dd47ff8e51ca78d31bc",
+      "artifact_sha256": "c0d114080a99cbb49f69f17a0a930bb3d89e92e39fe02ba9bb79c0ac72c9aa39",
       "refit_after_threshold": false
     },
     "svc_word_legacy": {
@@ -760,7 +760,7 @@
         }
       },
       "artifact": "models/svc_word_legacy.joblib",
-      "artifact_sha256": "615da0612447935af53dd736b5b6f400412e699131084a6979e31f60a16b422b",
+      "artifact_sha256": "717107d521823a356c6bdc28c08a9ce59d16153d644052fecb1d91112ae3e353",
       "refit_after_threshold": false
     },
     "rf_word_legacy": {
@@ -876,7 +876,7 @@
         }
       },
       "artifact": "models/rf_word_legacy.joblib",
-      "artifact_sha256": "ff68f4a07c1e788b714ef6a7dd10b3674bf00731d5bfa7e2fef9c3f4e097d2fb",
+      "artifact_sha256": "ad0575dff365b78f1f83370dfb49b8b0030eaa4f912afbc2ad84baa7f2d43fdd",
       "refit_after_threshold": false
     },
     "linear_svc_word_legacy": {
@@ -985,7 +985,7 @@
         }
       },
       "artifact": "models/linear_svc_word_legacy.joblib",
-      "artifact_sha256": "24b2e8d438f07eacde2ed62f4a019a7229b4c7f8e05317c1716545c8db337197",
+      "artifact_sha256": "8c0c3c9b2f51484f3b1f9e0a5e5f0f70c1056ddfa3edd9019c934ac3eff3fd80",
       "refit_after_threshold": false
     },
     "linear_svc_char_legacy": {
@@ -1203,7 +1203,7 @@
         }
       },
       "artifact": "models/linear_svc_word_gentle.joblib",
-      "artifact_sha256": "4cf48de15761b129cf8f6b0d6981fd2f982a5b9789e4f93bc584a4302ffad761",
+      "artifact_sha256": "258e33903678b7a142538fdf15b260bf1ffebfcddb1edaec2a15f8d1911363e5",
       "refit_after_threshold": false
     },
     "linear_svc_char_gentle": {
@@ -1479,7 +1479,7 @@
         }
       },
       "artifact": "models/linear_svc_word_char_gentle.joblib",
-      "artifact_sha256": "13c0fafe17fe7f36b4abc4cedfd9b64512a677f54c825179309e74713b43d7d3",
+      "artifact_sha256": "fd79a5cb61fe1856fec4eed92bec2942b27cca0eccc66c15da46a2a5a149330c",
       "refit_after_threshold": false
     },
     "linear_svc_char_no_punctuation": {
@@ -1702,8 +1702,13 @@
     }
   },
   "selected_model": "linear_svc_word_gentle",
-  "elapsed_seconds": 73.63720662496053,
-  "completed_utc": "2026-10-05T06:18:18.606236+00:00",
+  "baseline": {
+    "strategy": "DummyClassifier(strategy='prior')",
+    "fit_split": "train",
+    "purpose": "class-imbalance reference; excluded from model selection"
+  },
+  "elapsed_seconds": 75.07981404103339,
+  "completed_utc": "2026-10-05T06:55:21.695227+00:00",
   "robustness_rows": 7920,
   "attack_datasets": 360
 }

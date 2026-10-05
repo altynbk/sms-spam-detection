@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 
 import numpy as np
+from sklearn.dummy import DummyClassifier
 from sklearn.metrics import (accuracy_score, average_precision_score, confusion_matrix,
                              f1_score, precision_score, recall_score, roc_auc_score)
 
@@ -57,6 +58,20 @@ def metrics(y, scores, threshold, *, y_pred=None):
         "n_ham": int(fp + tn), "n_spam": int(fn + tp),
         "confusion_matrix": [[int(tn), int(fp)], [int(fn), int(tp)]],
     }
+
+
+def majority_baseline(train_labels, evaluation_labels):
+    """No-text reference; learn the majority/prior from training labels only."""
+    train, _ = _arrays(train_labels, np.zeros(len(train_labels)))
+    target, _ = _arrays(evaluation_labels, np.zeros(len(evaluation_labels)))
+    if set(train) != {0, 1}:
+        raise ValueError("Baseline training requires both ham and spam")
+    model = DummyClassifier(strategy="prior").fit(np.zeros((len(train), 1)), train)
+    features = np.zeros((len(target), 1))
+    scores = spam_scores(model, features)
+    return {"model": "dummy_prior", "predicted_class": int(model.predict(features[:1])[0]),
+            "spam_prior": float(model.class_prior_[list(model.classes_).index(1)]),
+            **metrics(target, scores, 0.5, y_pred=model.predict(features))}
 
 
 def select_threshold(y, scores, max_fpr=0.01):

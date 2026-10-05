@@ -1,4 +1,47 @@
-# Executed validation and second review
+# Executed validation and review history
+
+## Reference review: latest checks
+
+Reviewed on 5 October 2026, starting from commit
+`bb8e308d6365984d4a07b74e0a9814651122f77e`. See
+[REFERENCE_COMPARISON.md](REFERENCE_COMPARISON.md) for the primary sources and
+the resulting corrections. The Python environment and dependency locks are
+unchanged from the implementation review below.
+
+- **70 tests passed in 12.43 seconds**, with warnings treated as pytest errors.
+  New coverage includes a train-only no-text baseline, rejection of incomplete
+  scenario grids and altered CV/summary aggregates, and running the expanded
+  verifier through the synthetic end-to-end experiment.
+- The real **full experiment completed in 75.08 seconds**: 84 candidates,
+  420 CV fits, 11 train-only refits and 360 shared attack datasets.
+- The eight existing tables (`splits`, `cv_results`, `validation_metrics`,
+  `clean_metrics`, `robustness_runs`, `robustness_summary`, `attack_manifest`,
+  `errors`) are **byte-identical** to the previous full run. All best parameters,
+  CV scores, thresholds and the frozen selected model also match exactly.
+- The additional baseline predicts ham for every test message: accuracy
+  904/1034 = 0.874275, recall/F1 = 0, FP = 0, FN = 130. Its majority and prior
+  come only from the training labels; it does not participate in model selection.
+- All **nine notebook code cells** executed in a fresh kernel with local models.
+  They also executed in a separate source-only copy made from Git's tracked and
+  unignored files, with **no joblib files present**. That copy displayed the saved
+  report and the expected instructions for enabling optional inference.
+- Notebook format validation passed. Local Jupyter emitted its TCP transport
+  warning, as in the earlier review; neither notebook run had a cell error.
+- All three regenerated figures were visually inspected: native/default and
+  validation-threshold panels, model colors, labels and legend are present.
+- The expanded verifier passed in a separate process with `--all-attacks`:
+  **all 7,920 attack rows**, 360 attack dataset hashes, 22 clean rows, 22 validation
+  rows, 2 baseline rows, 383 error rows and 396 summary rows were recomputed.
+  It also checked the 84 CV rows against their fold aggregates and selection,
+  full scenario key sets, saved artifacts, source hashes and split membership.
+  See [verification.json](../results/full/verification.json) for the machine-readable record.
+
+The full run was moved aside before regeneration, so these comparisons use the
+actual previous files. The repeat run checks reproducibility on the same fixed
+split; it is not an independent generalization estimate. No test-driven model,
+parameter, threshold or defense changes were introduced.
+
+## Earlier implementation review
 
 Local review on 5 October 2026. Base commit:
 `8a47f22ab76061b07a9ba54cbb548588d826fa41`.
@@ -54,8 +97,8 @@ python scripts/verify_results.py --run results/full --all-attacks
 
 ## Independent saved-result verification
 
-The included verifier ran in a fresh Python process. Its report is
-[verification.json](../results/full/verification.json):
+The included verifier ran in a fresh Python process. The current, expanded report is
+[verification.json](../results/full/verification.json). The earlier check covered:
 
 - All 11 artifacts and source/data/manifest hashes matched metadata.
 - Split membership and the five shared CV folds were reconstructed from configuration.

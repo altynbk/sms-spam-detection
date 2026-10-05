@@ -1,7 +1,19 @@
 import numpy as np
 import pytest
 
-from spam_detector.evaluation import attack_success_rate, metrics, predictions, select_threshold
+from spam_detector.evaluation import attack_success_rate, majority_baseline, metrics, predictions, select_threshold
+
+
+def test_baseline_learns_majority_from_train_not_evaluation():
+    # Training is mostly ham, evaluation is mostly spam: never choose using test labels.
+    result = majority_baseline([0, 0, 0, 1], [1, 1, 1, 0])
+    assert result["predicted_class"] == 0 and result["spam_prior"] == 0.25
+    assert result["accuracy"] == 0.25 and result["f1"] == result["recall"] == 0
+    assert result["roc_auc"] == 0.5 and result["average_precision"] == 0.75
+    # Do not hard-code ham when the training class distribution is reversed.
+    reversed_train = majority_baseline([1, 1, 0], [0, 0, 1])
+    assert reversed_train["predicted_class"] == 1
+    assert reversed_train["fp"] == 2 and reversed_train["fn"] == 0
 
 
 def test_counts_ranking_metrics_and_fpr():

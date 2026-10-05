@@ -7,6 +7,7 @@ import pytest
 
 from spam_detector.evaluation import metrics
 from spam_detector.train import Config, run
+from scripts.verify_results import verify
 
 
 def test_quick_end_to_end_synthetic_only(tmp_path):
@@ -43,6 +44,10 @@ def test_quick_end_to_end_synthetic_only(tmp_path):
                          y_pred=bundle.pipeline.predict(held_out.sms))
         assert native["fp"] == native_row.fp and native["fn"] == native_row.fn
     assert pd.read_csv(out / "attack_manifest.csv").changed_ham.eq(0).all()
+    verification = verify(out, data, all_attacks=True)
+    assert verification["attack_metric_rows_recomputed"] == 132
+    assert verification["baseline_metric_rows_recomputed"] == 2
+    assert verification["validation_metric_rows_recomputed"] == 22
     with pytest.raises(FileExistsError, match="overwrite"):
         run(config)
 
