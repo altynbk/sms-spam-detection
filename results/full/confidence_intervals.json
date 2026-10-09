@@ -1,0 +1,13 @@
+{
+  "method": "class-stratified whole-group percentile bootstrap",
+  "scope": "Fixed model, decision rule, split and observed class/group composition; no refitting. Excludes model-selection, training and domain-shift uncertainty. Rare errors can produce discrete or degenerate intervals.",
+  "draws": 5000,
+  "confidence": 0.95,
+  "seed": 42,
+  "source_sha256": {
+    "selection.json": "73fa4c6a53e5b5cca621e0ff04de8e611c012075f1cb9efbe35a1edc277e5375",
+    "splits.csv": "f8a07310b5815e64d559797952f6db340d61d485b664e620ecfc9e2bde210ded",
+    "errors.csv": "bb15ad481a38c7ca639e0320f9f747173ac37904e28280f2bfd4f632a190dbca",
+    "clean_metrics.csv": "36d53023ac24dc7357e8157c735309d574881ba575903ac0001f4bc40b48a757"
+  }
+}

@@ -47,3 +47,5 @@ jobs:
         run: python -m spam_detector.train --mode quick --grouping "${{ matrix.grouping }}" --jobs 2 --output "${{ runner.temp }}/sms-spam-quick"
       - name: Independently verify every quick-run attack
         run: python scripts/verify_results.py --run "${{ runner.temp }}/sms-spam-quick" --all-attacks
+      - name: Estimate conditional uncertainty from the saved predictions
+        run: python -m spam_detector.uncertainty --run "${{ runner.temp }}/sms-spam-quick" --draws 1000
