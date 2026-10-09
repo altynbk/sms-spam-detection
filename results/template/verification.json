@@ -13,7 +13,7 @@
   "validation_metric_rows_recomputed": 22,
   "baseline_metric_rows_recomputed": 2,
   "cv_rows_checked_against_folds_and_selection": 84,
-  "error_rows_recomputed": 383,
+  "error_rows_recomputed": 407,
   "summary_rows_recomputed": 396,
   "complete_scenario_key_sets_checked": true,
   "verifier_sha256": "6d2a6a8d8e0fe6e1c4a44b82abcc5b9fc06702f64546f9b1c018e8bbcbc465cf",

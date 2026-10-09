@@ -31,7 +31,7 @@ established.
 Tested in a dedicated **Python 3.12.14 environment on macOS arm64**.
 The exact runtime/test dependencies in `requirements.txt` were resolved and installed
 in that environment, not copied from an unrelated global installation. Other OS/Python
-combinations should be checked separately. GitHub Actions targets Python 3.12 on
+combinations should be checked separately. GitHub Actions tests both grouping modes with Python 3.12 on
 Ubuntu and macOS; its current results are linked in the badge above.
 
 From the repository root:
@@ -75,7 +75,7 @@ python -m jupyterlab ML_Spam_Detector.ipynb
 The committed report runs after a source-only clone using `results/full`, without
 training or model files. Its optional inference cell gives instructions if models
 are absent. After training, set `RUN = Path("results/full-new")` to inspect that run.
-All nine code cells have been executed in a fresh kernel. The separate notebook dependency lock
+All ten code cells have been executed in a fresh kernel. The separate notebook dependency lock
 was also installed and tested. Non-English strings in Unicode test cases and attack
 mappings are intentional data, not project documentation or evidence of language accuracy.
 
@@ -116,6 +116,37 @@ excluding the CSV header). No raw or normalized group crosses splits.
 Five shared `StratifiedGroupKFold` folds inside train use seed 42. Every fold fits
 its own vocabulary and IDF inside its pipeline. Group stratification only approximates
 class balance by message count.
+
+## Sensitivity to message templates
+
+The default grouping keeps case/whitespace variants together. A deterministic
+extension, `--grouping template`, also masks URLs and digit sequences in normalized
+messages longer than 30 characters. Short messages retain their original keys.
+This key is used for both holdout splitting and CV; the classifier still receives
+the original SMS. Conflicting labels in a template group raise an error.
+
+The default split contains **13 templates across splits (31 messages)**, including
+**6 test messages with a training-template counterpart**. The template split has
+**zero overlaps under this rule** and 5,137 groups. Its train/validation/test sizes
+are 3,095/1,040/1,036. Each run exports a reproducible `template_overlap.json` report
+with hashes and source row identifiers; it does not export additional message text.
+
+```bash
+python -m spam_detector.train --mode full --grouping template --jobs 2 --output results/template-new
+python scripts/verify_results.py --run results/template-new --all-attacks
+```
+
+The [template experiment](results/template/selection.json) repeats the full search
+on its own training folds and selects `linear_svc_char_no_punctuation`. Native
+predictions yield F1 **0.9531**, 2 FP and 10 FN. Its validation-selected threshold
+yields F1 **0.9288**, 11 FP and 8 FN, with test FPR **1.22%**. The empirical 1%
+validation constraint does not guarantee the same rate on test.
+
+This is an exploratory sensitivity analysis added after inspecting the original
+experiment. Membership, fitted models and the selected variant all change, so the
+F1 difference is not a causal estimate of duplicate leakage. The default choice
+remains frozen. The heuristic does not identify every paraphrase or campaign;
+an independent modern-data benchmark remains necessary for transfer claims.
 
 ## Controlled comparisons and selection
 
@@ -303,7 +334,7 @@ models; Git ignores them, so regenerate them after a source-only clone.
 | `results/historical/`, `figures/historical/` | Original saved results, clearly separated |
 | `docs/` | Original-code audit and actual validation |
 
-**70 pytest tests passed.** Coverage includes grouped split/fold isolation, conflicting
+**75 pytest tests passed.** Coverage includes grouped split/fold isolation, conflicting
 labels, zero-intensity identity, unchanged ham/ineligible characters, uppercase and
 Unicode, reproducible attacks, ASR including an empty denominator, threshold ties,
 vocabulary/IDF isolation, invalid inputs, generator inputs, joblib round trips and
@@ -344,8 +375,8 @@ The old ML experiment was **not retrained**. Historical files are retained, not 
 as a controlled before/after result. Changes in splits, grouping, search, thresholds,
 preprocessing order and software prevent attributing metric differences solely to leakage.
 
-Only one grouped split is studied. Near-duplicate templates and source/sender effects
-can remain. Modern SMS, multilingual accuracy, temporal/source transfer, adaptive attacks
+One default grouped split and one exploratory template split are studied.
+Near-duplicate templates and source/sender effects can remain. Modern SMS, multilingual accuracy, temporal/source transfer, adaptive attacks
 and attacks on ham have not been evaluated. Spam-only attacks keep FPR fixed by construction.
 Repeated attack seeds do not replace repeated independent training/evaluation splits.
 

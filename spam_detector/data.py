@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import re
 from numbers import Integral
 
 import numpy as np
@@ -11,6 +12,21 @@ from sklearn.model_selection import StratifiedGroupKFold, train_test_split
 from .preprocessing import normalized_key
 
 LABEL_MAP = {"ham": 0, "spam": 1, "0": 0, "1": 1}
+
+
+def template_key(text):
+    """A conservative, label-independent template key used only for grouping.
+
+    Mask URLs and digit sequences in messages longer than 30 normalized
+    characters. Short texts retain their original normalized key to avoid
+    grouping unrelated replies such as dates or authentication codes.
+    This heuristic does not identify every campaign or semantic paraphrase.
+    """
+    key = normalized_key(text)
+    if len(key) > 30:
+        key = re.sub(r"https?://\S+|www\.\S+", "<url>", key)
+        key = re.sub(r"\d+", "#", key)
+    return key
 
 
 def sha256_text(text):
@@ -25,7 +41,9 @@ def _label(value):
     raise ValueError(f"Invalid label {value!r}; expected ham/spam or integer 0/1")
 
 
-def prepare_data(frame):
+def prepare_data(frame, grouping="normalized"):
+    if grouping not in {"normalized", "template"}:
+        raise ValueError("grouping must be normalized or template")
     if not {"sms", "label"}.issubset(frame.columns):
         raise ValueError("Dataset must contain sms and label columns")
     if frame.empty:
@@ -41,8 +59,8 @@ def prepare_data(frame):
         raise ValueError("Dataset must contain both ham=0 and spam=1")
     df["source_row"] = np.arange(len(df))
     df["message_id"] = df.sms.map(sha256_text)
-    df["group_id"] = df.sms.map(normalized_key).map(sha256_text)
-    for column, description in [("message_id", "exact text"), ("group_id", "normalized text")]:
+    df["group_id"] = df.sms.map(template_key if grouping == "template" else normalized_key).map(sha256_text)
+    for column, description in [("message_id", "exact text"), ("group_id", f"{grouping} text")]:
         counts = df.groupby(column).label.nunique()
         conflicts = counts[counts > 1].index
         if len(conflicts):
@@ -53,20 +71,41 @@ def prepare_data(frame):
     clean = df.drop_duplicates("sms").copy().reset_index(drop=True)
     clean["source_rows"] = clean.message_id.map(source_rows).map(json.dumps)
     group_sizes = clean.groupby("group_id").size()
+    normalized_sizes = clean.sms.map(normalized_key).value_counts()
     audit = {
         "input_rows": len(df), "exact_duplicates_removed": len(df) - len(clean),
-        "deduplicated_rows": len(clean), "normalized_groups": len(group_sizes),
-        "normalized_groups_with_multiple_raw_texts": int((group_sizes > 1).sum()),
-        "additional_normalized_duplicates": int((group_sizes - 1).sum()),
+        "deduplicated_rows": len(clean), "normalized_groups": len(normalized_sizes),
+        "normalized_groups_with_multiple_raw_texts": int((normalized_sizes > 1).sum()),
+        "additional_normalized_duplicates": int((normalized_sizes - 1).sum()),
+        "grouping": grouping, "split_groups": len(group_sizes),
+        "split_groups_with_multiple_raw_texts": int((group_sizes > 1).sum()),
         "conflicting_exact_groups": 0, "conflicting_normalized_groups": 0,
         "class_counts": {str(k): int(v) for k, v in clean.label.value_counts().items()},
     }
     return clean, audit
 
 
-def load_data(path):
+def load_data(path, grouping="normalized"):
     # Preserve literal strings like "NA" and numeric-looking messages as text.
-    return prepare_data(pd.read_csv(path, dtype={"sms": str, "label": str}, keep_default_na=False))
+    return prepare_data(pd.read_csv(path, dtype={"sms": str, "label": str}, keep_default_na=False), grouping)
+
+
+def template_overlap(frame):
+    """Report template overlap without exporting SMS text or altering splits."""
+    annotated = frame.assign(template=frame.sms.map(template_key).map(sha256_text))
+    crossing = annotated.groupby("template").filter(lambda group: group.split.nunique() > 1)
+    train_keys = set(annotated.loc[annotated.split == "train", "template"])
+    test = annotated[annotated.split == "test"]
+    return {
+        "rule": "Lowercase and whitespace; mask URLs and digit runs only when normalized length > 30",
+        "crossing_templates": int(crossing.template.nunique()),
+        "crossing_messages": len(crossing),
+        "test_messages_with_train_template": int(test.template.isin(train_keys).sum()),
+        "groups": [{"template_sha256": key,
+                    "source_rows": [int(x) for x in group.source_row],
+                    "splits": group.split.tolist()}
+                   for key, group in crossing.groupby("template", sort=True)],
+    }
 
 
 def assert_disjoint(frame):

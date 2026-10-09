@@ -1,0 +1,161 @@
+{
+  "rule": "Lowercase and whitespace; mask URLs and digit runs only when normalized length > 30",
+  "crossing_templates": 13,
+  "crossing_messages": 31,
+  "test_messages_with_train_template": 6,
+  "groups": [
+    {
+      "template_sha256": "0a67a37678c3e85332e7fb6de2c61863c160309bca8c7ea4500e11c3d51facab",
+      "source_rows": [
+        1598,
+        5280
+      ],
+      "splits": [
+        "validation",
+        "test"
+      ]
+    },
+    {
+      "template_sha256": "210ac2b4bbaffca24b246cda52e59bde2aa903fe32e884f6bee8670555220c4f",
+      "source_rows": [
+        648,
+        1594,
+        4658,
+        4841
+      ],
+      "splits": [
+        "test",
+        "train",
+        "train",
+        "test"
+      ]
+    },
+    {
+      "template_sha256": "2e605b801801c280e381da1987682556498b29b3615db65e39352b44d68789a0",
+      "source_rows": [
+        879,
+        1623,
+        1880
+      ],
+      "splits": [
+        "validation",
+        "test",
+        "train"
+      ]
+    },
+    {
+      "template_sha256": "5261b5de17925ba255e55a80e1f0b79c10cd78e613315ae68faf092dabb14e51",
+      "source_rows": [
+        1853,
+        3189
+      ],
+      "splits": [
+        "validation",
+        "test"
+      ]
+    },
+    {
+      "template_sha256": "6233deeb61a8443fc687528fe6a436e72d2af2af9ac6545ddbc81e24ac868da9",
+      "source_rows": [
+        3595,
+        4386
+      ],
+      "splits": [
+        "train",
+        "test"
+      ]
+    },
+    {
+      "template_sha256": "7276692e6a863b6c0dfe697f18c2c5d5f193dcf345a1474a71e36edba1af6032",
+      "source_rows": [
+        2113,
+        3698
+      ],
+      "splits": [
+        "validation",
+        "train"
+      ]
+    },
+    {
+      "template_sha256": "76cae5e8cc81e27ee2053bcd0e75a7d2df7ddcca83dc892f6ca7455d4a40bb9c",
+      "source_rows": [
+        593,
+        4088,
+        5503
+      ],
+      "splits": [
+        "train",
+        "validation",
+        "train"
+      ]
+    },
+    {
+      "template_sha256": "7fcdded0db38797b14fde4dd5ee3b4f0eb9dc205123153ea8aea16dc1d43db11",
+      "source_rows": [
+        1502,
+        4108
+      ],
+      "splits": [
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "template_sha256": "9ba0ff028758325b7b20c41af1e940c7a5069a2ce194482dc55cada21e1851c0",
+      "source_rows": [
+        65,
+        3421
+      ],
+      "splits": [
+        "validation",
+        "train"
+      ]
+    },
+    {
+      "template_sha256": "9bc4607a9bca1b37fac0fa3fca2d0561689ddeff13505cc26309188dfbdcb928",
+      "source_rows": [
+        424,
+        2910
+      ],
+      "splits": [
+        "validation",
+        "train"
+      ]
+    },
+    {
+      "template_sha256": "9e532ed2778615966db61198e2c85065eaf352da466097e059195c29eb95d21d",
+      "source_rows": [
+        2295,
+        2941
+      ],
+      "splits": [
+        "test",
+        "train"
+      ]
+    },
+    {
+      "template_sha256": "b2b82c3e3c6bb7f380d931730392f42138bd4d249658cc13630549daeff8f808",
+      "source_rows": [
+        1252,
+        3391,
+        4297
+      ],
+      "splits": [
+        "train",
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "template_sha256": "ed549358fd205f41356593627bc8c5c0e7c410bd4464d6a69de689b3b34a87b9",
+      "source_rows": [
+        3639,
+        4673
+      ],
+      "splits": [
+        "test",
+        "train"
+      ]
+    }
+  ]
+}

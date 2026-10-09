@@ -35,7 +35,9 @@ features were recognized. The library rejects non-string inputs and empty batche
 The bundled [SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection)
 contains 5,574 rows. Exact deduplication leaves 5,171 messages and 5,159 normalized
 groups. Grouping retains punctuation and Unicode while ignoring case/whitespace.
-This does not identify every related campaign or template.
+This does not identify every related campaign or template. An additional
+`--grouping template` experiment masks URLs and digit sequences for long messages;
+its zero overlap is specific to that heuristic.
 
 | Split | Ham | Spam | Role |
 |---|---:|---:|---|
@@ -45,7 +47,8 @@ This does not identify every related campaign or template.
 
 The model was selected from 11 variants using highest mean train-CV spam F1.
 Test outcomes did not choose the variant or threshold. There was no refitting after
-threshold selection. This is a single grouped holdout, not temporal/source transfer.
+threshold selection. The default result uses a single grouped holdout. The additional template
+experiment is exploratory; neither establishes temporal/source transfer.
 
 ## Measured performance
 
@@ -89,3 +92,14 @@ the model. Prediction input should not be stored as a side effect of using the d
 For broader use, collect a separate representative evaluation set, define the
 false-positive cost and target languages, and test source/time transfer. Keep the
 current results frozen when evaluating any new model or defense.
+
+## Template sensitivity
+
+The default split contains 13 crossing templates under a URL/digit masking rule,
+including six test messages with a training counterpart. A separate full search
+with template groups eliminates those crossings and selects the char/no-punctuation
+LinearSVC. On its different test set, native predictions give F1 0.9531 (2 FP, 10 FN);
+validation tuning gives F1 0.9288 (11 FP, 8 FN, FPR 1.22%). This does not replace the
+default model or establish that one representation is universally best. The
+analysis was introduced after inspecting the default run and is not an untouched
+confirmatory evaluation. See `results/template/` and each run's template audit.

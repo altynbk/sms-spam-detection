@@ -10,14 +10,17 @@ from spam_detector.train import Config, run
 from scripts.verify_results import verify
 
 
-def test_quick_end_to_end_synthetic_only(tmp_path):
+@pytest.mark.parametrize("grouping", ["normalized", "template"])
+def test_quick_end_to_end_synthetic_only(tmp_path, grouping):
     # This verifies orchestration, not real-world model quality.
     data = tmp_path / "synthetic.csv"
-    pd.DataFrame({"sms": [f"meeting hello schedule number {i}" if i % 3 else f"FREE prize CASH offer {i}"
+    pd.DataFrame({"sms": [(f"meeting hello schedule {chr(97+i//26)}{chr(97+i%26)} number {i}" if i % 3
+                           else f"FREE prize CASH offer {chr(97+i//26)}{chr(97+i%26)} reference {i}")
                           for i in range(120)],
                   "label": [int(i % 3 == 0) for i in range(120)]}).to_csv(data, index=False)
     out = tmp_path / "run"
-    config = Config(mode="quick", data=str(data), output=str(out), repeats=1, intensities=(0, 0.3))
+    config = Config(mode="quick", data=str(data), output=str(out), repeats=1, intensities=(0, 0.3),
+                    grouping=grouping)
     metadata = run(config)
     assert metadata["status"] == "complete"
     assert len(metadata["models"]) == 11

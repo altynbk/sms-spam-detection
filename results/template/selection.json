@@ -1,0 +1,17 @@
+{
+  "selected_model": "linear_svc_char_no_punctuation",
+  "rule": "highest mean CV F1; ties by model_id alphabetically",
+  "thresholds": {
+    "nb_word_legacy": 0.254409645630534,
+    "lr_word_legacy": 0.5555846641133452,
+    "svc_word_legacy": -0.3850157593920994,
+    "rf_word_legacy": 0.29,
+    "linear_svc_word_legacy": -0.3168106624093212,
+    "linear_svc_char_legacy": -0.16467254432196032,
+    "linear_svc_word_gentle": -0.34697251707901866,
+    "linear_svc_char_gentle": -0.09152370068119386,
+    "linear_svc_word_char_gentle": -0.13201184016041578,
+    "linear_svc_char_no_punctuation": -0.17489611851251863,
+    "linear_svc_char_no_currency": -0.07393747233181847
+  }
+}

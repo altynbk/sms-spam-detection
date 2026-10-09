@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from spam_detector.data import assert_disjoint, load_data, make_cv_folds, prepare_data, split_data
+from spam_detector.data import assert_disjoint, load_data, make_cv_folds, prepare_data, split_data, template_key
 from spam_detector.preprocessing import normalized_key
 
 DATA = Path(__file__).resolve().parents[1] / "data" / "smshamspam.csv"
@@ -66,3 +66,36 @@ def test_csv_literal_na_is_a_text(tmp_path):
     path.write_text("sms,label\nNA,ham\n123,spam\n", encoding="utf-8")
     df, _ = load_data(path)
     assert df.sms.tolist() == ["NA", "123"]
+
+
+def test_template_grouping_retains_text_and_groups_changed_contact_details():
+    texts = ["Your account statement is ready. Visit https://example.com/123 or call 01234.",
+             "Your account statement is ready. Visit https://elsewhere.org/999 or call 09876.",
+             "Lunch at 12", "Lunch at 13"]
+    frame, _ = prepare_data(pd.DataFrame({"sms": texts, "label": [1, 1, 0, 0]}), "template")
+    assert frame.sms.tolist() == texts
+    assert frame.group_id.iloc[0] == frame.group_id.iloc[1]
+    assert frame.group_id.iloc[2] != frame.group_id.iloc[3]
+
+
+def test_template_label_conflict_is_not_silently_resolved():
+    texts = ["Your free prize has arrived. Call 01234 now!", "Your free prize has arrived. Call 09876 now!"]
+    with pytest.raises(ValueError, match="Conflicting labels for template text"):
+        prepare_data(pd.DataFrame({"sms": texts, "label": [0, 1]}), "template")
+
+
+def test_template_groups_do_not_cross_real_data_splits_or_cv():
+    frame, audit = load_data(DATA, "template")
+    assert audit["normalized_groups"] == 5159
+    assert audit["split_groups"] == 5137
+    split = split_data(frame)
+    assert split.assign(template=split.sms.map(template_key)).groupby("template").split.nunique().max() == 1
+    train = split[split.split == "train"]
+    folds, _ = make_cv_folds(train)
+    for fit, held in folds:
+        assert not set(train.iloc[fit].sms.map(template_key)) & set(train.iloc[held].sms.map(template_key))
+
+
+def test_unknown_grouping_rejected():
+    with pytest.raises(ValueError, match="grouping"):
+        prepare_data(pd.DataFrame(), "unknown")

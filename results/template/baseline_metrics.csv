@@ -1,0 +1,3 @@
+split,model,predicted_class,spam_prior,precision,recall,f1,accuracy,roc_auc,average_precision,tn,fp,fn,tp,fpr,n_ham,n_spam,confusion_matrix
+validation,dummy_prior,0,0.1247172859450727,0.0,0.0,0.0,0.8701923076923077,0.5,0.12980769230769232,905,0,135,0,0.0,905,135,"[[905, 0], [135, 0]]"
+test,dummy_prior,0,0.1247172859450727,0.0,0.0,0.0,0.8725868725868726,0.5,0.1274131274131274,904,0,132,0,0.0,904,132,"[[904, 0], [132, 0]]"

@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from spam_detector.attacks import attack_messages
-from spam_detector.data import assert_disjoint, load_data, make_cv_folds, split_data
+from spam_detector.data import assert_disjoint, load_data, make_cv_folds, split_data, template_overlap
 from spam_detector.evaluation import (attack_success_rate, default_threshold, majority_baseline,
                                       metrics, predictions, select_threshold)
 
@@ -89,9 +89,11 @@ def verify(run_dir, data_path, all_attacks=False):
         check(hashlib.sha256((ROOT / relative).read_bytes()).hexdigest() == digest, f"Source changed: {relative}")
     check(hashlib.sha256(Path(data_path).read_bytes()).hexdigest() == meta["dataset"]["sha256"], "Dataset changed")
     check(hashlib.sha256((out / "splits.csv").read_bytes()).hexdigest() == meta["split_manifest_sha256"], "Split file changed")
-    frame, _ = load_data(data_path)
     cfg = meta["config"]
+    frame, _ = load_data(data_path, grouping=cfg.get("grouping", "normalized"))
     generated = split_data(frame, cfg["seed"], cfg["validation_size"], cfg["test_size"])
+    check(json.loads((out / "template_overlap.json").read_text()) == template_overlap(generated),
+          "Template overlap report differs from split membership")
     manifest = pd.read_csv(out / "splits.csv")
     check(generated.message_id.tolist() == manifest.message_id.tolist(), "Message identity/order changed")
     check(generated.split.tolist() == manifest.split.tolist(), "Saved split does not match seed/config")
