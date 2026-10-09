@@ -19,7 +19,7 @@ import pandas as pd
 from sklearn.model_selection import GridSearchCV, ParameterGrid
 
 from .attacks import ATTACK_TYPES, attack_messages
-from .data import load_data, make_cv_folds, split_data
+from .data import load_data, make_cv_folds, split_data, template_overlap
 from .evaluation import (SpamModel, attack_success_rate, default_threshold, majority_baseline, metrics,
                          predictions, score_kind, select_threshold, spam_scores)
 from .modeling import experiments
@@ -33,6 +33,7 @@ class Config:
     mode: str = "full"
     data: str = "data/smshamspam.csv"
     output: str = "results/full"
+    grouping: str = "normalized"
     seed: int = 42
     validation_size: float = 0.2
     test_size: float = 0.2
@@ -129,7 +130,7 @@ def run(config):
     out = Path(config.output)
     if out.exists() and any(out.iterdir()):
         raise FileExistsError(f"Refusing to overwrite an experiment: {out}. Choose a new --output directory.")
-    frame, audit = load_data(config.data)
+    frame, audit = load_data(config.data, grouping=config.grouping)
     frame = split_data(frame, config.seed, config.validation_size, config.test_size)
     train = frame[frame.split == "train"].copy()
     validation = frame[frame.split == "validation"].copy()
@@ -141,6 +142,7 @@ def run(config):
     (out / "models").mkdir()
     manifest = frame[["source_row", "source_rows", "message_id", "group_id", "label", "split", "cv_fold"]]
     manifest.to_csv(out / "splits.csv", index=False)
+    write_json(out / "template_overlap.json", template_overlap(frame))
     dataset_sha = hashlib.sha256(Path(config.data).read_bytes()).hexdigest()
     publish_text = dataset_sha == PUBLIC_DATA_SHA256 or config.export_error_text
     specs = experiments(config.seed, config.mode == "quick")
@@ -155,7 +157,7 @@ def run(config):
                     "path": config.data, "sha256": dataset_sha, "error_text_exported": publish_text},
         "git": _revision(root), "source_sha256": _source_hashes(root), "data_audit": audit,
         "labels": {"ham": 0, "spam": 1},
-        "split_method": "Stratified unique normalized groups, 2-stage split (seed, seed+1)",
+        "split_method": f"Stratified unique {config.grouping} groups, 2-stage split (seed, seed+1)",
         "split_counts": {name: {"total": len(part), "ham": int((part.label == 0).sum()),
                                 "spam": int((part.label == 1).sum())}
                          for name, part in frame.groupby("split")},
@@ -301,6 +303,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mode", choices=["quick", "full"], default="full")
     parser.add_argument("--data", default="data/smshamspam.csv")
+    parser.add_argument("--grouping", choices=["normalized", "template"], default="normalized",
+                        help="Grouping unit shared by holdout splits and cross-validation")
     parser.add_argument("--output", default=None)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-fpr", type=float, default=0.01)
