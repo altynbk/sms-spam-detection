@@ -1,5 +1,17 @@
 # Executed validation and review history
 
+## Interactive demonstration
+
+- 95 regression, integration and application tests passed locally; dependencies
+  passed `pip check`. The app has a separate optional lock and CI job.
+- Exact LinearSVC contributions reconstruct scores for word, character and combined
+  features. Saved predictions agree with the app's inference helper.
+- Application tests cover blank/OOV input, deterministic and zero-intensity edits,
+  results controls and missing-model fallback. Loader tests reject changed model
+  bytes before unpickling and reject mismatched versions or thresholds.
+- The running browser flow was checked against the actual saved default model,
+  including the rendered decision and its reconstructed score.
+
 ## Manuscript synchronization
 
 The existing Word and PDF files now describe the current eleven-model experiment,
