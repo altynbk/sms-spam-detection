@@ -9,7 +9,13 @@ import pandas as pd
 import streamlit as st
 
 from spam_detector.attacks import obfuscate
-from spam_detector.demo import artifact_identity, inspect_message, load_verified_model
+from spam_detector.demo import (
+    MAX_ATTACK_INPUT_CHARS,
+    MAX_MESSAGE_CHARS,
+    artifact_identity,
+    inspect_message,
+    load_verified_model,
+)
 
 ROOT = Path(__file__).resolve().parent
 RUN = Path(os.environ.get("SMS_SPAM_RUN", str(ROOT / "results/full"))).resolve()
@@ -95,7 +101,7 @@ with check:
         if col.button(label):
             st.session_state["sms"] = value
     with st.form("classify"):
-        message = st.text_area("Message", key="sms", max_chars=5000, height=140,
+        message = st.text_area("Message", key="sms", max_chars=MAX_MESSAGE_CHARS, height=140,
                                placeholder="Type or paste an English message…")
         submitted = st.form_submit_button("Check message", type="primary", disabled=model is None)
     if submitted:
@@ -105,7 +111,9 @@ with check:
 with playground:
     st.subheader("Small edits, different evidence")
     st.write("Compare the same message before and after a reproducible character edit. The model and threshold stay fixed.")
-    attack_text = st.text_area("Original message", "WIN a FREE cash prize! Call now to claim your reward.", max_chars=5000, height=110)
+    attack_text = st.text_area("Original message", "WIN a FREE cash prize! Call now to claim your reward.",
+                              max_chars=MAX_ATTACK_INPUT_CHARS, height=110,
+                              help=f"Up to {MAX_ATTACK_INPUT_CHARS:,} characters, leaving room for inserted separators.")
     a, b, c = st.columns(3)
     attack = a.selectbox("Edit type", ["leet", "separators", "unicode"])
     intensity = b.slider("Edit probability", 0.0, 0.5, 0.3, 0.1)
