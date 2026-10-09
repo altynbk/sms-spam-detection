@@ -1,5 +1,13 @@
 # Executed validation and review history
 
+## Manuscript synchronization
+
+The existing Word and PDF files now describe the current eleven-model experiment,
+both grouping protocols, conditional intervals and fixed-threshold attack results.
+The bibliography corrects the publication identities for ExplainableDetector,
+SpamDam and COPS. All six rendered pages were inspected; tables are built from
+committed CSV/JSON outputs and the focused figure from the saved attack summary.
+
 ## Conditional metric uncertainty
 
 - Added class-stratified whole-group percentile intervals from fixed predictions.
@@ -118,7 +126,8 @@ experiment metadata.
   messages are in English. Unicode mappings and multilingual edge-case inputs
   remain as intentional test data; the public dataset is not translated.
 - **Scope:** this update covers code, results and English project documentation.
-  The original manuscript remains unchanged and describes the historical experiment.
+  At this stage the manuscript still described the historical experiment; it was
+  subsequently synchronized as recorded above.
 
 ## Commands actually run
 
