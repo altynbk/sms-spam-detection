@@ -11,6 +11,10 @@ from sklearn.svm import LinearSVC
 
 from .evaluation import SpamModel
 
+MAX_MESSAGE_CHARS = 5000
+# Separators can add one character at each of the n - 1 boundaries.
+MAX_ATTACK_INPUT_CHARS = (MAX_MESSAGE_CHARS + 1) // 2
+
 
 def artifact_identity(run):
     """Inspect a trusted local run; hashes detect changes, not malicious authors."""
@@ -53,8 +57,8 @@ def inspect_message(model, text):
     """
     if not isinstance(text, str) or not text.strip():
         raise ValueError("Enter a nonblank English SMS")
-    if len(text) > 5000:
-        raise ValueError("Use a message with at most 5,000 characters")
+    if len(text) > MAX_MESSAGE_CHARS:
+        raise ValueError(f"Use a message with at most {MAX_MESSAGE_CHARS:,} characters")
     features = model.pipeline[:-1].transform([text]).tocsr()
     score = float(model.score(text)[0])
     result = dict(prediction=int(model.predict(text)[0]), score=score,

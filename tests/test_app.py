@@ -6,6 +6,7 @@ import pytest
 pytest.importorskip("streamlit")
 from streamlit.testing.v1 import AppTest
 from spam_detector.evaluation import metrics
+from spam_detector.demo import MAX_ATTACK_INPUT_CHARS, MAX_MESSAGE_CHARS
 from test_demo import LABELS, TEXTS, model_run
 
 APP = Path(__file__).resolve().parents[1] / "app.py"
@@ -71,3 +72,18 @@ def test_missing_artifact_keeps_results_available(demo):
     assert app.button[3].disabled and app.button[4].disabled
     assert len(app.dataframe) > 0
     assert any("Prediction is unavailable" in info.value for info in app.info)
+
+
+def test_long_attack_input_leaves_room_for_inserted_separators(demo):
+    app = AppTest.from_file(str(APP), default_timeout=15).run()
+    assert app.text_area[0].proto.max_chars == MAX_MESSAGE_CHARS
+    assert app.text_area[1].proto.max_chars == MAX_ATTACK_INPUT_CHARS
+    original = ("FREE prize " * MAX_ATTACK_INPUT_CHARS)[:MAX_ATTACK_INPUT_CHARS]
+    app.text_area[1].input(original)
+    app.selectbox[0].set_value("separators")
+    app.slider[0].set_value(.5)
+    app.button[4].click().run()
+    assert not app.exception
+    assert len(app.code[1].value) > len(original)
+    assert not any("at most" in w.value for w in app.warning)
+    assert sum(h.value in {"Spam", "Ham"} for h in app.subheader) == 2
