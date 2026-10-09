@@ -12,6 +12,8 @@ inputs and applies the same grouping in holdout splits and cross-validation.
 - All nine baseline CSV tables and the frozen selection remained byte-identical.
 - The template run has 5,137 groups and no crossings under the declared rule.
 - All ten notebook code cells executed successfully in a fresh kernel.
+- Independent verification passed for both complete runs: 7,920 attacked metric
+  rows per protocol, every attack hash, clean/validation metrics and template audit.
 - The template study is exploratory and does not replace an external benchmark.
 
 ## Readiness and development-roadmap review
