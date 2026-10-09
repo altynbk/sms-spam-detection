@@ -6,10 +6,16 @@ Classical machine learning on the [SMS Spam Collection](https://archive.ics.uci.
 with controlled preprocessing/feature comparisons and character-level attacks.
 **Labels: ham = 0, spam = 1.** Saved models accept original SMS strings.
 
-This is a reproducible educational/portfolio study of a historical English corpus.
-It does not establish performance on modern SMS, Russian/Kazakh, mobile devices,
-or production traffic. The original NB, Logistic Regression, linear-kernel SVC,
-Random Forest and obfuscation experiment remain the foundation.
+The study compares 11 classifier, feature and preprocessing variants on a
+historical English SMS corpus. The model selected by training cross-validation
+achieves **F1 0.9531**, with **4 false positives and 8 false negatives** on the
+held-out test set. Under the separator attack at intensity 0.3, its mean spam
+recall falls from **93.85% to 60.35%**. Clean accuracy and robustness therefore
+need to be assessed together.
+
+These results describe the recorded dataset and evaluation protocol. Performance
+on modern SMS, Russian/Kazakh, mobile devices and production traffic has not been
+established.
 
 - [Executed notebook](ML_Spam_Detector.ipynb): explanation, figures and error analysis.
 - [Original-code audit](docs/AUDIT.md): confirmed issues and claims that did not hold up.
@@ -54,7 +60,7 @@ Default output directories are `results/full` and `results/quick`. A nonempty ou
 is never overwritten; choose another path for another run. Current complete results
 are in `results/full/`. Quick is a smoke check and does not replace the full study.
 
-### Why retain Jupyter?
+### Read the experiment report
 
 The notebook is the readable research report: narrative, comparisons, visualizations
 and error examples. Reusable data preparation, fitting, evaluation and inference live
@@ -69,8 +75,7 @@ python -m jupyterlab ML_Spam_Detector.ipynb
 The committed report runs after a source-only clone using `results/full`, without
 training or model files. Its optional inference cell gives instructions if models
 are absent. After training, set `RUN = Path("results/full-new")` to inspect that run.
-All nine code
-cells have been executed in a fresh kernel. The separate notebook dependency lock
+All nine code cells have been executed in a fresh kernel. The separate notebook dependency lock
 was also installed and tested. Non-English strings in Unicode test cases and attack
 mappings are intentional data, not project documentation or evidence of language accuracy.
 
