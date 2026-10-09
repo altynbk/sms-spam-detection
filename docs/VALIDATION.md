@@ -1,201 +1,93 @@
-# Executed validation and review history
+# Validation
 
-## Interactive demonstration
+Reviewed on **9 October 2026**, using Python 3.12.14 on macOS arm64 and the
+committed dependency locks. This report describes the current state; earlier
+implementation history remains in Git and the [original audit](AUDIT.md).
 
-- 95 regression, integration and application tests passed locally; dependencies
-  passed `pip check`. The app has a separate optional lock and CI job.
-- Exact LinearSVC contributions reconstruct scores for word, character and combined
-  features. Saved predictions agree with the app's inference helper.
-- Application tests cover blank/OOV input, deterministic and zero-intensity edits,
-  results controls and missing-model fallback. Loader tests reject changed model
-  bytes before unpickling and reject mismatched versions or thresholds.
-- The running browser flow was checked against the actual saved default model,
-  including the rendered decision and its reconstructed score.
+## Executed checks
 
-## Manuscript synchronization
+| Check | Result |
+|---|---|
+| Regression, integration and application suite | **96 tests passed**; warnings are errors |
+| Installed dependencies | `python -m pip check` passed |
+| Notebook | Format valid; all **11 code cells** executed in a fresh kernel without cell errors |
+| Default full experiment | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
+| Template full experiment | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
+| Conditional intervals | Both runs' 5,000-draw estimates and source hashes reproduced |
+| Manuscript | Current metrics present in the six-page PDF and four editable Word tables |
+| Repository | Local links checked; published source and result files retained |
 
-The existing Word and PDF files now describe the current eleven-model experiment,
-both grouping protocols, conditional intervals and fixed-threshold attack results.
-The bibliography corrects the publication identities for ExplainableDetector,
-SpamDam and COPS. All six rendered pages were inspected; tables are built from
-committed CSV/JSON outputs and the focused figure from the saved attack summary.
+Independent verification also reconstructs both protocols' split/CV membership,
+validation thresholds, 22 clean and 22 validation rows, two baseline rows,
+84 search-result aggregates and 396 attack-summary rows per protocol. All 383
+default and 407 template error records agree with model predictions. Dataset,
+recorded training-source and artifact hashes match. No model is fitted or
+selected using test outcomes during verification.
 
-## Conditional metric uncertainty
+Machine-readable records:
+[default verification](../results/full/verification.json),
+[template verification](../results/template/verification.json).
+The verifier checks saved CV scores and their aggregates; it does not repeat the
+420 training fits in a full search.
 
-- Added class-stratified whole-group percentile intervals from fixed predictions.
-- Regression checks cover grouped resampling, deterministic output, malformed
-  inputs and a missing error record that would otherwise inflate reported quality.
-- Both saved experiments include 5,000-draw estimates and source-table hashes.
-- All report cells executed in a fresh kernel after adding the interval tables.
-- Continuous integration also computes intervals from each real-data quick run.
+## Application and manuscript
 
-## Template sensitivity evaluation
+Inference tests check serialization, artifact changes, version/threshold mismatch
+and exact linear contributions for word, character and combined features.
+Application tests cover blank/OOV input, deterministic edits, zero-intensity
+identity, long input with inserted separators, results controls and unavailable
+models. The playground's 2,500-character source limit keeps every derived message
+within the 5,000-character inference limit.
 
-The optional `--grouping template` rule groups normalized messages longer than
-30 characters after masking URLs and digit sequences. It preserves raw model
-inputs and applies the same grouping in holdout splits and cross-validation.
+The browser flow was also exercised against the saved default model during the
+demo's validation. Predictions and reconstructed scores agreed with local
+inference. Application tests use synthetic fixtures to check behavior, not to
+estimate spam-detection accuracy.
 
-- 75 regression and integration tests passed, including template label conflicts,
-  raw-text preservation, real-data split/fold isolation and verification in both modes.
-- Both grouping modes completed the full 84-candidate, 420-fit protocol.
-- All nine baseline CSV tables and the frozen selection remained byte-identical.
-- The template run has 5,137 groups and no crossings under the declared rule.
-- All ten notebook code cells executed successfully in a fresh kernel.
-- Independent verification passed for both complete runs: 7,920 attacked metric
-  rows per protocol, every attack hash, clean/validation metrics and template audit.
-- The template study is exploratory and does not replace an external benchmark.
+The current manuscript describes both full protocols and their limitations.
+Its six rendered pages were inspected when the manuscript was synchronized.
+The present review rechecked the PDF's result text and Word table structure;
+neither file was changed.
 
-## Readiness and development-roadmap review
+## Reproduce checks locally
 
-Further review on 5 October 2026, starting from
-`6257f462a63f36a7bc7970117901e9b7c6be02de`. Re-read data validation/grouping,
-preprocessing, feature grids, attacks, evaluation, verification and input-contract
-tests. No additional calculation defect was identified in this review.
-
-- **70 tests passed in 12.52 seconds** in the existing dedicated environment.
-- `uv pip check --python <environment>/bin/python` confirmed that the 109 installed
-  runtime, test and notebook packages are compatible. This uv-created environment
-  has no pip module; the standard-venv README and GitHub setup-python workflow use pip.
-- A new quick run on the real bundled CSV completed. The verifier independently
-  recomputed **all 264 attack rows**, 12 dataset hashes, 22 clean and 22 validation
-  rows, plus baseline/error/summary tables and CV aggregates.
-- Full-run training-source hashes, all 11 saved artifact hashes and the verifier
-  hash still match the earlier complete verification record. Training code,
-  thresholds and the committed full results were not modified or regenerated.
-- Added GitHub Actions with Python 3.12 on Ubuntu/macOS: locked dependencies,
-  dependency check, pytest, a real-data quick run and all-attack verification.
-  The YAML structure and pinned official action commit references were checked.
-  Actual hosted executions are recorded in
-  [GitHub Actions](https://github.com/altynbk/sms-spam-detection/actions/workflows/tests.yml).
-- Added an English [model card](MODEL_CARD.md) and [development roadmap](ROADMAP.md),
-  based on inspected public demo implementations and official framework docs.
-  Website/API/mobile features in the roadmap are proposals, not implemented features.
-
-## Reference review
-
-Reviewed on 5 October 2026, starting from commit
-`bb8e308d6365984d4a07b74e0a9814651122f77e`. See
-[REFERENCE_COMPARISON.md](REFERENCE_COMPARISON.md) for the primary sources and
-the resulting corrections. The Python environment and dependency locks are
-unchanged from the implementation review below.
-
-- **70 tests passed in 12.43 seconds**, with warnings treated as pytest errors.
-  New coverage includes a train-only no-text baseline, rejection of incomplete
-  scenario grids and altered CV/summary aggregates, and running the expanded
-  verifier through the synthetic end-to-end experiment.
-- The real **full experiment completed in 75.08 seconds**: 84 candidates,
-  420 CV fits, 11 train-only refits and 360 shared attack datasets.
-- The eight existing tables (`splits`, `cv_results`, `validation_metrics`,
-  `clean_metrics`, `robustness_runs`, `robustness_summary`, `attack_manifest`,
-  `errors`) are **byte-identical** to the previous full run. All best parameters,
-  CV scores, thresholds and the frozen selected model also match exactly.
-- The additional baseline predicts ham for every test message: accuracy
-  904/1034 = 0.874275, recall/F1 = 0, FP = 0, FN = 130. Its majority and prior
-  come only from the training labels; it does not participate in model selection.
-- All **nine notebook code cells** executed in a fresh kernel with local models.
-  They also executed in a separate source-only copy made from Git's tracked and
-  unignored files, with **no joblib files present**. That copy displayed the saved
-  report and the expected instructions for enabling optional inference.
-- Notebook format validation passed. Local Jupyter emitted its TCP transport
-  warning, as in the earlier review; neither notebook run had a cell error.
-- All three regenerated figures were visually inspected: native/default and
-  validation-threshold panels, model colors, labels and legend are present.
-- The expanded verifier passed in a separate process with `--all-attacks`:
-  **all 7,920 attack rows**, 360 attack dataset hashes, 22 clean rows, 22 validation
-  rows, 2 baseline rows, 383 error rows and 396 summary rows were recomputed.
-  It also checked the 84 CV rows against their fold aggregates and selection,
-  full scenario key sets, saved artifacts, source hashes and split membership.
-  See [verification.json](../results/full/verification.json) for the machine-readable record.
-
-The full run was moved aside before regeneration, so these comparisons use the
-actual previous files. The repeat run checks reproducibility on the same fixed
-split; it is not an independent generalization estimate. No test-driven model,
-parameter, threshold or defense changes were introduced.
-
-## Earlier implementation review
-
-Local review on 5 October 2026. Base commit:
-`8a47f22ab76061b07a9ba54cbb548588d826fa41`.
-The checks below were completed locally before committing the implementation.
-Python 3.12.14, macOS arm64; exact packages are recorded in the lock files and
-experiment metadata.
-
-## Review findings and fixes
-
-- **Native default decisions:** the initial implementation reported default
-  results using `score >= 0.5`. Random Forest's native tie-breaking chooses ham
-  when both class probabilities are 0.5. This affected one clean-test prediction.
-  Default-mode evaluation now uses `pipeline.predict`, matching CV and native
-  inference; tuned decisions still use the explicitly defined `>=` rule.
-- **Generator inputs:** TransformerMixin called fit and transform on the same
-  iterable; fit consumed a one-shot generator. TextCleaner now materializes it
-  once in fit_transform. A regression test verifies fitting equivalence.
-- **Malformed attack grids:** empty/duplicate attacks or intensities now fail
-  before data access or model training.
-- **Reproducible verification:** the former scratch verification was replaced
-  by `scripts/verify_results.py`, an included tool with explicit checks and no fitting.
-- **Language:** README, audit, validation report and notebook narrative/output
-  messages are in English. Unicode mappings and multilingual edge-case inputs
-  remain as intentional test data; the public dataset is not translated.
-- **Scope:** this update covers code, results and English project documentation.
-  At this stage the manuscript still described the historical experiment; it was
-  subsequently synchronized as recorded above.
-
-## Commands actually run
-
-Commands below use `python` as shorthand for the dedicated environment's executable.
-Earlier result directories were retained outside the deliverable as comparison evidence;
-new full/quick directories were generated without changing seed, grids or selection rules.
+With the environment active:
 
 ```bash
 python -m pytest -q
-python -m spam_detector.train --mode full --jobs 2 --output results/full
-python -m spam_detector.train --mode quick --jobs 2 --output results/quick
+python -m pip check
+
+# Requires the original matching local model artifacts.
 python scripts/verify_results.py --run results/full --all-attacks
+python scripts/verify_results.py --run results/template --all-attacks
+
+# Uses only saved prediction/error tables; no model artifacts needed.
+python -m spam_detector.uncertainty --run results/full
+python -m spam_detector.uncertainty --run results/template
 ```
 
-- **61 passed in 11.34 seconds**, with Python warnings treated as pytest errors.
-  These include fresh-process serialization checks for all 11 model variants and
-  the new generator/default-tie/configuration regressions.
-- Full: 11 variants, 84 parameter combinations, 420 CV fits and 11 train-only refits;
-  360 shared attacked datasets and 7,920 result rows.
-- Quick: real bundled CSV, 11 variants, 5 folds, one candidate per variant,
-  2 intensities × 2 seeds × 3 scenarios, 264 result rows.
-- All nine English notebook code cells executed through nbclient in a fresh kernel;
-  nbformat validation passed and there were no cell error outputs.
-- The local Jupyter kernel emitted a transport warning about unencrypted TCP.
-  It was not suppressed and did not cause a notebook execution failure.
-- No Python warnings/errors were found in the full/quick training logs.
+After a fresh clone, model binaries are absent. Follow the
+[reproduction commands](../README.md#reproduce-the-experiments) to train into
+`results/local/`, then verify those new directories. Never train over a completed
+published run.
 
-## Independent saved-result verification
+## GitHub checks
 
-The included verifier ran in a fresh Python process. The current, expanded report is
-[verification.json](../results/full/verification.json). The earlier check covered:
+[Tests and reproducibility](https://github.com/altynbk/sms-spam-detection/actions/workflows/tests.yml)
+runs on pull requests, pushes to `main` and manual dispatch. Four Python 3.12 jobs
+cover Ubuntu/macOS and normalized/template grouping. Each checks dependencies,
+runs core tests, trains a real-data quick experiment in a temporary directory,
+independently verifies all 264 attack rows and computes conditional intervals.
+A fifth job installs the optional app lock and tests the interactive flows.
 
-- All 11 artifacts and source/data/manifest hashes matched metadata.
-- Split membership and the five shared CV folds were reconstructed from configuration.
-- Every tuned threshold was recomputed from validation and matched exactly.
-- All 22 clean result rows were recomputed, including confusion matrices and ranking metrics.
-- Every one of the 360 raw attacked datasets reproduced its saved SHA-256 and changed-message counts.
-- **Every one of the 7,920 attacked result rows was independently recomputed** by
-  passing the entire raw attacked batch through each loaded pipeline, bypassing
-  the training runner's unchanged-ham score cache.
-- FP counts remained constant under spam-only attacks; ASR numerators/denominators,
-  zero-intensity identity and fixed thresholds were verified.
+All five checks are required before merging to `main`. Core-only jobs skip the
+optional application module; the dedicated app job exercises it. Hosted run
+status and logs are available at the workflow link above.
 
-The verification did not train models or choose parameters using test results.
-After the code corrections, the selected model, all 11 best parameter dictionaries,
-all best CV scores and all validation thresholds matched the previous run exactly.
-Tuned clean metrics also matched. The corrected RF native-default confusion matrix
-is `[[902, 2], [24, 106]]`, rather than the initial explicit-0.5 table's
-`[[901, 3], [24, 106]]`. This is a decision-rule correction, not a model improvement.
+## Scope
 
-## Readiness judgment
-
-The implementation and English analysis are suitable for review as a reproducible
-educational/portfolio project. Keep Jupyter for narrative and the Python package
-for reusable logic; a rewrite is not justified by the findings.
-
-Claims about new languages, current SMS, on-device latency or real-world robustness
-need separate evidence. The existing historical manuscript is outside the scope of
-this code and documentation update.
+Recomputation establishes consistency of the recorded experiment. The intervals
+condition on fitted models and observed groups; attack-seed variation does not
+measure training uncertainty. The template study is exploratory. None of these
+checks establishes accuracy on new languages, current SMS or independent sources.
+See the [model card](MODEL_CARD.md) and [research priorities](ROADMAP.md).

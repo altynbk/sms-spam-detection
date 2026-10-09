@@ -30,7 +30,7 @@ and [attack directory](https://github.com/ChaseSecurity/SpamDam/tree/main/SSD_An
 1. **Fresh-clone notebook failure:** the previous introduction tried to train into
    the populated `results/full` directory, and the last cell unconditionally loaded
    an ignored model file. The report now works with the committed tables/figures;
-   optional inference explains how to create `results/full-new` and switch `RUN`.
+   optional inference explains how to create `results/local/full` and switch `RUN`.
    The README inference path now agrees with that command.
 2. **Missing class-imbalance reference:** `baseline_metrics.csv` reports a
    `DummyClassifier(strategy="prior")` fitted from training labels only. It is

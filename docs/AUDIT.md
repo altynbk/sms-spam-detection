@@ -63,4 +63,4 @@ software versions, and the attack-before-preprocessing order also changed.
 Controlled comparisons are made within the new shared protocol.
 At the time of this audit, the DOCX/PDF described the historical experiment.
 They were subsequently updated in place to match the current protocol, template
-sensitivity and conditional uncertainty reports; see `docs/VALIDATION.md`.
+sensitivity and conditional uncertainty reports; see the [current validation](VALIDATION.md).
