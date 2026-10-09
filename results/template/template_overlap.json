@@ -1,0 +1,7 @@
+{
+  "rule": "Lowercase and whitespace; mask URLs and digit runs only when normalized length > 30",
+  "crossing_templates": 0,
+  "crossing_messages": 0,
+  "test_messages_with_train_template": 0,
+  "groups": []
+}

@@ -1,5 +1,19 @@
 # Executed validation and review history
 
+## Template sensitivity evaluation
+
+The optional `--grouping template` rule groups normalized messages longer than
+30 characters after masking URLs and digit sequences. It preserves raw model
+inputs and applies the same grouping in holdout splits and cross-validation.
+
+- 75 regression and integration tests passed, including template label conflicts,
+  raw-text preservation, real-data split/fold isolation and verification in both modes.
+- Both grouping modes completed the full 84-candidate, 420-fit protocol.
+- All nine baseline CSV tables and the frozen selection remained byte-identical.
+- The template run has 5,137 groups and no crossings under the declared rule.
+- All ten notebook code cells executed successfully in a fresh kernel.
+- The template study is exploratory and does not replace an external benchmark.
+
 ## Readiness and development-roadmap review
 
 Further review on 5 October 2026, starting from

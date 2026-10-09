@@ -1,8 +1,8 @@
 {
   "mode": "full",
   "data": "data/smshamspam.csv",
-  "output": "/tmp/sms-full-refresh-20261009",
-  "grouping": "normalized",
+  "output": "results/template",
+  "grouping": "template",
   "seed": 42,
   "validation_size": 0.2,
   "test_size": 0.2,

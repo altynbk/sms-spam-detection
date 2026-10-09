@@ -1,0 +1,815 @@
+model,classifier,feature_type,preprocessing,threshold_mode,threshold,message_id,source_row,text,label,prediction,score,score_kind,error_type
+nb_word_legacy,nb,word,legacy,default,0.5,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.5209900601936162,probability,FP
+nb_word_legacy,nb,word,legacy,default,0.5,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,0.10777252077014857,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,797a2b0ec453a069a705b9722fdd70ea145176d05411ab139e2582708c6f5bef,943,"How about getting in touch with folks waiting for company? Just txt back your NAME and AGE to opt in! Enjoy the community (150p/SMS)
+",1,0,0.41906814674766324,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.07420532170828756,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.13025327448710258,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,0.011938585322769554,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,0.2575600511972627,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,0.08237582745493878,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.5125116105133913,probability,FP
+nb_word_legacy,nb,word,legacy,default,0.5,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,0.26956001347950914,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,0.011760958485731353,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,0.0012140834858106121,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,0.32412309551417506,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,0.03767625195841484,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,980ae05b27687c97ef65a219973b310c20d8198b2b8eec19ce6d1d297cb3db44,4475,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min
+",1,0,0.2693102055139109,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,0.03328283528264295,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,6cb354a44694597c6774e28ce8ac59714388f4e08977a01bf4d82e31b4031ad7,4862,"Nokia phone is lovly..
+",0,1,0.8774342402012936,probability,FP
+nb_word_legacy,nb,word,legacy,default,0.5,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,0.08641001603311621,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,589f7e864140d25bbb861d83365d7b119658cbf8b646c7f9f0aec6fb94d66f50,5030,"I'd like to tell you my deepest darkest fantasies. Call me 09094646631 just 60p/min. To stop texts call 08712460324 (nat rate)
+",1,0,0.484705091455483,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.008861769090882215,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,0.11690779650829695,probability,FN
+nb_word_legacy,nb,word,legacy,default,0.5,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.21855049285742154,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.5209900601936162,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,0.10777252077014857,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.07420532170828756,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.13025327448710258,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,0.011938585322769554,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,0.08237582745493878,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,0.3624592486381915,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.5125116105133913,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,0.011760958485731353,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,3273c9ff5158102dca820b758abe5a105399df09325f84e795f9560c087c8df9,2928,"Ok... U enjoy ur shows...
+",0,1,0.333182172532554,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,0.0012140834858106121,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,d5248cc8c69260ecc5c16ae5df7bda904a1153452acd16f585e81361a955d873,3890,"Unlimited texts. Limited minutes.
+",0,1,0.46098117738507816,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,0.03767625195841484,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,0.46195945860128873,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,0.03328283528264295,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,6cb354a44694597c6774e28ce8ac59714388f4e08977a01bf4d82e31b4031ad7,4862,"Nokia phone is lovly..
+",0,1,0.8774342402012936,probability,FP
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,0.08641001603311621,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.008861769090882215,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,0.11690779650829695,probability,FN
+nb_word_legacy,nb,word,legacy,validation,0.254409645630534,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.21855049285742154,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.8000482076242492,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.7084097847120617,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,c9561baaec4278a78ecc2aff5fff33a5788cfeac3a1baab7005fff1f3e38ff6e,1425,"Yes.. now only saw your message..
+",0,1,0.5478656202311082,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.48325754062285925,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.4122968919573479,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,0.3471874627086791,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.618096004002915,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.613795156532916,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,27349a26edad7fe9a3286db146cd058d9f1b88c78b5bae7f3c1f1e36cbacca1c,2683,"I got a call from a landline number. . . I am asked to come to anna nagar . . . I will go in the afternoon
+",0,1,0.5444548939860794,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,0.41233401575347073,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,0.3226581656682832,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,0.47674040248434235,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,0.07597861791592891,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,925aa8a5008e7d8e6eea73ab6479e49b96514bb026260bff74f85d3581ef5bb0,3367,"I am waiting for your call sir.
+",0,1,0.578412068621438,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,76ac46570a470881613928025ef532dd46fd96cef5118f93d1defa3c794c29a5,3603,"Cps is causing the outages to conserve energy.
+",0,1,0.5792687837068762,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,0.799219586296656,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,01d7b7d951426c1a39ad2683e91685b9d4f2bb260d483954cb6a61f359926727,3824,"Please protect yourself from e-threats. SIB never asks for sensitive information like Passwords,ATM/SMS PIN thru email. Never share your password with anybody.
+",0,1,0.5094126079940238,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,0.3764942819570763,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,980ae05b27687c97ef65a219973b310c20d8198b2b8eec19ce6d1d297cb3db44,4475,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min
+",1,0,0.49776944214946234,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,0.5225082751217422,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,0.4002115616193239,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,5a75b1277b6ba03b4fae6c84896398427b8b8294c766276b569388bbf0890511,5096,"Hi Shanil,Rakhesh here.thanks,i have exchanged the uncut diamond stuff.leaving back. Excellent service by Dino and Prem.
+",0,1,0.5902351087506972,probability,FP
+lr_word_legacy,lr,word,legacy,default,0.5,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.3358132752849777,probability,FN
+lr_word_legacy,lr,word,legacy,default,0.5,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.2604174457192941,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.8000482076242492,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,0.5361797723940815,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.7084097847120617,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.48325754062285925,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.4122968919573479,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,0.3471874627086791,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.618096004002915,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,962137bb83d5903777b6331d5a97595336b2fa53411b4edccd69811cc8fa09ca,1895,"FreeMsg Hey U, i just got 1 of these video/pic fones, reply WILD to this txt & ill send U my pics, hurry up Im so bored at work xxx (18 150p/rcvd STOP2stop)
+",1,0,0.521921459862907,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.613795156532916,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,0.41233401575347073,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,0.3226581656682832,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,0.47674040248434235,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,0.07597861791592891,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,925aa8a5008e7d8e6eea73ab6479e49b96514bb026260bff74f85d3581ef5bb0,3367,"I am waiting for your call sir.
+",0,1,0.578412068621438,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,76ac46570a470881613928025ef532dd46fd96cef5118f93d1defa3c794c29a5,3603,"Cps is causing the outages to conserve energy.
+",0,1,0.5792687837068762,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,0.799219586296656,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,0.3764942819570763,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,980ae05b27687c97ef65a219973b310c20d8198b2b8eec19ce6d1d297cb3db44,4475,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min
+",1,0,0.49776944214946234,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,0.4002115616193239,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,5a75b1277b6ba03b4fae6c84896398427b8b8294c766276b569388bbf0890511,5096,"Hi Shanil,Rakhesh here.thanks,i have exchanged the uncut diamond stuff.leaving back. Excellent service by Dino and Prem.
+",0,1,0.5902351087506972,probability,FP
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.3358132752849777,probability,FN
+lr_word_legacy,lr,word,legacy,validation,0.5555846641133452,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.2604174457192941,probability,FN
+svc_word_legacy,svc,word,legacy,default,0.0,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.05810992265933679,decision_function,FP
+svc_word_legacy,svc,word,legacy,default,0.0,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,-0.06425380679698689,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,797a2b0ec453a069a705b9722fdd70ea145176d05411ab139e2582708c6f5bef,943,"How about getting in touch with folks waiting for company? Just txt back your NAME and AGE to opt in! Enjoy the community (150p/SMS)
+",1,0,-0.040553756461045976,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,46ba070371eaa3cf055bf9bb8829daf4cef58d842542c9756a1798d56bbfba83,1263,"Hungry gay guys feeling hungry and up 4 it, now. Call 08718730555 just 10p/min. To stop texts call 08712460324 (10p/min)
+",1,0,-0.0037812110567678747,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,-0.2571823305562456,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.35557931374193996,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-1.1145652578655456,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.13613481557909013,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.06936677022831927,decision_function,FP
+svc_word_legacy,svc,word,legacy,default,0.0,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.2339756676963588,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.5734135819161432,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.05660407078419605,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.4582248152012554,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.6985565152639474,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,980ae05b27687c97ef65a219973b310c20d8198b2b8eec19ce6d1d297cb3db44,4475,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min
+",1,0,-0.19265514552883112,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,-0.2445030716176867,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,-0.5837760954968492,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,589f7e864140d25bbb861d83365d7b119658cbf8b646c7f9f0aec6fb94d66f50,5030,"I'd like to tell you my deepest darkest fantasies. Call me 09094646631 just 60p/min. To stop texts call 08712460324 (nat rate)
+",1,0,-0.24841523652302178,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.8341194094523402,decision_function,FN
+svc_word_legacy,svc,word,legacy,default,0.0,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.7337251618014541,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,013b53c20527a45d846d4ecfe3ebb97f60acda0fb7d70889ac422bfa8dfb5791,295,"I accidentally deleted the message. Resend please.
+",0,1,-0.35842803671489487,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.05810992265933679,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,-0.06299083070273603,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-1.1145652578655456,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,-0.3147762230381683,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,-0.1854747854180927,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.06936677022831927,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.5734135819161432,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.4582248152012554,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,6ce4d13b831f2bbdf32aea936a25c6d73b2ed8cf229902c04d432b947501e890,3536,"I'm at home. Please call
+",0,1,-0.29192328678557,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,-0.3640882324556082,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.6985565152639474,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,-0.5837760954968492,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,5a75b1277b6ba03b4fae6c84896398427b8b8294c766276b569388bbf0890511,5096,"Hi Shanil,Rakhesh here.thanks,i have exchanged the uncut diamond stuff.leaving back. Excellent service by Dino and Prem.
+",0,1,-0.03375766252942203,decision_function,FP
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.8341194094523402,decision_function,FN
+svc_word_legacy,svc,word,legacy,validation,-0.3850157593920994,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.7337251618014541,decision_function,FN
+rf_word_legacy,rf,word,legacy,default,0.5,92279e0a0838dc43f073017a747da6311482f5329bd536459363fcaf0d0fcdba,368,"Here is your discount code RP176781. To stop further messages reply stop. www.regalportfolio.co.uk. Customer Services 08717205546
+",1,0,0.49,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,0.45,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,72f56b9626f7437f84521f19a09835c32db3157f90a693c903e5ba906367a1ea,823,"SMSSERVICES. for yourinclusive text credits, pls goto www.comuk.net login= 3qxj9 unsubscribe with STOP, no extra charge. help 08702840625.COMUK. 220-CM2 9AE
+",1,0,0.43,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,46ba070371eaa3cf055bf9bb8829daf4cef58d842542c9756a1798d56bbfba83,1263,"Hungry gay guys feeling hungry and up 4 it, now. Call 08718730555 just 10p/min. To stop texts call 08712460324 (10p/min)
+",1,0,0.38,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.25,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,0.07,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,4f9cf633b7199221e17c7155768ed61d0e74a1ae2acbd8897fc78466c44092f7,1777,"Call FREEPHONE 0800 542 0578 now!
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,0.31,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,15997697b705a2c38303551c0c80566bc2fb79d468bf8b05c9e6d41642f727dc,2003,"TheMob>Yo yo yo-Here comes a new selection of hot downloads for our members to get for FREE! Just click & open the next link sent to ur fone...
+",1,0,0.49,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,522d8a240e69a2e365df3b3d8afad20553a6e4bb09ded9d29070a8a97b048607,2313,"tddnewsletter@emc1.co.uk (More games from TheDailyDraw) Dear Helen, Dozens of Free Games - with great prizesWith..
+",1,0,0.43166666666666664,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,0.11,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,0.36,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,0.0,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,0.09,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,2c102816287a95d3ebcc075cee3de960d8fd560f1f9d66c0603055b190bb486e,3422,"Welcome! Please reply with your AGE and GENDER to begin. e.g 24M
+",1,0,0.34,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,417804cfa65eb791efad3ec3219187986186d5a680683662e94e3629c98a1a64,3862,"Free Msg: Ringtone!From: http://tms. widelive.com/index. wml?id=1b6a5ecef91ff9*37819&first=true18:0430-JUL-05
+",1,0,0.1260388877628008,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,0.2,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,c5dfbdbbe18f5f9403a0275b1910df5bbadb7e08412c00c700b6d57e1ca334f3,4102,"GSOH? Good with SPAM the ladies?U could b a male gigolo? 2 join the uk's fastest growing mens club reply ONCALL. mjzgroup. 08714342399.2stop reply STOP. msg@£1.50rcvd
+",1,0,0.47,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,54febcbaa565a9f509ba52e580aef215b5164fdd756824e8ce9d3f14ce96eb19,4329,"Congrats! 2 mobile 3G Videophones R yours. call 09061744553 now! videochat wid ur mates, play java games, Dload polyH music, noline rentl. bx420. ip4. 5we. 150pm
+",1,0,0.5,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,0.46,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,2df636ebe3740f68a313b95e415d7da2a732b2c9e1dc962ca82ffffaed8ed8f0,4725,"FREE GAME. Get Rayman Golf 4 FREE from the O2 Games Arcade. 1st get UR games settings. Reply POST, then save & activ8. Press 0 key for Arcade. Termsapply
+",1,0,0.46,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,0.1,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,589f7e864140d25bbb861d83365d7b119658cbf8b646c7f9f0aec6fb94d66f50,5030,"I'd like to tell you my deepest darkest fantasies. Call me 09094646631 just 60p/min. To stop texts call 08712460324 (nat rate)
+",1,0,0.41,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,aac19bc50324de6148308b877a5132b2ea52c7c0282f5e3da3bf1dff77a35088,5068,"83039 62735=£450 UK Break AccommodationVouchers terms & conditions apply. 2 claim you mustprovide your claim number which is 15541 
+",1,0,0.48,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.1,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,0.47,probability,FN
+rf_word_legacy,rf,word,legacy,default,0.5,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.18,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,25500e026c633fb772dff67c83a3fdc488cce7d201ab0f17377b4a1299364a1d,822,"On the road so cant txt
+",0,1,0.4,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,1516ae2d70b4e5d84cdab440832299aec524138360aade6eaae9dff3c3d307a5,1056,"I'm at work. Please call
+",0,1,0.41,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,0.25,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,0.07,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,4f9cf633b7199221e17c7155768ed61d0e74a1ae2acbd8897fc78466c44092f7,1777,"Call FREEPHONE 0800 542 0578 now!
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.46,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,27349a26edad7fe9a3286db146cd058d9f1b88c78b5bae7f3c1f1e36cbacca1c,2683,"I got a call from a landline number. . . I am asked to come to anna nagar . . . I will go in the afternoon
+",0,1,0.32,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,0.16,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,0.11,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,0.0,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,0.09,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,6ce4d13b831f2bbdf32aea936a25c6d73b2ed8cf229902c04d432b947501e890,3536,"I'm at home. Please call
+",0,1,0.38,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,0.42,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,f754cacaa8f3df440a7a2580ccee8d9e3c8eb8475563a27deb7c3bdc9f5d7d52,3738,"Plz note: if anyone calling from a mobile Co. &amp; asks u to type # &lt;#&gt;  or # &lt;#&gt; . Do not do so. Disconnect the call,coz it iz an attempt of 'terrorist' to make use of the sim card no. Itz confirmd by nokia n motorola n has been verified by CNN IBN.
+",0,1,0.41,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,c07f856121c970f0fc527def1cd41f2955a1ccd9989558fff6af70af0bef07a0,3832,"Let's pool our money together and buy a bunch of lotto tickets. If we win I get &lt;#&gt; % u get &lt;#&gt; %. Deal?
+",0,1,0.37,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,417804cfa65eb791efad3ec3219187986186d5a680683662e94e3629c98a1a64,3862,"Free Msg: Ringtone!From: http://tms. widelive.com/index. wml?id=1b6a5ecef91ff9*37819&first=true18:0430-JUL-05
+",1,0,0.1260388877628008,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,db08462c065dde165947cc3f097398b883bc99c11fc7ff3cba6901eb1d838163,4035,"Wot u up 2? Thout u were gonna call me!! Txt bak luv K
+",0,1,0.31,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,0.2,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,6cb354a44694597c6774e28ce8ac59714388f4e08977a01bf4d82e31b4031ad7,4862,"Nokia phone is lovly..
+",0,1,0.29216374269005846,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,0.1,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,5a75b1277b6ba03b4fae6c84896398427b8b8294c766276b569388bbf0890511,5096,"Hi Shanil,Rakhesh here.thanks,i have exchanged the uncut diamond stuff.leaving back. Excellent service by Dino and Prem.
+",0,1,0.46,probability,FP
+rf_word_legacy,rf,word,legacy,validation,0.29,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,0.1,probability,FN
+rf_word_legacy,rf,word,legacy,validation,0.29,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,0.18,probability,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.2310576151063447,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,-0.010223378072739098,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,46ba070371eaa3cf055bf9bb8829daf4cef58d842542c9756a1798d56bbfba83,1263,"Hungry gay guys feeling hungry and up 4 it, now. Call 08718730555 just 10p/min. To stop texts call 08712460324 (10p/min)
+",1,0,-0.04714420387409579,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.023274152986241914,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,-0.03953008704117189,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.2775313511206373,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.884941279031076,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.19482885054947963,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.16852855148826273,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.2692837183351917,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.4593721390480686,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.06784918095986725,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.3193974832617714,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.609268333289074,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,980ae05b27687c97ef65a219973b310c20d8198b2b8eec19ce6d1d297cb3db44,4475,"Want explicit SEX in 30 secs? Ring 02073162414 now! Costs 20p/min
+",1,0,-0.05180914358886812,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,-0.3409983429675605,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,-0.4270372948899807,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,589f7e864140d25bbb861d83365d7b119658cbf8b646c7f9f0aec6fb94d66f50,5030,"I'd like to tell you my deepest darkest fantasies. Call me 09094646631 just 60p/min. To stop texts call 08712460324 (nat rate)
+",1,0,-0.15949133263922732,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.7410224993771077,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.08190604652474254,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,default,0.0,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.7227888615445377,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,0.2310576151063447,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.023274152986241914,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.884941279031076,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,-0.19988671276628855,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,-0.21210298156700413,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.16852855148826273,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,27349a26edad7fe9a3286db146cd058d9f1b88c78b5bae7f3c1f1e36cbacca1c,2683,"I got a call from a landline number. . . I am asked to come to anna nagar . . . I will go in the afternoon
+",0,1,-0.31314679378901167,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.4593721390480686,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.3193974832617714,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,-0.2754218026101236,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.609268333289074,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,-0.3409983429675605,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,-0.4270372948899807,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,5a75b1277b6ba03b4fae6c84896398427b8b8294c766276b569388bbf0890511,5096,"Hi Shanil,Rakhesh here.thanks,i have exchanged the uncut diamond stuff.leaving back. Excellent service by Dino and Prem.
+",0,1,-0.0880966229887401,decision_function,FP
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.7410224993771077,decision_function,FN
+linear_svc_word_legacy,linear_svc,word,legacy,validation,-0.3168106624093212,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.7227888615445377,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.3754580666254965,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,d57433152360d2fbb5df364e516dc874afd6fcc18cf7589eee8ec6320a979af2,1318,"Win the newest “Harry Potter and the Order of the Phoenix (Book 5) reply HARRY, answer 5 questions - chance to be the first among readers!
+",1,0,-0.012341161585492477,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.26578182553099994,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.5808999893663394,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.1635098195569662,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.4928587485575502,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.9941583236437277,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.487257360808636,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,-0.27082818367316097,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.6679281352372778,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,-0.08579778942108418,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.3252638531652281,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,default,0.0,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.3763878367109639,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,-0.09116135850380092,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.3754580666254965,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,c9561baaec4278a78ecc2aff5fff33a5788cfeac3a1baab7005fff1f3e38ff6e,1425,"Yes.. now only saw your message..
+",0,1,-0.03399811413862963,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.26578182553099994,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.5808999893663394,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,-0.09604990107060929,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,-0.04320476778433746,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,e706f2fda1bba2942d565a27d9a29be0cf9a5f9adc861a528788581ab5e2ebf4,2754,"Derp. Which is worse, a dude who always wants to party or a dude who files a complaint about the three drug abusers he lives with
+",0,1,-0.07532730775021412,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.4928587485575502,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.9941583236437277,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.487257360808636,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,-0.27082818367316097,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.6679281352372778,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,61120dec1a52ea69c0ec472121694a8875c750cf922d1545cacd44f9e915f806,4393,"what are your new years plans?
+",0,1,-0.14498789157806247,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,-0.10314747347700925,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,9f5ee93c0dc712c970438f184f3e37882edddc5c64ef431c4aeb09738d4c5e1e,5307,"""Hi missed your Call and my mumHas beendropping red wine all over theplace! what is your adress?""
+",0,1,-0.06786840021961438,decision_function,FP
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.3252638531652281,decision_function,FN
+linear_svc_char_legacy,linear_svc,char,legacy,validation,-0.16467254432196032,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.3763878367109639,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,d24c4d2b8ec90d59b75606f1715bf28c876b1ac7778e4fba396031218076fcb0,684,"Hi I'm sue. I am 20 years old and work as a lapdancer. I love sex. Text me live - I'm i my bedroom now. text SUE to 89555. By TextOperator G2 1DA 150ppmsg 18+
+",1,0,-0.025157589007161696,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,fbf56d2dbaea03359502b85e704803c2e4abf44d8ec86a5dde5157bd3f088b63,1458,"CLAIRE here am havin borin time & am now alone U wanna cum over 2nite? Chat now 09099725823 hope 2 C U Luv CLAIRE xx Calls£1/minmoremobsEMSPOBox45PO139WA
+",1,0,-0.15672554778540893,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.7321943270453535,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.17773105269070388,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.2386818217147606,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.4451151422022697,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.745001264783341,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,497ac7b0e223e53208906c00c1dedb2be34759ba20f6845c9513edb337ede306,2915,"Sorry! U can not unsubscribe yet. THE MOB offer package has a min term of 54 weeks> pls resubmit request after expiry. Reply THEMOB HELP 4 more info
+",1,0,-0.12636262919620345,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.230721779104154,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.659328951832785,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,-0.44865141404086495,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.6579325279858856,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,default,0.0,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.7454945788274736,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,-0.2881221509945181,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,1516ae2d70b4e5d84cdab440832299aec524138360aade6eaae9dff3c3d307a5,1056,"I'm at work. Please call
+",0,1,-0.20278371296491926,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,-0.045660829726675733,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.7321943270453535,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,-0.2590535534922662,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,-0.15043496610760976,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.2386818217147606,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,27349a26edad7fe9a3286db146cd058d9f1b88c78b5bae7f3c1f1e36cbacca1c,2683,"I got a call from a landline number. . . I am asked to come to anna nagar . . . I will go in the afternoon
+",0,1,-0.2911869188842845,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.4451151422022697,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.745001264783341,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.230721779104154,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,6ce4d13b831f2bbdf32aea936a25c6d73b2ed8cf229902c04d432b947501e890,3536,"I'm at home. Please call
+",0,1,-0.07916440789909218,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,-0.27557217511731924,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,db08462c065dde165947cc3f097398b883bc99c11fc7ff3cba6901eb1d838163,4035,"Wot u up 2? Thout u were gonna call me!! Txt bak luv K
+",0,1,-0.30576794916286365,decision_function,FP
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.659328951832785,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,-0.44865141404086495,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.6579325279858856,decision_function,FN
+linear_svc_word_gentle,linear_svc,word,gentle,validation,-0.34697251707901866,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.7454945788274736,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.520094000122153,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.2276206654418984,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.17697018882309012,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.2117043326805521,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.05902345921153884,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,0.06320687212933906,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.10401131852355472,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.2663288206159833,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.8213036564034442,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.342305214028443,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,-0.33234525655020286,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.449377839282602,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,-0.00593950238596852,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,9f5ee93c0dc712c970438f184f3e37882edddc5c64ef431c4aeb09738d4c5e1e,5307,"""Hi missed your Call and my mumHas beendropping red wine all over theplace! what is your adress?""
+",0,1,0.02736996747083431,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.23763099071577876,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,default,0.0,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.10718627161995653,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.520094000122153,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.2276206654418984,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.17697018882309012,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.2117043326805521,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,0.06320687212933906,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.10401131852355472,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,e706f2fda1bba2942d565a27d9a29be0cf9a5f9adc861a528788581ab5e2ebf4,2754,"Derp. Which is worse, a dude who always wants to party or a dude who files a complaint about the three drug abusers he lives with
+",0,1,-0.036812506613457474,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.2663288206159833,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.8213036564034442,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.342305214028443,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,-0.33234525655020286,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.449377839282602,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,61120dec1a52ea69c0ec472121694a8875c750cf922d1545cacd44f9e915f806,4393,"what are your new years plans?
+",0,1,-0.050264543818996144,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,-0.05470421597292541,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,8c5160e2807d60a0423c86b46946f8bd304031564f8a1e95b82e60b6c0505e9a,4894,"Send me the new number
+",0,1,-0.005788739436238588,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,9f5ee93c0dc712c970438f184f3e37882edddc5c64ef431c4aeb09738d4c5e1e,5307,"""Hi missed your Call and my mumHas beendropping red wine all over theplace! what is your adress?""
+",0,1,0.02736996747083431,decision_function,FP
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.23763099071577876,decision_function,FN
+linear_svc_char_gentle,linear_svc,char,gentle,validation,-0.09152370068119386,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.10718627161995653,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.355614412683499,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.558591161388103,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.25634382766032315,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.15124670410211216,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,0.0923584571434537,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.35823768988709204,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.22209888395650002,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.7372940526034338,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.2687374703059,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.4320511950126841,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,-0.07211604788089376,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,-0.1660131776968481,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,9f5ee93c0dc712c970438f184f3e37882edddc5c64ef431c4aeb09738d4c5e1e,5307,"""Hi missed your Call and my mumHas beendropping red wine all over theplace! what is your adress?""
+",0,1,0.12777705464799105,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.2585528076121366,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,default,0.0,bccf19a632f71c0476996556f542faeb5f30eea01d8b83d9bae1aa3d95acd234,5542,"ASKED 3MOBILE IF 0870 CHATLINES INCLU IN FREE MINS. INDIA CUST SERVs SED YES. L8ER GOT MEGA BILL. 3 DONT GIV A SHIT. BAILIFF DUE IN DAYS. I O £250 3 WANT £800
+",1,0,-0.09897982478180611,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,-0.08449363782176622,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.355614412683499,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.558591161388103,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.25634382766032315,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.15124670410211216,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,0.0923584571434537,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.35823768988709204,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,e706f2fda1bba2942d565a27d9a29be0cf9a5f9adc861a528788581ab5e2ebf4,2754,"Derp. Which is worse, a dude who always wants to party or a dude who files a complaint about the three drug abusers he lives with
+",0,1,-0.04978795954512938,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.22209888395650002,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.7372940526034338,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.2687374703059,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,0a7b03fdb716adafba39472c4782b8ff78e99bab571b222398d0ad2ebe723fb9,3692,"Sir, i am waiting for your call, once free please call me.
+",0,1,-0.09144982617477093,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.4320511950126841,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,8c5160e2807d60a0423c86b46946f8bd304031564f8a1e95b82e60b6c0505e9a,4894,"Send me the new number
+",0,1,-0.12138303590817112,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,d2fddff2ae362ca0f5fdbcbc84712af0a5850688df2bda80fdb61b7ce2a7d032,4914,"Goal! Arsenal 4 (Henry, 7 v Liverpool 2 Henry scores with a simple shot from 6 yards from a pass by Bergkamp to give Arsenal a 2 goal margin after 78 mins.
+",1,0,-0.1660131776968481,decision_function,FN
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,9f5ee93c0dc712c970438f184f3e37882edddc5c64ef431c4aeb09738d4c5e1e,5307,"""Hi missed your Call and my mumHas beendropping red wine all over theplace! what is your adress?""
+",0,1,0.12777705464799105,decision_function,FP
+linear_svc_word_char_gentle,linear_svc,word_char,gentle,validation,-0.13201184016041578,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.2585528076121366,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.3798453663927468,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.2553036481955515,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.5623952993047807,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.04153104909184946,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.4634638080976685,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-1.0144253253537956,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.4821912163071331,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,-0.24346236619357642,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.6775103601159992,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,-0.13315880186155926,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.3310782291115629,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,default,0.0,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.36829458296567974,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,d7b4caa9060b8c2238e59122e13e9cd0b3dbb71e6b441d0d847d4eb1031d0acc,495,"Are you free now?can i call now?
+",0,1,-0.10159372434086511,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,9e40d2d16ab0a6b8df9a77a6ee4289ca297c2f56fa65f4ec38353b7a879a3f92,974,"what is your account number?
+",0,1,-0.1690313771415648,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.3798453663927468,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,c9561baaec4278a78ecc2aff5fff33a5788cfeac3a1baab7005fff1f3e38ff6e,1425,"Yes.. now only saw your message..
+",0,1,-0.047144043117147705,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.2553036481955515,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.5623952993047807,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,-0.10642270097429885,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,-0.048253916771351824,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,e706f2fda1bba2942d565a27d9a29be0cf9a5f9adc861a528788581ab5e2ebf4,2754,"Derp. Which is worse, a dude who always wants to party or a dude who files a complaint about the three drug abusers he lives with
+",0,1,-0.12091663889830939,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.4634638080976685,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-1.0144253253537956,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.4821912163071331,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,-0.24346236619357642,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.6775103601159992,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,61120dec1a52ea69c0ec472121694a8875c750cf922d1545cacd44f9e915f806,4393,"what are your new years plans?
+",0,1,-0.1494834847117188,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,-0.11525810642417111,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,9f5ee93c0dc712c970438f184f3e37882edddc5c64ef431c4aeb09738d4c5e1e,5307,"""Hi missed your Call and my mumHas beendropping red wine all over theplace! what is your adress?""
+",0,1,-0.05481785737886535,decision_function,FP
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.3310782291115629,decision_function,FN
+linear_svc_char_no_punctuation,linear_svc,char,no_punctuation,validation,-0.17489611851251863,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.36829458296567974,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.5256543554859003,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.22538480137876415,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.19752289566264236,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.2067204544880501,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.15482440951854193,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,0.05402018672931108,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.08455664806013274,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.2644102360744358,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.8326304867178316,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.3352362901540589,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,-0.3421223152063645,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.41667297063533504,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,55292057ed80c712a0ed677d1f5dd34aa995052b7fc639fe98f8af39b40ffd83,4676,"Hi babe its Chloe, how r u? I was smashed on saturday night, it was great! How was your weekend? U been missing me? SP visionsms.com Text stop to stop 150p/text
+",1,0,-0.00628863172295091,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,8c5160e2807d60a0423c86b46946f8bd304031564f8a1e95b82e60b6c0505e9a,4894,"Send me the new number
+",0,1,0.005925122502918434,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,9f5ee93c0dc712c970438f184f3e37882edddc5c64ef431c4aeb09738d4c5e1e,5307,"""Hi missed your Call and my mumHas beendropping red wine all over theplace! what is your adress?""
+",0,1,0.04153604913424913,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.2330940450695994,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,default,0.0,0fd27800e5884ad8b13cbe327fe799eeb61429405d980424362c4fb3d080874b,5458,"""For the most sparkling shopping breaks from 45 per person; call 0121 2025050 or visit www.shortbreaks.org.uk""
+",1,0,-0.06406383263706816,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,0dc937e4ec8d99e96fdfe3cb346512c655451e36065a0f97600f1c454af77776,1299,"Your daily text from me – a favour this time
+",0,1,0.5256543554859003,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,0a0e809a60f7e97eda04ea03cf7971c752c74f57d0b89a19383a43df9fb0b997,1500,"SMS. ac JSco: Energy is high, but u may not know where 2channel it. 2day ur leadership skills r strong. Psychic? Reply ANS w/question. End? Reply END JSCO
+",1,0,-0.22538480137876415,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,add5ad2fdb05602a14f85fca3b16489be5e539a6d4af587d457018f65e4a275f,1638,"0A$NETWORKS allow companies to bill for SMS, so they are responsible for their ""suppliers"", just as a shop has to give a guarantee on what they sell. B. G.
+",1,0,-0.19752289566264236,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,b3f9488ea245791bc1276c30824fc04fc5c39c48638c3bb0761f680e552854dc,1672,"Glad to see your reply.
+",0,1,0.2067204544880501,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,8a26fd3ee2b964680bc60655820c114cbde3a5feb1b8c392ca84907eb631959c,1940,"More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A£1.50 minAPN LS278BB
+",1,0,-0.15482440951854193,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,40bacf1aefe5282c46f29f0d3036046ebdfe58c9cf4e3daa97bb71a9e10f93a0,2009,"See the forwarding message for proof
+",0,1,0.05402018672931108,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,c90ab92ac6d2eb4d7a03971cb31c1a6d65e8b23221b81719e073e72cecae576c,2289,"Dont you have message offer
+",0,1,0.08455664806013274,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,3d9723bc55a390c15935bf5234f73428cd6e221b0539517b66aaab1d619c1048,2770,"Burger King - Wanna play footy at a top stadium? Get 2 Burger King before 1st Sept and go Large or Super with Coca-Cola and walk out a winner
+",1,0,-0.2644102360744358,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,02e79aa421aa787528af3a4c05b5eeb4695eaaf3708f4979993d26f2775da013,2823,"ROMCAPspam Everyone around should be responding well to your presence since you are so warm and outgoing. You are bringing in a real breath of sunshine.
+",1,0,-0.8326304867178316,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,b9bc249dc49a54c73976516b23f7822ddfd445f9ced136f5a567753e80e7eb66,2965,"Do you ever notice that when you're driving, anyone going slower than you is an idiot and everyone driving faster than you is a maniac?
+",1,0,-1.3352362901540589,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,8a1f0181ce2a294e9b668727c332b545d88166547953ef02ba5b253a67bdbb14,3302,"RCT' THNQ Adrian for U text. Rgds Vatian
+",1,0,-0.3421223152063645,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,c26103bee44c926384e753eaa4738cba0ee2395d34e6d593470df9cdedaa68a3,4069,"TBS/PERSOLVO. been chasing us since Sept for£38 definitely not paying now thanks to your information. We will ignore them. Kath. Manchester.
+",1,0,-0.41667297063533504,decision_function,FN
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,61120dec1a52ea69c0ec472121694a8875c750cf922d1545cacd44f9e915f806,4393,"what are your new years plans?
+",0,1,-0.038634147685684184,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,4a226971641f44484e78bd8bb5e76bc04f9d2d3241a6d01ee3599f9f2700c578,4600,"Have you laid your airtel line to rest?
+",0,1,-0.04818232758318741,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,8c5160e2807d60a0423c86b46946f8bd304031564f8a1e95b82e60b6c0505e9a,4894,"Send me the new number
+",0,1,0.005925122502918434,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,9f5ee93c0dc712c970438f184f3e37882edddc5c64ef431c4aeb09738d4c5e1e,5307,"""Hi missed your Call and my mumHas beendropping red wine all over theplace! what is your adress?""
+",0,1,0.04153604913424913,decision_function,FP
+linear_svc_char_no_currency,linear_svc,char,no_currency,validation,-0.07393747233181847,8114a93ab413407a122b81e95303f5f522188559e75dcd08574e52eeeadc46d6,5372,"dating:i have had two of these. Only started after i sent a text to talk sport radio last week. Any connection do you think or coincidence?
+",1,0,-0.2330940450695994,decision_function,FN
