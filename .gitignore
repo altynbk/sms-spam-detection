@@ -2,6 +2,7 @@
 models/
 *.joblib
 _cv_cache/
+results/local/
 results/quick/
 results/verification-*/
 work/
