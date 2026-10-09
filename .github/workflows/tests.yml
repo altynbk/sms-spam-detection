@@ -14,13 +14,14 @@ concurrency:
 
 jobs:
   test:
-    name: Python 3.12 / ${{ matrix.os }}
+    name: Python 3.12 / ${{ matrix.os }} / ${{ matrix.grouping }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
+        grouping: [normalized, template]
     env:
       MPLBACKEND: Agg
       OMP_NUM_THREADS: "2"
@@ -43,6 +44,6 @@ jobs:
       - name: Run regression and integration tests
         run: python -m pytest -q
       - name: Run the real-data quick experiment
-        run: python -m spam_detector.train --mode quick --jobs 2 --output "${{ runner.temp }}/sms-spam-quick"
+        run: python -m spam_detector.train --mode quick --grouping "${{ matrix.grouping }}" --jobs 2 --output "${{ runner.temp }}/sms-spam-quick"
       - name: Independently verify every quick-run attack
         run: python scripts/verify_results.py --run "${{ runner.temp }}/sms-spam-quick" --all-attacks
