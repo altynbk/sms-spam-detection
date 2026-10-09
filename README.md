@@ -74,6 +74,46 @@ cells have been executed in a fresh kernel. The separate notebook dependency loc
 was also installed and tested. Non-English strings in Unicode test cases and attack
 mappings are intentional data, not project documentation or evidence of language accuracy.
 
+### Work in VS Code and Warp on macOS
+
+Use the same repository folder and `.venv` in both applications. Complete the
+installation above first; for notebook support, also install
+`requirements-notebook.txt`. If your clone is in a different location, replace
+the example path below. In each new Warp terminal session, run:
+
+```bash
+cd ~/Projects/sms-spam-detection
+source .venv/bin/activate
+code .
+git status --short --branch
+```
+
+If `code` is unavailable, run **Shell Command: Install 'code' command in PATH**
+from the VS Code Command Palette, then restart the terminal. Alternatively, open
+the repository folder through **File > Open Folder**. See the
+[VS Code CLI guide](https://code.visualstudio.com/docs/configure/command-line).
+
+In VS Code, install the Microsoft Python and Jupyter extensions. Run
+**Python: Select Interpreter** and choose this repository's `.venv/bin/python`.
+For `ML_Spam_Detector.ipynb`, also select the same environment in the notebook's
+kernel picker. Selecting a notebook kernel and activating a Warp terminal are
+separate steps. See [Python environments](https://code.visualstudio.com/docs/python/environments).
+
+Check which Python the terminal is using with:
+
+```bash
+python -c "import sys; print(sys.executable)"
+```
+
+The path should end in `sms-spam-detection/.venv/bin/python`. Run the test and
+experiment commands from **Install and run** in this environment. `.venv/` and
+`.vscode/` are ignored by Git, so local editor settings are not included in a
+fresh clone.
+
+For a pull request, create a branch, make and commit an actual change, then push
+the branch. Creating a branch alone does not change any files: GitHub cannot
+open a pull request when there are no new commits compared with `main`.
+
 ## Data preparation and evaluation protocol
 
 The bundled `data/smshamspam.csv` has columns `sms,label`, with 5,574 rows.
