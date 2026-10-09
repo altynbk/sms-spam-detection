@@ -23,8 +23,44 @@ established.
 - [Reference comparison](docs/REFERENCE_COMPARISON.md): scikit-learn examples,
   the UCI corpus and SpamDam; findings and corrections from a further review.
 - [Model card](docs/MODEL_CARD.md): intended use, score semantics and limitations.
-- [Development roadmap](docs/ROADMAP.md): comparable demos, a proposed interactive
-  SMS Spam Lab, and priorities for stronger evaluation.
+- [Interactive demo](#interactive-demo): SMS checks, exact linear explanations,
+  an attack playground and recorded results.
+- [Development roadmap](docs/ROADMAP.md): completed features and priorities for stronger evaluation.
+
+## Interactive demo
+
+With the local saved models already prepared:
+
+```bash
+source .venv/bin/activate
+python -m pip install -r requirements-app.txt
+python -m streamlit run app.py
+```
+
+Open [SMS Spam Lab](http://127.0.0.1:8501). The four tabs provide message checks,
+repeatable character edits, a results explorer and the study's scope. LinearSVC
+explanations use actual TF-IDF values and fitted coefficients; their sum plus the
+intercept reconstructs the decision score. No margin is presented as a confidence
+percentage. Blank inputs and messages with no recognized features receive a prompt.
+
+Model binaries are excluded from Git. On a fresh clone, first reproduce a full
+experiment in an unused directory, then point the app at that completed run:
+
+```bash
+python -m spam_detector.train --mode full --output results/demo
+SMS_SPAM_RUN=results/demo python -m streamlit run app.py
+```
+
+The app never trains on startup. It verifies the selected artifact's SHA-256,
+package versions, model identity and saved threshold before loading it. Hashes
+detect changes, not a malicious artifact author: use only trusted local runs.
+Recorded results remain viewable if a model is missing. Input is processed in
+session memory without application logging or prediction caching; it is not sent
+to an external prediction service. The default server binds to localhost and
+usage telemetry is disabled. If hosted elsewhere, the server receives submitted text.
+
+The optional app lock includes the unchanged training requirements. Regenerate it
+with `uv pip compile requirements-app.in --no-header --no-annotate --output-file requirements-app.txt`.
 
 ## Install and run
 
@@ -402,8 +438,8 @@ and attacks on ham have not been evaluated. Spam-only attacks keep FPR fixed by 
 Repeated attack seeds do not replace repeated independent training/evaluation splits.
 
 Jupyter plus a small tested Python package is appropriate for this educational
-research scope. A proposed Streamlit lab would make inference, controlled attacks
-and saved results interactive; see the [roadmap](docs/ROADMAP.md). Stronger
+research scope. The Streamlit lab makes inference, controlled attacks and saved
+results interactive; see the [roadmap](docs/ROADMAP.md). Stronger
 generalization claims need additional evidence, not simply a web interface or more
 complex models.
 

@@ -18,7 +18,7 @@ without caller-side preprocessing. Labels are **ham = 0, spam = 1**.
 
 At the validation threshold, score >= **-0.08620419778818611** predicts spam.
 `score()` returns a signed decision-function value, **not a probability or a
-percentage confidence**. A future UI should display the label and, in optional
+percentage confidence**. The demo displays the label and, in optional
 details, the margin and threshold. Turning that number into a percentage using
 clipping, an arbitrary sigmoid or multiplication by 100 is not calibrated confidence.
 Probability estimates would require a separately validated calibration protocol;
@@ -27,8 +27,9 @@ see [scikit-learn's calibration guide](https://scikit-learn.org/stable/modules/c
 The API accepts a single string or a nonempty iterable of strings. Empty,
 whitespace-only, punctuation-only and Unicode strings are valid inference inputs,
 but receiving a finite score does not establish predictive usefulness. An
-interactive demo should ask for nonblank text and explain when no vocabulary
-features were recognized. The library rejects non-string inputs and empty batches.
+interactive demo asks for nonblank text and withholds the displayed classification
+when no vocabulary features were recognized. This is a UI guard, not a calibrated
+abstention rule. The library rejects non-string inputs and empty batches.
 
 ## Data and evaluation
 
@@ -89,11 +90,13 @@ The authoritative settings and exact versions are in
 in [verification.json](../results/full/verification.json). Dataset, training source
 and saved models have SHA-256 records. The runtime is pinned in `requirements.txt`.
 
-Git intentionally excludes joblib models. Reproduce into a new output directory,
+Git intentionally excludes joblib models. Reproduce into an unused output directory,
 then load that run's selected artifact as shown in the README. Load only trusted
-artifacts. A deployed demo should carry a known artifact, matching package versions
-and the recorded threshold, and should never train on startup or silently replace
-the model. Prediction input should not be stored as a side effect of using the demo.
+artifacts. The local demo checks the artifact hash, package versions, model identity
+and recorded threshold before loading. It never trains on startup or saves input
+messages. Exact LinearSVC feature contributions plus the intercept reconstruct
+the score; these are associations, not causal explanations. Any hosted deployment
+would require its own access, privacy and operational review.
 
 For broader use, collect a separate representative evaluation set, define the
 false-positive cost and target languages, and test source/time transfer. Keep the

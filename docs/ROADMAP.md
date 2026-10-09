@@ -1,8 +1,8 @@
 # Development roadmap and comparable demos
 
-Reviewed on 5 October 2026. These are proposed extensions. This revision adds
-continuous integration and the model card; it does not implement or deploy a website.
-Project code, documentation and any future interface remain in English.
+Updated on 9 October 2026. The local SMS Spam Lab, exact linear explanations,
+template sensitivity and conditional metric intervals are implemented. Public
+hosting has not been provisioned. Project code, documentation and UI remain in English.
 
 ## What comparable projects implement
 
@@ -21,13 +21,12 @@ reference for broader data and adversarial evaluation. An attractive demo and a
 reliable evaluation solve different problems: a site improves accessibility of
 the work, while new data determines how broadly its results apply.
 
-## Recommended next release: SMS Spam Lab
+## Implemented local demo
 
-Build a compact **Streamlit application** around the existing package. This is a
-good match for a Python research project with tables, plots and interactive
-controls; the [official tutorial](https://docs.streamlit.io/get-started/tutorials/create-an-app)
-demonstrates that workflow. Keep Jupyter as the research report. The first app can
-run in one Python process, with the saved model loaded once and no database.
+The **Streamlit application** reuses the existing package and saved model. It runs
+in one Python process without a database; Jupyter remains the research report.
+See the [launch instructions](../README.md#interactive-demo). The following flows
+are implemented and covered by application or inference tests.
 
 | Page | User experience | Completion criterion |
 |---|---|---|
@@ -40,33 +39,32 @@ The attack playground is the strongest differentiator: it exposes an experiment
 already implemented and tested in this repository. The model is fixed; interactive
 examples are not used to optimize the existing holdout scores.
 
-Use a separate optional dependency file for the app. Supply a trusted selected-model
-artifact with its hash and package versions; training is a preparation step, not a
-request handler. Process messages in memory and do not save them by default. An
-empty or out-of-vocabulary message should not be presented as a confident decision.
+The optional dependency lock is `requirements-app.txt`. The loader verifies a
+trusted selected-model artifact against its recorded hash, package versions,
+identity and threshold. Messages stay in memory; blank and out-of-vocabulary
+inputs do not receive an unqualified displayed decision.
 
 Streamlit Community Cloud is one possible hosting route. Hugging Face Spaces is
 another: its current SDK choices are Gradio, Docker and static HTML; Streamlit
 uses the Docker route because its built-in SDK is deprecated.
 See the [Spaces overview](https://huggingface.co/docs/hub/spaces-overview) and
 [Streamlit deployment notice](https://huggingface.co/docs/hub/en/spaces-sdks-streamlit).
-Choose hosting and artifact delivery when implementing the app; none is provisioned
+Choose hosting and artifact delivery before a public release; neither is provisioned
 by this roadmap. A static GitHub Pages report alone would not run this Python model.
 
 ## Priorities after the first demo
 
 | Priority | Extension | Why it helps | How to evaluate it |
 |---|---|---|---|
-| 1 | Explain the selected LinearSVC decision | Show which recognized word/ngram features push the decision toward spam or ham. | Compute contributions from the actual TF-IDF vector and fitted coefficients; contributions plus intercept must reconstruct the margin. Describe associations, not causes or guaranteed safety. |
 | 1 | Independent modern-data benchmark | Addresses the largest gap in claims about real SMS. Include realistic ham as well as scams/spam. | Record licensing/provenance; separate sources, time and related templates; freeze the current model and report errors before considering retraining. |
-| 2 | Group-aware uncertainty and repeated development splits | Helps distinguish stable improvements from split luck. | Use an explicit resampling unit/protocol; do not confuse variation over attack seeds with uncertainty over data. Preserve a new independent final holdout. |
+| 2 | Repeated development splits | Conditional group-bootstrap intervals are implemented, but do not include refitting or search variability. | Evaluate a predefined split protocol on development data and preserve a new independent final holdout. |
 | 2 | Calibrated probabilities or a review band | Makes confidence displays or "needs review" actions defensible. | Fit calibration/review rules on development data and evaluate calibration, coverage and FP/FN on a new holdout. Never turn the current SVM margin directly into a percentage. |
 | 2 | Russian/Kazakh extension | Could make the project more locally useful. | Build independently labeled data in each language and code-switching examples; report per-language results. Changing UI language or translating the old corpus alone is insufficient evidence. |
 | 3 | Stronger attacks and defenses | Explore invisible characters, spacing, paraphrases or adversarial augmentation. | Define perturbation budgets and meaning/readability checks; keep attack families/seeds used for development separate from final evaluation. |
 | 3 | FastAPI and a custom web/mobile client | Useful if the demo becomes a multi-client service. | Reuse the same model artifact and contract; test latency, request limits and parity with local inference. Add authentication/storage only for a defined user need. |
 
-I would implement the Streamlit lab and exact linear explanations first for a
-portfolio release, then invest in independent modern data for stronger ML claims.
+The local lab and exact linear explanations complete the interactive release.
+Independent modern data is the next priority for stronger ML claims.
 Transformer comparisons, browser extensions and mobile apps can follow a concrete
 need; adding them does not by itself improve the validity of the evaluation.
 
@@ -76,4 +74,4 @@ GitHub Actions runs the pinned Python 3.12 environment on Linux and macOS, check
 dependencies, executes the tests, runs the real-data quick experiment and verifies
 all of its attack rows. Its output is temporary and never replaces `results/full`.
 The [model card](MODEL_CARD.md) records intended use, score semantics, measured
-performance and artifact handling so a future interface has an explicit contract.
+performance and artifact handling and serves as the inference contract for the demo.

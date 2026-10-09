@@ -2,6 +2,7 @@ name: Tests and reproducibility
 
 on:
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -49,3 +50,25 @@ jobs:
         run: python scripts/verify_results.py --run "${{ runner.temp }}/sms-spam-quick" --all-attacks
       - name: Estimate conditional uncertainty from the saved predictions
         run: python -m spam_detector.uncertainty --run "${{ runner.temp }}/sms-spam-quick" --draws 1000
+
+  demo:
+    name: Interactive demo
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-app.txt
+      - name: Install optional demo dependencies
+        run: python -m pip install -r requirements-app.txt
+      - name: Check dependencies
+        run: python -m pip check
+      - name: Verify inference and interactive flows
+        run: python -m pytest -q tests/test_demo.py tests/test_app.py
