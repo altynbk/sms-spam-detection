@@ -1,5 +1,14 @@
 # Executed validation and review history
 
+## Conditional metric uncertainty
+
+- Added class-stratified whole-group percentile intervals from fixed predictions.
+- Regression checks cover grouped resampling, deterministic output, malformed
+  inputs and a missing error record that would otherwise inflate reported quality.
+- Both saved experiments include 5,000-draw estimates and source-table hashes.
+- All report cells executed in a fresh kernel after adding the interval tables.
+- Continuous integration also computes intervals from each real-data quick run.
+
 ## Template sensitivity evaluation
 
 The optional `--grouping template` rule groups normalized messages longer than

@@ -75,7 +75,7 @@ python -m jupyterlab ML_Spam_Detector.ipynb
 The committed report runs after a source-only clone using `results/full`, without
 training or model files. Its optional inference cell gives instructions if models
 are absent. After training, set `RUN = Path("results/full-new")` to inspect that run.
-All ten code cells have been executed in a fresh kernel. The separate notebook dependency lock
+All report code cells have been executed in a fresh kernel. The separate notebook dependency lock
 was also installed and tested. Non-English strings in Unicode test cases and attack
 mappings are intentional data, not project documentation or evidence of language accuracy.
 
@@ -231,6 +231,27 @@ Tuning **reduced** test F1 for several variants. Char legacy/gentle reached
 Thresholds were not adjusted to repair these test outcomes. The objective constrains
 validation FPR and maximizes recall, not test F1; small validation samples and differing
 empirical score distributions can produce worse test tradeoffs.
+
+### Conditional uncertainty
+
+For the frozen selected model, a class-stratified bootstrap resamples entire test
+groups with replacement (5,000 draws, seed 42). The 95% percentile interval for
+validation-threshold F1 is **0.9249–0.9769** in the default protocol and
+**0.8968–0.9586** in the exploratory template protocol. These are different test
+sets, so overlapping intervals are not a paired significance test.
+
+```bash
+python -m spam_detector.uncertainty --run results/full
+python -m spam_detector.uncertainty --run results/template
+```
+
+This command reconstructs predictions from the saved complete error ledger,
+checks them against the confusion counts, and records input hashes. It requires
+no model files or retraining. Each run's `confidence_intervals.csv` reports
+precision, recall, F1 and FPR for both decision rules. The intervals condition on
+the fitted model, split and observed class/group composition; they exclude
+training/search variability and domain shift. Rare errors can yield discrete or
+degenerate intervals. They are separate from the attack-seed standard deviations.
 
 ## Robustness evaluation
 

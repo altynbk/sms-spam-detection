@@ -64,6 +64,12 @@ For the frozen selected model at its validation threshold:
 | False negatives / spam | 8 / 130 |
 | FPR | 0.44% |
 
+The conditional 95% group-bootstrap interval for this F1 is 0.9249–0.9769
+(5,000 class-stratified whole-group resamples, seed 42). See
+[confidence_intervals.csv](../results/full/confidence_intervals.csv) for both
+decision rules. This conditions on the fitted model and observed split; it does
+not include model-selection uncertainty, refitting or domain shift.
+
 Native default decisions give 3 FP and 10 FN. A no-text training-majority reference
 has 87.43% accuracy and zero spam recall/F1. Accuracy alone is insufficient here.
 Some alternative models exceed 1% FPR on test despite satisfying the constraint
