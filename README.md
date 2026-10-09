@@ -407,6 +407,20 @@ and saved results interactive; see the [roadmap](docs/ROADMAP.md). Stronger
 generalization claims need additional evidence, not simply a web interface or more
 complex models.
 
-The original DOCX/PDF in `paper/` describe the historical experiment and are
-unchanged by this update. Use this README, the notebook and `results/full/` for
-the current protocol and results.
+The [paper (PDF)](paper/SMS_Spam_Detection_Paper.pdf) and
+[editable manuscript](paper/SMS_Spam_Detection_Paper.docx) describe the current
+eleven-model protocol, template sensitivity, conditional intervals and limitations.
+The existing files were updated in place. The bibliography links to verified
+publication records; comparisons with other studies are qualitative.
+
+To rebuild the manuscript from the committed tables:
+
+```bash
+python -m pip install -r requirements-paper.txt
+python scripts/build_paper_figures.py
+python scripts/build_paper.py
+```
+
+Export the resulting DOCX to the same PDF filename with Word or LibreOffice and
+check all pages. Figure generation uses the main runtime requirements; document
+authoring is optional and does not affect training.

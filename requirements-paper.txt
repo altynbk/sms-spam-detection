@@ -1,0 +1,2 @@
+# Optional Word authoring dependency. Plotting uses requirements.txt.
+python-docx==1.2.0
