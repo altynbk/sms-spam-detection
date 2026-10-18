@@ -5,6 +5,7 @@
 A reproducible study of classical text classifiers on the historical English
 [SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection),
 with an interactive lab for exploring predictions and character-level attacks.
+An independent evaluation also tests the frozen model on published smishing reports.
 
 Eleven variants share grouped train/validation/test splits. Training
 cross-validation chooses the model; validation sets its threshold; held-out data
@@ -25,8 +26,16 @@ The selected word TF-IDF LinearSVC, using its frozen validation threshold:
 A training-majority baseline achieves 87.43% accuracy but detects no spam.
 Character features retain more recall under the tested edits, with different
 false-positive costs. An exploratory template-grouped experiment and conditional
-intervals qualify the findings. These results do not establish performance on
-modern SMS, Russian/Kazakh or production traffic.
+intervals qualify the historical findings.
+
+**External check:** on 372 distinct English reports with an explicit 2023–2024
+year, the unchanged model detects **176** and misses **196**: recall **47.31%**
+(conditional 95% interval **42.32–52.28%**). This author-released IMC 2025 dataset
+contains pseudonymized positive reports only, predominantly dated 2023; it cannot
+measure modern false positives or F1. The broader English cohort gives 48.23%
+recall. See the [external evaluation](docs/EXTERNAL_EVALUATION.md) for provenance,
+frozen protocol, complete results and limitations. Russian/Kazakh and production
+traffic remain untested.
 
 ![Mean spam recall under character edits](paper/figures/robustness.png)
 
@@ -40,6 +49,7 @@ all eleven variants and the limits of these comparisons.
 - [Paper (PDF)](paper/SMS_Spam_Detection_Paper.pdf) · [Editable manuscript](paper/SMS_Spam_Detection_Paper.docx)
 - [Executed notebook](ML_Spam_Detector.ipynb) — analysis, figures and error examples.
 - [Model card](docs/MODEL_CARD.md) — intended use, measured quality and limitations.
+- [External evaluation](docs/EXTERNAL_EVALUATION.md) — independent reported SMS and transfer limits.
 - [Validation](docs/VALIDATION.md) — completed checks and reproducible commands.
 - [Development](CONTRIBUTING.md) · [Research priorities](docs/ROADMAP.md)
 
@@ -156,6 +166,7 @@ See the [input contract](docs/MODEL_CARD.md#model-and-decision-rule).
 | `tests/`, `.github/workflows/tests.yml` | Regression checks and CI |
 | `data/smshamspam.csv` | Bundled public corpus |
 | `results/full/`, `results/template/` | Published tables, manifests, figures and provenance |
+| `data/external/imc25/`, `results/external/imc25/` | Licensed source manifest, frozen cohorts and external results |
 | `results/local/` | Ignored outputs from new local runs |
 | `ML_Spam_Detector.ipynb` | Executed research report |
 | `paper/`, `scripts/build_paper*.py` | Current manuscript and its table/figure builders |
@@ -172,12 +183,14 @@ controlled before/after comparison.
 ```bash
 python -m pip install -r requirements-paper.txt
 python scripts/build_paper_figures.py
+python scripts/build_external_figure.py
 python scripts/build_paper.py
 ```
 
 Export the DOCX to `paper/SMS_Spam_Detection_Paper.pdf` with Word or LibreOffice
 and inspect every page. The builders use the committed experimental tables.
 
-Project code: [MIT](LICENSE). Dataset: [CC BY 4.0, UCI DOI 10.24432/C5CC84](https://doi.org/10.24432/C5CC84).
+Project code: [MIT](LICENSE). Historical dataset: [CC BY 4.0, UCI DOI 10.24432/C5CC84](https://doi.org/10.24432/C5CC84).
 The [protocol](docs/PROTOCOL.md#data-preparation-and-evaluation-protocol) records
-the bundled CSV's provenance and hash.
+the bundled CSV's provenance and hash. The external source has its own
+[CC BY 4.0 attribution, pinned snapshot and download instructions](data/external/imc25/README.md).

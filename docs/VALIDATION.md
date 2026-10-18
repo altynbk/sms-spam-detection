@@ -1,6 +1,6 @@
 # Validation
 
-Reviewed on **9 October 2026**, using Python 3.12.14 on macOS arm64 and the
+Updated on **18 October 2026**, using Python 3.12.14 on macOS arm64 and the
 committed dependency locks. This report describes the current state; earlier
 implementation history remains in Git and the [original audit](AUDIT.md).
 
@@ -8,12 +8,13 @@ implementation history remains in Git and the [original audit](AUDIT.md).
 
 | Check | Result |
 |---|---|
-| Regression, integration and application suite | **96 tests passed**; warnings are errors |
+| Regression, integration and application suite | **115 tests passed**; warnings are errors |
 | Installed dependencies | `python -m pip check` passed |
-| Notebook | Format valid; all **11 code cells** executed in a fresh kernel without cell errors |
-| Default full experiment | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
-| Template full experiment | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
-| Conditional intervals | Both runs' 5,000-draw estimates and source hashes reproduced |
+| Notebook | Format valid; all **12 code cells** executed in a fresh kernel without cell errors |
+| Default full experiment (9 October) | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
+| Template full experiment (9 October) | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
+| Historical conditional intervals (9 October) | Both runs' 5,000-draw estimates and source hashes reproduced |
+| External reported SMS | **31,806 prediction rows / 63,612 decisions**, eight metric rows, 72 category rows and all conditional intervals recomputed |
 | Manuscript | Current metrics present in the six-page PDF and four editable Word tables |
 | Repository | Local links checked; published source and result files retained |
 
@@ -29,6 +30,20 @@ Machine-readable records:
 [template verification](../results/template/verification.json).
 The verifier checks saved CV scores and their aggregates; it does not repeat the
 420 training fits in a full search.
+
+## External evaluation
+
+The [external verification](../results/external/imc25/evaluation/verification.json)
+reconstructs both predeclared cohorts from the pinned raw snapshot and checks
+the unchanged model against the artifact hash fixed before external prediction.
+It recomputes scores directly from the feature transform and classifier, checks
+input hashes and both decisions, and reproduces the saved summaries and intervals.
+All OOV messages remain included; no fitting or threshold selection occurs.
+
+Regression tests exercise date eligibility, overlap and duplicate handling,
+whole-group resampling, rejection of substituted artifacts and deliberate ledger
+corruption, and the absence of misleading two-class metrics on positive-only data.
+Synthetic fixtures require neither a network download nor the original model.
 
 ## Application and manuscript
 
@@ -64,6 +79,9 @@ python scripts/verify_results.py --run results/template --all-attacks
 # Uses only saved prediction/error tables; no model artifacts needed.
 python -m spam_detector.uncertainty --run results/full
 python -m spam_detector.uncertainty --run results/template
+
+# Requires the pinned external CSV and original matching default model.
+python scripts/verify_external.py --run results/external/imc25/evaluation
 ```
 
 After a fresh clone, model binaries are absent. Follow the
@@ -88,6 +106,7 @@ status and logs are available at the workflow link above.
 
 Recomputation establishes consistency of the recorded experiment. The intervals
 condition on fitted models and observed groups; attack-seed variation does not
-measure training uncertainty. The template study is exploratory. None of these
-checks establishes accuracy on new languages, current SMS or independent sources.
+measure training uncertainty. The template study is exploratory. External recall
+is conditional on a positive-only, pseudonymized convenience sample; no modern
+F1/FPR or new-language performance is established.
 See the [model card](MODEL_CARD.md) and [research priorities](ROADMAP.md).

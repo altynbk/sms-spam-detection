@@ -4,12 +4,15 @@ The current project includes grouped evaluation of eleven classical variants,
 validation-only thresholds, three character attacks, a template sensitivity study,
 conditional group-bootstrap intervals, an executed notebook, a current manuscript
 and an interactive local lab. Reproduction and application checks run in CI.
+An [external positive-report evaluation](EXTERNAL_EVALUATION.md) is complete:
+the frozen model detects 176 / 372 dated English reports (47.31% recall).
+It exposes limited transfer, but the source has no ham and cannot measure FPR.
 
 The next improvements should add evidence where the current study is weakest.
 
 | Priority | Work | Completion criterion |
 |---|---|---|
-| 1 | Independent modern English SMS benchmark | Obtain licensed, labeled ham and spam; separate related templates, sources and time periods. Evaluate the frozen current model and report FP/FN before considering retraining. |
+| 1 | Modern legitimate SMS and a new final holdout | Obtain licensed, independently labeled ham and new spam with trustworthy dates; separate related templates, sources and time periods. Measure FP/FN on both classes. Reserve an untouched final set before using the inspected external results to develop improvements. |
 | 2 | Variation across training splits | Predefine repeated development splits and repeat fitting/search. Report dispersion while preserving a new independent final holdout. |
 | 3 | Stronger attacks and tested defenses | Define perturbation budgets and meaning/readability checks. Keep attack families and examples used to develop a defense separate from final evaluation. |
 | Conditional | Russian/Kazakh evaluation | Collect independently labeled data for each target language, including code-switching. Report per-language errors; translating the interface or corpus does not establish accuracy. |

@@ -253,7 +253,10 @@ The historical experiment was not retrained. Its saved results use different
 splits, search, thresholds, software and attack ordering, so differences cannot
 be attributed solely to deduplication. See the [original audit](AUDIT.md).
 
-Both current protocols use one historical English corpus. Related templates and
-sender/source effects can remain. Modern SMS, multilingual accuracy, independent
-source/time transfer, adaptive attacks and attacks on ham have not been evaluated.
+Both training protocols use one historical English corpus. Related templates and
+sender/source effects can remain. A separate [external evaluation](EXTERNAL_EVALUATION.md)
+now measures the unchanged model's recall on independent reported English SMS,
+including an explicitly dated 2023–2024 cohort. It does not estimate modern FPR
+or F1 because the source has no ham. Multilingual accuracy, representative
+production performance, adaptive attacks and attacks on ham remain unmeasured.
 The [model card](MODEL_CARD.md) states the measured scope.
