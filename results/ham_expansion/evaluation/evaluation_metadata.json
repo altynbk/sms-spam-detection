@@ -1,0 +1,23 @@
+{
+  "training_metadata_sha256": "41265110bfd6bbc438cf07f7922562b05e35c5824b6d4db62887997fde02ab46",
+  "selected_model": "ham_word_char_c1_w1",
+  "promotion_gate": {
+    "passed": false,
+    "criteria": {
+      "fpr_at_most_one_percent": false,
+      "fpr_not_above_original": true,
+      "fpr_reduction_vs_previous_upper_bound_below_zero": false,
+      "recall_vs_original_lower_bound_at_least_minus_3pp": true,
+      "recall_vs_previous_lower_bound_at_least_minus_3pp": true
+    }
+  },
+  "deployment_status": "research candidate; historical demo unchanged",
+  "test_rows": 8287,
+  "new_test_sources": 1,
+  "test_scope": "Untouched components from the same author corpus as added development data; not unseen-provider validation",
+  "output_sha256": {
+    "test_scores.csv": "ce25be4300ed65efd8ebfb161dfa3e9935d332c867873240e338f6fbcbb3b18b",
+    "test_metrics.csv": "ae6e9d164ad6d79e6292881b05c6b553e91835f19ef460ebfb89bdabda22dcd8",
+    "test_intervals.json": "408d36e02960c957f7c41cef59edf0e9c3dadccf89540e9ff7a1a44ae49c03ef"
+  }
+}
