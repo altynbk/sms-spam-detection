@@ -1,0 +1,9 @@
+{
+  "model": "ham_word_char_c1_w1",
+  "C": 1.0,
+  "ham_multiplier": 1.0,
+  "threshold": 0.48587418949350525,
+  "macro_recall": 0.8876551103341553,
+  "macro_fpr": 0.002779189608922773,
+  "max_source_fpr": 0.008894536213468869
+}

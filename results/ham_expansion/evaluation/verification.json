@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "fitted_candidates_checked": 6,
+  "threshold_only_control_checked": true,
+  "validation_scores_checked": 59101,
+  "validation_metric_rows_checked": 35,
+  "test_messages_checked": 8287,
+  "test_score_values_checked": 33148,
+  "test_metric_rows_checked": 4,
+  "thresholds_reselected_by_exhaustive_search": true,
+  "paired_intervals_recomputed_by_rows": true,
+  "bootstrap_draws_per_comparison": 5000,
+  "promotion_gate_recomputed": true,
+  "output_sha256": {
+    "test_scores.csv": "ce25be4300ed65efd8ebfb161dfa3e9935d332c867873240e338f6fbcbb3b18b",
+    "test_metrics.csv": "ae6e9d164ad6d79e6292881b05c6b553e91835f19ef460ebfb89bdabda22dcd8",
+    "test_intervals.json": "408d36e02960c957f7c41cef59edf0e9c3dadccf89540e9ff7a1a44ae49c03ef"
+  },
+  "verifier_sha256": "8e552ffb94b697251401382f7c5b7032761badc6e1cdb2aed02660724b1d982f",
+  "shared_verifier_sha256": "8ebcf54e55b0dd84d523b75bb341dbb8d5382783cde4cde46594b3569276b73b"
+}

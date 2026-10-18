@@ -1,0 +1,43 @@
+{
+  "python": "3.12.14",
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+  },
+  "selected_model": "ham_word_char_c1_w1",
+  "source_sha256": {
+    "spam_detector/ham_expansion.py": "26fcc12c0ddf33aa412fa2a4ac0d734d6d90b757577fb827d22491a9f051acba",
+    "spam_detector/ham_data.py": "d12e2f77ade24430876a4282a1987032b6fae7a02b9e4959d021278e545873bd",
+    "spam_detector/adaptation.py": "cbe92135d065d0125534b7a2c65b96e51c1de57603774d49622217cd3dc26dfd",
+    "spam_detector/adaptation_data.py": "2bec0787e9a6ddac2609fe45563baf989405298692e6c84ef1bf066786300545",
+    "spam_detector/adaptation_protocol.py": "e2ff99d0ffee7ac85638335fc00c57d031b5ccf641f97b2446e614e0b6a93784",
+    "spam_detector/modeling.py": "e8a9610b766c01d872f09a2db37ca57a9060f600b78af1b75298cb9e20025586",
+    "spam_detector/preprocessing.py": "f25e755261f52866cee2aadea2d81f952eb79667438c4d191cc4302d303e933b",
+    "spam_detector/evaluation.py": "7c6c3e17f11f35543211ae86ad5327dc4f82479c358e988b53f8e684c5092a2c",
+    "data/external/ham_expansion/protocol.json": "572ce33f52126e183820fa3491c3cb0d4750a02ece6ba1aa891262a5d62f82fd",
+    "data/external/ham_expansion/source.json": "89963331d63be9ee7c6663e28f476a3451127256aca3ed1c5a3065a45ae02e89",
+    "results/ham_expansion/protocol/membership.csv": "adc1010c8bac5f9e9b3894c656303feabb4faa3c21169f48cdb2775b9e9daa2f"
+  },
+  "artifacts": {
+    "ham_word_char_c0.5_w1": "b5d0ddd692225292c3238e64c9ea3c8538855b3d04f3442f8ed34249db384ce8",
+    "ham_word_char_c0.5_w2": "7445a444f2b0ddb2f0a1a37abbd6e26be583150ec82ce43bdd53a955d4630e41",
+    "ham_word_char_c0.5_w4": "f578287c45ed574b3beae166e584575681f1cdbc5b00c95ca3387535c20e1024",
+    "ham_word_char_c1_w1": "1353f4def67725fcd5716e2afd888d67dde17bc7b912460cda8f03c3401c84ff",
+    "ham_word_char_c1_w2": "92e501347ed3d32f21204ad1b459b99a3b3c7424eb843a727af64ca4a5959985",
+    "ham_word_char_c1_w4": "6836bfd528e0401ce5b6e83f0d6a0e32343d1e62e3a9ea3d0913ebececec14dd"
+  },
+  "output_sha256": {
+    "candidates.csv": "bdaa606b34d8b3db3744453a6506854b35aec0fdcfcf831ac132391d64f75e59",
+    "validation_metrics.csv": "6e348f6972f2178187575db69265d64b45d604ad66fef343cb34d28e3615a3a3",
+    "validation_scores.csv": "d7fa6721eccd9408c84abbc7340055082a8dc01f2924a8429d561568c42720b6",
+    "selection.json": "fe84efbc3ff2f3d79a65f05755bd5120bd5f855736f38d84702de5ac050f3c48",
+    "training_weights.csv": "27463ed03b315a626cc4519f3730d0c86efc5e82d3fa8084d7e5190fb95dd4bb",
+    "threshold_control.json": "12f226f15ab52f5edcc1c9a9cfb0ae7b926884b438a68118198477b20bc149ca"
+  },
+  "train_rows": 29593,
+  "validation_rows": 8443,
+  "test_predictions_during_selection": 0
+}
