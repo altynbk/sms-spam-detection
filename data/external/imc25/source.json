@@ -1,0 +1,41 @@
+{
+  "name": "Fishing for Smishing — IMC 2025",
+  "authors": [
+    "Sharad Agarwal",
+    "Antonis Papasavva",
+    "Guillermo Suarez-Tangil",
+    "Marie Vasek"
+  ],
+  "doi": "10.1145/3730567.3764431",
+  "repository": "https://github.com/reportsmishing/Smishing-Dataset-IMC25",
+  "commit": "a6175560b57387199871e51fbef6bc523d2516b4",
+  "published_snapshot": "2025-09-12",
+  "retrieved_on": "2026-10-18",
+  "url": "https://raw.githubusercontent.com/reportsmishing/Smishing-Dataset-IMC25/a6175560b57387199871e51fbef6bc523d2516b4/dataset/final_dataset_output.csv",
+  "sha256": "1bbd1e9e82c3ea023112207b80da268a5c4a07d2353c2b0898360ab037fa9a64",
+  "bytes": 9462365,
+  "rows": 33869,
+  "columns": [
+    "time",
+    "sender_id",
+    "telephone_number_type",
+    "original_network_name",
+    "original_network_country",
+    "text",
+    "translation",
+    "language",
+    "url_shortener",
+    "named_entity",
+    "scam_type",
+    "lure_principles"
+  ],
+  "license": "CC-BY-4.0",
+  "license_sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661",
+  "paper_url": "https://sharad1126.github.io/files/IMC_2025_Smishing.pdf",
+  "collection_period": "2017–2024 across five public reporting sources",
+  "caveats": [
+    "Positive reports only; no independently sampled legitimate messages",
+    "Public text is pseudonymized; source extraction and labeling used language models",
+    "time may contain partial or ambiguous screenshot timestamps; per-row reporting source is absent"
+  ]
+}

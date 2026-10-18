@@ -1,0 +1,74 @@
+{
+  "source_rows": 33869,
+  "non_english_rows": 11791,
+  "english_rows": 22078,
+  "blank_english_rows": 0,
+  "reference_rows": 5574,
+  "cohorts": {
+    "recent_2023_2024": {
+      "candidate_rows": 488,
+      "exact_reference_matches": 0,
+      "normalized_reference_matches": 0,
+      "template_reference_matches": 0,
+      "overlap_rows_excluded": 0,
+      "duplicate_rows_removed": 116,
+      "messages": 372,
+      "template_groups": 371,
+      "categories": {
+        "banking": 176,
+        "delivery": 29,
+        "government": 31,
+        "hey mum/dad": 2,
+        "others": 92,
+        "spam": 24,
+        "telecom": 12,
+        "wrong number": 6
+      },
+      "candidate_years": {
+        "2023": 480,
+        "2024": 8
+      }
+    },
+    "all_english": {
+      "candidate_rows": 22078,
+      "exact_reference_matches": 0,
+      "normalized_reference_matches": 0,
+      "template_reference_matches": 0,
+      "overlap_rows_excluded": 0,
+      "duplicate_rows_removed": 6547,
+      "messages": 15531,
+      "template_groups": 15390,
+      "categories": {
+        "banking": 6404,
+        "delivery": 1229,
+        "government": 1317,
+        "hey mum/dad": 55,
+        "mixed": 127,
+        "others": 3634,
+        "spam": 1168,
+        "telecom": 1379,
+        "unknown": 1,
+        "wrong number": 217
+      },
+      "candidate_years": {
+        "2012": 3,
+        "2013": 5,
+        "2014": 1,
+        "2015": 1,
+        "2016": 3,
+        "2017": 123,
+        "2018": 168,
+        "2019": 287,
+        "2020": 556,
+        "2021": 804,
+        "2022": 762,
+        "2023": 480,
+        "2024": 8,
+        "<NA>": 18877
+      }
+    }
+  },
+  "source_sha256": "1bbd1e9e82c3ea023112207b80da268a5c4a07d2353c2b0898360ab037fa9a64",
+  "reference_sha256": "bbcb13af6558d89e007094a1d62a982ce2b03ce679f89cd88625de3c71cea76a",
+  "protocol_sha256": "c7e71a48e38bd70120e3c07954ed5b92669e72bf459f4fb63c921b81e722ebd0"
+}
