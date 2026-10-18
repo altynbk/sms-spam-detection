@@ -5,6 +5,7 @@ Export the resulting DOCX to PDF with a compatible office renderer.
 """
 
 import csv
+import hashlib
 import json
 from pathlib import Path
 
@@ -40,6 +41,26 @@ def main():
     assert meta["split_counts"]["test"] == {"ham": 904, "spam": 130, "total": 1034}
     tuned = next(r for r in clean if r["model"] == selected and r["threshold_mode"] == "validation")
     assert (int(tuned["fp"]), int(tuned["fn"])) == (4, 8)
+    external = read_csv("external/imc25/evaluation", "metrics.csv")
+    external_meta = read_json("external/imc25/evaluation", "metadata.json")
+    external_check = read_json("external/imc25/evaluation", "verification.json")
+    assert external_meta["model_id"] == selected
+    assert external_meta["model_sha256"] == meta["models"][selected]["artifact_sha256"]
+    assert external_check["status"] == "passed"
+    assert external_check["output_hashes"] == external_meta["output_sha256"]
+    for name, digest in external_meta["output_sha256"].items():
+        path = ROOT / "results/external/imc25/evaluation" / name
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == digest
+
+    def ext(cohort, mode="validation", view="published"):
+        return next(r for r in external if r["cohort"] == cohort
+                    and r["threshold_mode"] == mode and r["view"] == view)
+
+    recent, broad = ext("recent_2023_2024"), ext("all_english")
+    assert (int(recent["detected"]), int(recent["missed"]), int(recent["n_messages"])) == (176, 196, 372)
+    assert (int(broad["detected"]), int(broad["n_messages"])) == (7491, 15531)
+    primary_recall = f'{100*float(recent["recall"]):.2f}%'
+    primary_interval = f'{100*float(recent["recall_lower"]):.2f}% to {100*float(recent["recall_upper"]):.2f}%'
 
     doc = Document()
     section = doc.sections[0]
@@ -77,7 +98,7 @@ def main():
     field = OxmlElement("w:fldSimple")
     field.set(qn("w:instr"), "PAGE")
     footer._p.append(field)
-    doc.core_properties.title = "SMS Spam Detection with Grouped Evaluation and Character Obfuscation"
+    doc.core_properties.title = "SMS Spam Detection with Grouped and External Evaluation"
     doc.core_properties.author = "Kabiyev Altynbek"
     doc.core_properties.subject = "Reproducible evaluation of sparse SMS classifiers"
     doc.core_properties.comments = ""
@@ -141,13 +162,13 @@ def main():
     p(doc.core_properties.title, "Title")
     p("Kabiyev Altynbek\nAstana IT University, Kazakhstan")
     h("Abstract")
-    p("This study evaluates eleven sparse text classifiers on the historical English SMS Spam Collection, with explicit separation of model search, threshold selection and final testing. Exact deduplication leaves 5,171 messages. Case and whitespace groups are kept together in train, validation and test partitions and in five training cross-validation folds. The selected word TF-IDF LinearSVC achieves spam F1 0.9531, with four false positives and eight false negatives among 1,034 test messages. Its conditional 95% group-bootstrap F1 interval is 0.9249 to 0.9769. At obfuscation intensity 0.3, mean spam recall falls from 0.9385 to 0.6035 for separator insertion. Character features preserve more recall in these tests but can incur more false positives. An exploratory split using URL and digit templates selects a different model and exposes a worse tradeoff after threshold tuning. These results support a reproducible historical benchmark and a controlled sensitivity study; they do not establish performance on current SMS, new languages or adaptive attacks.")
-    p("Keywords: SMS spam, TF-IDF, grouped evaluation, threshold selection, character obfuscation.")
+    p("This study evaluates eleven sparse text classifiers on the historical English SMS Spam Collection, separating training search, validation threshold selection and final testing. Deduplication leaves 5,171 messages, with normalized groups kept together in holdouts and training folds. The selected word TF-IDF LinearSVC achieves spam F1 0.9531, with four false positives and eight false negatives among 1,034 test messages. Its conditional 95% group-bootstrap F1 interval is 0.9249 to 0.9769. Separator insertion at intensity 0.3 lowers mean recall from 0.9385 to 0.6035. Character features retain more recall at operating points that can increase false positives. An exploratory template split qualifies the historical comparison. We then evaluate the unchanged artifact on independent published SMS reports under a protocol fixed before prediction. Among 372 distinct English texts with explicit 2023–2024 years, it detects 176 and misses 196: recall " + primary_recall + ", with a conditional 95% interval of " + primary_interval + ". The pseudonymized positive-only sample cannot estimate modern false-positive rate or F1. High historical quality therefore does not establish reliable transfer to reported smishing.")
+    p("Keywords: SMS spam, TF-IDF, grouped evaluation, external evaluation, character obfuscation.")
     h("1 Introduction")
     p("SMS filtering must detect unwanted messages without suppressing legitimate communication. Class imbalance makes accuracy an incomplete measure: on this test set, always predicting ham achieves 87.43% accuracy but detects no spam. We therefore report spam precision, recall and F1 together with false-positive and false-negative counts. We also separate clean-text quality from sensitivity to character edits that can disrupt a vocabulary-based classifier.")
-    p("The contribution is an auditable comparison of representations and decision rules. All candidates share training folds and attack realizations. Model choice is frozen before test scoring, and a separate validation set chooses the operating threshold. A second grouping rule examines residual template overlap. Neither test set is used to repair a threshold or to replace the selected model after viewing its errors.")
+    p("The contribution is an auditable comparison of representations and decision rules. Candidates share training folds and attack realizations. Model choice is frozen before test scoring, and validation chooses the threshold. A second grouping rule examines residual template overlap. An independent collection of reported SMS then tests transfer with the original model and threshold; these outcomes do not select or retrain the model.")
     h("2 Related work")
-    p("The SMS Spam Collection accompanies Almeida, Hidalgo and Yamakami's benchmark research [1, 2]. Its mixed historical sources make it useful for reproducible experiments, while limiting claims about deployment today. Uddin et al. study transformer-based detection and explainability in ExplainableDetector [3]. Li et al.'s SpamDam addresses newer SMS collection, federated learning and adversarial evaluation [4]. COPS studies a compact on-device smishing and URL pipeline [5]. These works motivate broader data and deployment studies; their published metrics are not directly comparable to our deduplicated splits. We do not reproduce those systems or claim to outperform them.")
+    p("The SMS Spam Collection accompanies Almeida, Hidalgo and Yamakami's benchmark research [1, 2]. Its historical sources limit deployment claims. ExplainableDetector studies transformer detection and explainability [3]; SpamDam investigates newer SMS, federated learning and adversaries [4]; COPS studies an on-device smishing and URL pipeline [5]. Their metrics are not directly comparable to our splits. Agarwal et al. release public smishing reports collected during 2017–2024 [9]. We use that independent artifact for a separate frozen-model evaluation, without claiming to reproduce or outperform those systems.")
 
     page()
     h("3 Data and evaluation protocol")
@@ -208,15 +229,33 @@ def main():
           [1.3, .8, .75, .75, .7, 2.7], "Table 4. Template protocol, CV-selected character LinearSVC without punctuation.")
     p("Training CV selects the character model without punctuation in this experiment. Tuning raises recall slightly but increases false positives from two to eleven and lowers F1 from 0.9531 to 0.9288. Test FPR reaches 1.22% despite meeting the validation constraint. The conditional intervals use 1,028 template test groups. These findings retain the unfavorable outcome rather than choosing a more flattering threshold after evaluation.")
     p("The template analysis was introduced after inspecting the default experiment and is exploratory. The two protocols change the split, fitted models and selected configurations together. Their difference is not a causal estimate of leakage, and their F1 intervals are not a paired significance test. The default model remains the frozen choice for its original protocol.")
-    h("9 Limitations and next evaluation")
-    p("Both protocols use one historical English corpus. Row order is not a timestamp, and the available text labels do not establish independent senders or campaigns [1]. Related messages may remain after either grouping rule. Performance on modern scams, Russian or Kazakh text, code-switching, email and URLs as separate objects remains unmeasured. A ham prediction does not establish that a link or sender is safe.")
-    p("A stronger generalization study should first obtain independently labeled, licensed modern ham and spam, freeze the current model, and report errors by source, time and language before considering retraining. A new final holdout is needed for testing defenses designed after these attacks. Deployment also requires measurements of latency, memory, privacy behavior and the cost of false positives; sparse features alone do not establish on-device suitability.")
+    h("9 Scope of the historical experiments")
+    p("Both training protocols use one historical English corpus. Row order is not a timestamp, and the available labels do not establish independent senders or campaigns [1]. Related messages may remain after either grouping rule. Section 10 therefore tests the original model on a separate reported-SMS collection. Russian or Kazakh text, code-switching, email and URLs as separate objects remain unmeasured. A ham prediction does not establish that a link or sender is safe.")
+    p("The external sample has no legitimate messages, so independent modern ham and a new spam holdout are still needed to assess the full error tradeoff. Source/date annotations and representative sampling also matter. Any defense developed after inspecting the reported failures needs new final evaluation data. Deployment additionally requires measurements of latency, memory, privacy behavior and false-positive cost; sparse features alone do not establish on-device suitability.")
 
     page()
-    h("10 Reproducibility and conclusion")
+    h("10 External evaluation on reported SMS")
+    p("We use the CC BY 4.0 author artifact from Fishing for Smishing [9], pinned at commit a6175560b57387199871e51fbef6bc523d2516b4. It contains 33,869 pseudonymized reports with publisher-supplied text and annotations, partly extracted using language models. We use original English text only. A 2025 release does not imply 2025 message dates. Requiring one explicit 2023 or 2024 year yields 488 rows, mostly 2023; normalized deduplication leaves 372 texts in 371 template groups. The supplementary cohort contains 15,531 distinct English texts across all/unknown years. Neither cohort matches the entire historical corpus under exact, normalized or template keys; paraphrase and campaign independence are not established.")
+    p("Source, membership, artifact hash and decision rules were fixed before external prediction (repository PR #8). No fitting or threshold selection occurs. All inputs, including OOV messages, remain in the denominator. Table 5 uses the published pseudonymized text; the two overlapping cohorts are not independent replications.")
+    rows = []
+    for cohort, label in [("recent_2023_2024", "2023–2024"), ("all_english", "All English")]:
+        for mode, rule in [("validation", "Validation"), ("default", "Native")]:
+            r = ext(cohort, mode)
+            rows.append([label, rule, f'{int(r["detected"]):,} / {int(r["n_messages"]):,}',
+                         f'{int(r["missed"]):,}', f'{100*float(r["recall"]):.2f}%',
+                         f'{100*float(r["recall_lower"]):.2f}–{100*float(r["recall_upper"]):.2f}%'])
+    table(["Cohort", "Decision", "Detected / total", "Missed", "Recall", "95% interval"], rows,
+          [1, .9, 1.45, .7, .8, 2.15], "Table 5. Frozen model on positive reports. No external F1, precision, accuracy or FPR estimate.")
+    doc.add_picture(str(ROOT / "results/external/imc25/evaluation/recall.png"), width=Inches(7))
+    p("Figure 2. Same model and validation threshold. Intervals condition on observed groups; external cohorts overlap. Source, sampling, message type and pseudonymization differ, so the contrast is not a causal estimate of temporal degradation.", "Caption")
+    stripped = ext("recent_2023_2024", view="placeholders_removed")
+    p(f'The primary result is {primary_recall} recall, with 196 misses. Removing the fixed publisher placeholder tokens gives {100*float(stripped["recall"]):.2f}% (175 detected), a 0.27 percentage-point change; it cannot recover unredacted originals. Intervals use 5,000 whole-template resamples, seed 42, and exclude training, annotation and sampling uncertainty. Category counts are descriptive. This positive-report convenience sample exposes limited transfer but cannot measure the cost of blocking legitimate SMS.')
+
+    page()
+    h("11 Reproducibility and conclusion")
     p("The repository supplies raw-data checks, split and CV manifests, all 84 search results, clean and validation metrics, attack seeds and hashes, complete error ledgers, interval reports and fitted-pipeline export. Dataset, training source and model artifacts have SHA-256 records. Both full protocols were independently checked against saved models, including all 7,920 attacked metric rows per run. The environment uses Python 3.12.14 and scikit-learn 1.9.1; exact dependencies and execution metadata are recorded with each experiment.")
-    p("The full run uses python -m spam_detector.train --mode full. Adding --grouping template selects the sensitivity protocol. Independent recomputation uses scripts/verify_results.py with --all-attacks; uncertainty uses python -m spam_detector.uncertainty. Output directories must be unused for training, preventing accidental replacement of a completed run. The README provides the complete commands. Saved model files must come from a trusted run and are regenerated locally rather than committed as binary release artifacts.")
-    p("This study finds high clean-test quality for a CV-selected word model alongside substantial sensitivity to separator edits. Character features improve recall under the tested edits at operating points that can also increase false positives. Template grouping and conditional uncertainty qualify the result without changing it into a deployment guarantee. The next substantive evidence gain would come from independent modern data, rather than another classifier selected on the same test set.")
+    p("The README documents training and historical verification; docs/EXTERNAL_EVALUATION.md records the pinned external source, cohort construction and scoring commands. scripts/verify_external.py reconstructs all 31,806 score rows, 63,612 binary decisions, eight summaries, 72 category rows and intervals directly from the fitted pipeline. External verification requires the original hash-matched local artifact; binaries are not committed. Output directories must be unused, and retraining cannot silently replace the frozen model.")
+    p("The word model combines high historical F1 with sensitivity to separator edits and low recall on independent reported SMS. Character features retain more recall under the synthetic edits, at operating points that can increase false positives. The external result leaves modern false-positive cost unresolved. Future development needs representative modern ham and new spam, with an untouched final holdout reserved before using these inspected failures to improve the model.")
     p("Code and experiment artifacts: https://github.com/altynbk/sms-spam-detection")
     h("References")
     refs = [
@@ -228,6 +267,7 @@ def main():
         "[6] F. Pedregosa et al. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, vol. 12, pp. 2825-2830, 2011. https://jmlr.org/papers/v12/pedregosa11a.html",
         "[7] Scikit-learn developers. Tuning the decision threshold for class prediction. User Guide, accessed 9 October 2026. https://scikit-learn.org/stable/modules/classification_threshold.html",
         "[8] SciPy developers. scipy.stats.bootstrap. Reference documentation, accessed 9 October 2026. https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+        "[9] S. Agarwal, A. Papasavva, G. Suarez-Tangil and M. Vasek. Fishing for Smishing: Understanding SMS Phishing Infrastructure and Strategies by Mining Public User Reports. ACM IMC, 2025. DOI: 10.1145/3730567.3764431. Dataset: https://github.com/reportsmishing/Smishing-Dataset-IMC25",
     ]
     for ref in refs:
         para = p(ref)
