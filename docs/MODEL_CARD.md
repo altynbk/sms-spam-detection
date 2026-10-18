@@ -49,7 +49,7 @@ its zero overlap is specific to that heuristic.
 The model was selected from 11 variants using highest mean train-CV spam F1.
 Test outcomes did not choose the variant or threshold. There was no refitting after
 threshold selection. The default result uses a single grouped holdout. The additional template
-experiment is exploratory; neither establishes temporal/source transfer.
+experiment is exploratory; neither establishes temporal/source transfer by itself.
 
 ## Measured performance
 
@@ -82,6 +82,28 @@ These are nonadaptive scenarios on the same 130 spam messages, not an adversaria
 security certification. Attack-seed SD is not uncertainty over new training sets.
 Human readability, semantic preservation and changes to ham were not evaluated.
 
+## Independent reported SMS
+
+The same frozen artifact and validation threshold were evaluated on the
+author-released IMC 2025 smishing dataset. The primary cohort contains 372
+distinct English texts with an explicit 2023–2024 year, predominantly 2023.
+There are no exact, normalized or template-key matches against the full
+historical corpus. These checks cannot exclude related campaigns or paraphrases.
+
+The model detects **176 / 372** reports: **47.31% recall**, 196 misses and a
+conditional 95% whole-template-bootstrap interval of **42.32–52.28%**. Native
+decisions detect 145 / 372 (38.98%). Removing fixed anonymization placeholders
+changes validation-threshold recall to 47.04%. The supplementary English cohort
+of 15,531 texts, including unknown/older years, gives 48.23% recall.
+
+The dataset is a pseudonymized convenience sample of positive reports, with
+publisher-supplied annotations and no legitimate-message class. External F1,
+precision, accuracy and false-positive rate are unavailable. The difference
+from the historical test is not a causal estimate of temporal degradation.
+OOV inputs remain in the research denominator, unlike the demo's UI abstention.
+The [external report](EXTERNAL_EVALUATION.md) records selection, source licensing,
+all decision rules, verification and the protocol frozen before prediction.
+
 ## Artifacts, reproducibility and release considerations
 
 The authoritative settings and exact versions are in
@@ -98,9 +120,10 @@ messages. Exact LinearSVC feature contributions plus the intercept reconstruct
 the score; these are associations, not causal explanations. Any hosted deployment
 would require its own access, privacy and operational review.
 
-For broader use, collect a separate representative evaluation set, define the
-false-positive cost and target languages, and test source/time transfer. Keep the
-current results frozen when evaluating any new model or defense.
+For broader use, obtain independent modern ham and new spam with reliable dates,
+define the false-positive cost and target languages, and reserve a new final
+holdout. The external sample has now been inspected and must not be repeatedly
+used to select a model or defense. Keep the current results frozen.
 
 ## Template sensitivity
 

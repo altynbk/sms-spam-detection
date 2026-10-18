@@ -1,0 +1,35 @@
+{
+  "protocol_sha256": "c7e71a48e38bd70120e3c07954ed5b92669e72bf459f4fb63c921b81e722ebd0",
+  "model_id": "linear_svc_word_gentle",
+  "model_sha256": "39f6f5593959ca1ecd85f485e27ffd8a1594af099cfa34e1a79f876b14bd95f6",
+  "model_metadata_sha256": "069d5534b91d676f00118a596bd4c06796d0d3bbf3d5266ffd2925f3a930a537",
+  "validation_threshold": -0.08620419778818611,
+  "native_decision": "pipeline.predict",
+  "source_sha256": {
+    "data/external/imc25/source.json": "fa2d8bab9cd3be908c8ff7bc4e8bc129ec663380cb06f2c13b45edd5a344eab9",
+    "data/external/imc25/protocol.json": "c7e71a48e38bd70120e3c07954ed5b92669e72bf459f4fb63c921b81e722ebd0",
+    "results/external/imc25/cohorts/audit.json": "b7502391e05986eee3545aa53d3b7fa653ec52add56b2c391f3a61ac7c035198",
+    "results/external/imc25/cohorts/recent_2023_2024_membership.csv": "6002c51e4629a8c5265381498fd7fc446555404b625bf9c15aee08d9e7c3c2b5",
+    "results/external/imc25/cohorts/all_english_membership.csv": "11826a71a79bc5df5c6c568941b138bd7fbb42a38d0ab2f2aa41dbcca203c0f2",
+    "spam_detector/external_data.py": "a84e986f19096b83561c9931dd798766bca6dd6fabe9bf09a974c4735ef95e7b",
+    "spam_detector/external_eval.py": "3d99416478b10102bb54ee1ed60b05f0e3557812db26bb37fcc7daca2f7387a9",
+    "spam_detector/demo.py": "a0223a2687d423a43317ea9e8bf3d08ec62a08c061678d0acd72f01e44658f99",
+    "scripts/verify_external.py": "7949840d7a9aa44b495d64384ca10dcb9af307f76a791767a0d5f0372995846a"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "no_fit": true,
+  "no_threshold_selection": true,
+  "primary_result": "recent_2023_2024 / published / validation",
+  "scope": "Recall on publisher-labeled positive reports. No ham, precision, F1, accuracy or FPR estimate. Pseudonymized convenience sample; dates/annotations not independently verified. Bootstrap conditions on fixed model and observed heuristic groups.",
+  "output_sha256": {
+    "predictions.csv": "27cafdb8970eaee369035423839ed3481cf20902058c4e0b5402a64802fba3d2",
+    "metrics.csv": "63498c249919d3a0c28ddf43c79d1b6fb24158a4362d21f1d422df66f6a64b71",
+    "categories.csv": "a94afb86d37c283cbfb5db9e87b3e52b1109a37ba923f4bdcb110e60b4e72695"
+  }
+}

@@ -1,0 +1,73 @@
+cohort,view,threshold_mode,category,n_messages,detected,missed,recall
+recent_2023_2024,published,validation,banking,176,112,64,0.6363636363636364
+recent_2023_2024,published,validation,delivery,29,3,26,0.10344827586206896
+recent_2023_2024,published,validation,government,31,12,19,0.3870967741935484
+recent_2023_2024,published,validation,hey mum/dad,2,0,2,0.0
+recent_2023_2024,published,validation,others,92,29,63,0.31521739130434784
+recent_2023_2024,published,validation,spam,24,12,12,0.5
+recent_2023_2024,published,validation,telecom,12,8,4,0.6666666666666666
+recent_2023_2024,published,validation,wrong number,6,0,6,0.0
+recent_2023_2024,published,default,banking,176,91,85,0.5170454545454546
+recent_2023_2024,published,default,delivery,29,3,26,0.10344827586206896
+recent_2023_2024,published,default,government,31,11,20,0.3548387096774194
+recent_2023_2024,published,default,hey mum/dad,2,0,2,0.0
+recent_2023_2024,published,default,others,92,21,71,0.22826086956521738
+recent_2023_2024,published,default,spam,24,11,13,0.4583333333333333
+recent_2023_2024,published,default,telecom,12,8,4,0.6666666666666666
+recent_2023_2024,published,default,wrong number,6,0,6,0.0
+recent_2023_2024,placeholders_removed,validation,banking,176,112,64,0.6363636363636364
+recent_2023_2024,placeholders_removed,validation,delivery,29,3,26,0.10344827586206896
+recent_2023_2024,placeholders_removed,validation,government,31,12,19,0.3870967741935484
+recent_2023_2024,placeholders_removed,validation,hey mum/dad,2,0,2,0.0
+recent_2023_2024,placeholders_removed,validation,others,92,28,64,0.30434782608695654
+recent_2023_2024,placeholders_removed,validation,spam,24,12,12,0.5
+recent_2023_2024,placeholders_removed,validation,telecom,12,8,4,0.6666666666666666
+recent_2023_2024,placeholders_removed,validation,wrong number,6,0,6,0.0
+recent_2023_2024,placeholders_removed,default,banking,176,91,85,0.5170454545454546
+recent_2023_2024,placeholders_removed,default,delivery,29,3,26,0.10344827586206896
+recent_2023_2024,placeholders_removed,default,government,31,11,20,0.3548387096774194
+recent_2023_2024,placeholders_removed,default,hey mum/dad,2,0,2,0.0
+recent_2023_2024,placeholders_removed,default,others,92,21,71,0.22826086956521738
+recent_2023_2024,placeholders_removed,default,spam,24,11,13,0.4583333333333333
+recent_2023_2024,placeholders_removed,default,telecom,12,8,4,0.6666666666666666
+recent_2023_2024,placeholders_removed,default,wrong number,6,0,6,0.0
+all_english,published,validation,banking,6404,3429,2975,0.5354465958775765
+all_english,published,validation,delivery,1229,499,730,0.40602115541090317
+all_english,published,validation,government,1317,551,766,0.4183750949126803
+all_english,published,validation,hey mum/dad,55,1,54,0.01818181818181818
+all_english,published,validation,mixed,127,59,68,0.4645669291338583
+all_english,published,validation,others,3634,1351,2283,0.37176664832140893
+all_english,published,validation,spam,1168,582,586,0.4982876712328767
+all_english,published,validation,telecom,1379,1012,367,0.7338651196519217
+all_english,published,validation,unknown,1,1,0,1.0
+all_english,published,validation,wrong number,217,6,211,0.027649769585253458
+all_english,published,default,banking,6404,2661,3743,0.41552154903185506
+all_english,published,default,delivery,1229,399,830,0.32465419039869814
+all_english,published,default,government,1317,450,867,0.3416856492027335
+all_english,published,default,hey mum/dad,55,1,54,0.01818181818181818
+all_english,published,default,mixed,127,52,75,0.4094488188976378
+all_english,published,default,others,3634,1122,2512,0.30875068794716565
+all_english,published,default,spam,1168,518,650,0.4434931506849315
+all_english,published,default,telecom,1379,899,480,0.6519216823785352
+all_english,published,default,unknown,1,1,0,1.0
+all_english,published,default,wrong number,217,6,211,0.027649769585253458
+all_english,placeholders_removed,validation,banking,6404,3420,2984,0.5340412242348532
+all_english,placeholders_removed,validation,delivery,1229,495,734,0.402766476810415
+all_english,placeholders_removed,validation,government,1317,546,771,0.4145785876993166
+all_english,placeholders_removed,validation,hey mum/dad,55,1,54,0.01818181818181818
+all_english,placeholders_removed,validation,mixed,127,58,69,0.4566929133858268
+all_english,placeholders_removed,validation,others,3634,1343,2291,0.3695652173913043
+all_english,placeholders_removed,validation,spam,1168,580,588,0.4965753424657534
+all_english,placeholders_removed,validation,telecom,1379,1006,373,0.7295141406816533
+all_english,placeholders_removed,validation,unknown,1,1,0,1.0
+all_english,placeholders_removed,validation,wrong number,217,6,211,0.027649769585253458
+all_english,placeholders_removed,default,banking,6404,2651,3753,0.4139600249843848
+all_english,placeholders_removed,default,delivery,1229,395,834,0.3213995117982099
+all_english,placeholders_removed,default,government,1317,448,869,0.340167046317388
+all_english,placeholders_removed,default,hey mum/dad,55,1,54,0.01818181818181818
+all_english,placeholders_removed,default,mixed,127,52,75,0.4094488188976378
+all_english,placeholders_removed,default,others,3634,1117,2517,0.3073747936158503
+all_english,placeholders_removed,default,spam,1168,517,651,0.4426369863013699
+all_english,placeholders_removed,default,telecom,1379,897,482,0.6504713560551124
+all_english,placeholders_removed,default,unknown,1,1,0,1.0
+all_english,placeholders_removed,default,wrong number,217,5,212,0.02304147465437788

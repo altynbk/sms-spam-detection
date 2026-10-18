@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "model_fitting": false,
+  "protocol_sha256": "c7e71a48e38bd70120e3c07954ed5b92669e72bf459f4fb63c921b81e722ebd0",
+  "prediction_rows": 31806,
+  "binary_decisions_checked": 63612,
+  "summary_rows": 8,
+  "category_rows": 72,
+  "all_scores_and_decisions_recomputed": true,
+  "memberships_reconstructed": true,
+  "intervals_recomputed": true,
+  "output_hashes": {
+    "predictions.csv": "27cafdb8970eaee369035423839ed3481cf20902058c4e0b5402a64802fba3d2",
+    "metrics.csv": "63498c249919d3a0c28ddf43c79d1b6fb24158a4362d21f1d422df66f6a64b71",
+    "categories.csv": "a94afb86d37c283cbfb5db9e87b3e52b1109a37ba923f4bdcb110e60b4e72695"
+  }
+}
