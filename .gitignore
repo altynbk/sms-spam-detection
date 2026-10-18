@@ -6,6 +6,7 @@ results/local/
 # External source bytes are downloaded from a pinned, licensed upstream snapshot.
 data/external/imc25/final_dataset_output.csv
 data/external/adaptation/*.csv
+data/external/ham_expansion/*.csv
 results/quick/
 results/verification-*/
 work/
