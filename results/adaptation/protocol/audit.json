@@ -1,0 +1,290 @@
+{
+  "historical_development_rows": 4096,
+  "financial_raw_rows": 523,
+  "financial_bengali_script_excluded": 101,
+  "financial_cleaning": {
+    "input_rows": 422,
+    "conflicting_groups": 0,
+    "conflicting_rows": 0,
+    "duplicates_removed": 3,
+    "retained_rows": 419
+  },
+  "financial_historical_overlap": {
+    "reference_rows": 5574,
+    "reference_keys": 5094,
+    "campaign_matches": 5,
+    "near_matches": 7,
+    "total_excluded": 7,
+    "remaining": 412,
+    "similarity_threshold": 0.85
+  },
+  "financial_validation_overlap": {
+    "reference_rows": 246,
+    "reference_keys": 246,
+    "campaign_matches": 0,
+    "near_matches": 2,
+    "total_excluded": 2,
+    "remaining": 81,
+    "similarity_threshold": 0.85
+  },
+  "financial_test_overlap": {
+    "reference_rows": 327,
+    "reference_keys": 326,
+    "campaign_matches": 0,
+    "near_matches": 5,
+    "total_excluded": 5,
+    "remaining": 78,
+    "similarity_threshold": 0.85
+  },
+  "imc_cleaning": {
+    "input_rows": 22041,
+    "conflicting_groups": 0,
+    "conflicting_rows": 0,
+    "duplicates_removed": 7145,
+    "retained_rows": 14896
+  },
+  "imc_reference_overlap": {
+    "reference_rows": 5986,
+    "reference_keys": 5504,
+    "campaign_matches": 4,
+    "near_matches": 46,
+    "total_excluded": 50,
+    "remaining": 14846,
+    "similarity_threshold": 0.85
+  },
+  "imc_validation_overlap": {
+    "reference_rows": 11856,
+    "reference_keys": 11236,
+    "campaign_matches": 0,
+    "near_matches": 1063,
+    "total_excluded": 1063,
+    "remaining": 1927,
+    "similarity_threshold": 0.85
+  },
+  "history_checkpoint": {
+    "source_sha256": "a3724dca065ee8ed23eb18fb6382657e2559f2b0c0364aaf9c14277af1974e32",
+    "parsing": {
+      "raw_rows": 8895,
+      "malformed_source_rows": [
+        1461,
+        1977
+      ],
+      "excluded_categories_or_redactions": 7917,
+      "eligible_rows": 976,
+      "scope": "All languages; unsolicited spam versus government PSAs; one Philippine recipient"
+    },
+    "cleaning": {
+      "input_rows": 976,
+      "conflicting_groups": 0,
+      "conflicting_rows": 0,
+      "duplicates_removed": 191,
+      "retained_rows": 785
+    },
+    "empty_imc_texts_after_placeholder_removal": 37,
+    "overlap": {
+      "reference_rows": 27615,
+      "reference_keys": 19185,
+      "campaign_matches": 3,
+      "near_matches": 30,
+      "total_excluded": 31,
+      "remaining": 754,
+      "similarity_threshold": 0.85
+    },
+    "class_counts": {
+      "0": 55,
+      "1": 699
+    },
+    "class_groups": {
+      "0": 54,
+      "1": 643
+    },
+    "received_range": [
+      "2022-09-30 13:01:05",
+      "2026-07-31 20:35:49"
+    ],
+    "code_sha256": "2bec0787e9a6ddac2609fe45563baf989405298692e6c84ef1bf066786300545"
+  },
+  "history_financial_overlap": {
+    "reference_rows": 412,
+    "reference_keys": 410,
+    "campaign_matches": 0,
+    "near_matches": 0,
+    "total_excluded": 0,
+    "remaining": 754,
+    "similarity_threshold": 0.85
+  },
+  "counts": [
+    {
+      "source": "financial",
+      "split": "test",
+      "label": 0,
+      "rows": 32
+    },
+    {
+      "source": "financial",
+      "split": "test",
+      "label": 1,
+      "rows": 46
+    },
+    {
+      "source": "financial",
+      "split": "train",
+      "label": 0,
+      "rows": 99
+    },
+    {
+      "source": "financial",
+      "split": "train",
+      "label": 1,
+      "rows": 147
+    },
+    {
+      "source": "financial",
+      "split": "validation",
+      "label": 0,
+      "rows": 33
+    },
+    {
+      "source": "financial",
+      "split": "validation",
+      "label": 1,
+      "rows": 48
+    },
+    {
+      "source": "historical",
+      "split": "train",
+      "label": 0,
+      "rows": 2704
+    },
+    {
+      "source": "historical",
+      "split": "train",
+      "label": 1,
+      "rows": 366
+    },
+    {
+      "source": "historical",
+      "split": "validation",
+      "label": 0,
+      "rows": 900
+    },
+    {
+      "source": "historical",
+      "split": "validation",
+      "label": 1,
+      "rows": 126
+    },
+    {
+      "source": "imc25",
+      "split": "train",
+      "label": 1,
+      "rows": 11856
+    },
+    {
+      "source": "imc25",
+      "split": "validation",
+      "label": 1,
+      "rows": 1927
+    },
+    {
+      "source": "sms_history",
+      "split": "test",
+      "label": 0,
+      "rows": 55
+    },
+    {
+      "source": "sms_history",
+      "split": "test",
+      "label": 1,
+      "rows": 699
+    }
+  ],
+  "groups": [
+    {
+      "source": "financial",
+      "split": "test",
+      "label": 0,
+      "groups": 32
+    },
+    {
+      "source": "financial",
+      "split": "test",
+      "label": 1,
+      "groups": 46
+    },
+    {
+      "source": "financial",
+      "split": "train",
+      "label": 0,
+      "groups": 99
+    },
+    {
+      "source": "financial",
+      "split": "train",
+      "label": 1,
+      "groups": 147
+    },
+    {
+      "source": "financial",
+      "split": "validation",
+      "label": 0,
+      "groups": 32
+    },
+    {
+      "source": "financial",
+      "split": "validation",
+      "label": 1,
+      "groups": 48
+    },
+    {
+      "source": "historical",
+      "split": "train",
+      "label": 0,
+      "groups": 2699
+    },
+    {
+      "source": "historical",
+      "split": "train",
+      "label": 1,
+      "groups": 345
+    },
+    {
+      "source": "historical",
+      "split": "validation",
+      "label": 0,
+      "groups": 899
+    },
+    {
+      "source": "historical",
+      "split": "validation",
+      "label": 1,
+      "groups": 122
+    },
+    {
+      "source": "imc25",
+      "split": "train",
+      "label": 1,
+      "groups": 11236
+    },
+    {
+      "source": "imc25",
+      "split": "validation",
+      "label": 1,
+      "groups": 1872
+    },
+    {
+      "source": "sms_history",
+      "split": "test",
+      "label": 0,
+      "groups": 54
+    },
+    {
+      "source": "sms_history",
+      "split": "test",
+      "label": 1,
+      "groups": 643
+    }
+  ],
+  "protocol_sha256": "c994566024a0894bc3dd1dd6755adc260ea4483ed18485687c92537669b5744f",
+  "code_sha256": "e2ff99d0ffee7ac85638335fc00c57d031b5ccf641f97b2446e614e0b6a93784"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Financial scams detection dataset",
+  "version": 2,
+  "authors": [
+    "Al Rafi Ahmed",
+    "Gazi Faizul Islam"
+  ],
+  "doi": "10.17632/znsk27yk3h.2",
+  "page": "https://data.mendeley.com/datasets/znsk27yk3h/2",
+  "url": "https://data.mendeley.com/public-files/datasets/znsk27yk3h/files/d8cdbed5-0c31-4010-82e7-ed432c4bc313/file_downloaded",
+  "filename": "financial.csv",
+  "sha256": "58ec802e4de8768643e3be0badbaedb3ae5017a273e8f3898e72f6a29cbc96ad",
+  "bytes": 47442,
+  "rows": 523,
+  "published": "2025-10-22",
+  "accessed": "2026-10-18",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "channels": [
+    "SMS",
+    "chat",
+    "email"
+  ],
+  "receipt_dates": "not supplied",
+  "language_selection": "Exclude Bengali Unicode block; Latin-script subset, not validated English language detection"
+}

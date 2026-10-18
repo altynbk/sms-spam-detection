@@ -1,0 +1,16 @@
+{
+  "title": "Spam of the Times: spam and marketing SMS",
+  "author": "Scott Lee Chua",
+  "repository": "https://github.com/scottleechua/data",
+  "commit": "ad50c348c53f738645f78ee8baa8be5082a1de91",
+  "filename": "text-messages.csv",
+  "url": "https://raw.githubusercontent.com/scottleechua/data/ad50c348c53f738645f78ee8baa8be5082a1de91/spam-and-marketing-sms/text-messages.csv",
+  "sha256": "a3724dca065ee8ed23eb18fb6382657e2559f2b0c0364aaf9c14277af1974e32",
+  "bytes": 989603,
+  "raw_rows": 8895,
+  "snapshot_date": "2026-08-20",
+  "accessed": "2026-10-18",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "role": "unscored external test source; never training or threshold selection"
+}
