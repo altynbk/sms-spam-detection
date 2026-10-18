@@ -1,0 +1,286 @@
+{
+  "raw_rows": 29403,
+  "raw_class_counts": {
+    "0": 4028,
+    "1": 25375
+  },
+  "cleaning": {
+    "input_rows": 29403,
+    "conflicting_groups": 0,
+    "conflicting_rows": 0,
+    "duplicates_removed": 99,
+    "retained_rows": 29304
+  },
+  "reference_overlap": {
+    "reference_rows": 40883,
+    "reference_keys": 28506,
+    "campaign_matches": 60,
+    "near_matches": 1790,
+    "total_excluded": 1790,
+    "remaining": 27514,
+    "similarity_threshold": 0.85
+  },
+  "near_grouping": {
+    "campaign_keys": 27102,
+    "near_components": 23753,
+    "conflicting_components": 2,
+    "conflicting_rows": 115,
+    "similarity": 0.85
+  },
+  "retired_history_validation_overlap": {
+    "reference_rows": 593,
+    "reference_keys": 557,
+    "campaign_matches": 0,
+    "near_matches": 36,
+    "total_excluded": 36,
+    "remaining": 125,
+    "similarity_threshold": 0.85
+  },
+  "counts": [
+    {
+      "source": "financial",
+      "split": "train",
+      "label": 0,
+      "rows": 99
+    },
+    {
+      "source": "financial",
+      "split": "train",
+      "label": 1,
+      "rows": 147
+    },
+    {
+      "source": "financial",
+      "split": "validation",
+      "label": 0,
+      "rows": 33
+    },
+    {
+      "source": "financial",
+      "split": "validation",
+      "label": 1,
+      "rows": 48
+    },
+    {
+      "source": "historical",
+      "split": "train",
+      "label": 0,
+      "rows": 2704
+    },
+    {
+      "source": "historical",
+      "split": "train",
+      "label": 1,
+      "rows": 366
+    },
+    {
+      "source": "historical",
+      "split": "validation",
+      "label": 0,
+      "rows": 900
+    },
+    {
+      "source": "historical",
+      "split": "validation",
+      "label": 1,
+      "rows": 126
+    },
+    {
+      "source": "imc25",
+      "split": "train",
+      "label": 1,
+      "rows": 11856
+    },
+    {
+      "source": "imc25",
+      "split": "validation",
+      "label": 1,
+      "rows": 1927
+    },
+    {
+      "source": "sms_history",
+      "split": "train",
+      "label": 0,
+      "rows": 44
+    },
+    {
+      "source": "sms_history",
+      "split": "train",
+      "label": 1,
+      "rows": 549
+    },
+    {
+      "source": "sms_history",
+      "split": "validation",
+      "label": 0,
+      "rows": 9
+    },
+    {
+      "source": "sms_history",
+      "split": "validation",
+      "label": 1,
+      "rows": 116
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "test",
+      "label": 0,
+      "rows": 1178
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "test",
+      "label": 1,
+      "rows": 7109
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "train",
+      "label": 0,
+      "rows": 1968
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "train",
+      "label": 1,
+      "rows": 11860
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "validation",
+      "label": 0,
+      "rows": 787
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "validation",
+      "label": 1,
+      "rows": 4497
+    }
+  ],
+  "groups": [
+    {
+      "source": "financial",
+      "split": "train",
+      "label": 0,
+      "groups": 99
+    },
+    {
+      "source": "financial",
+      "split": "train",
+      "label": 1,
+      "groups": 147
+    },
+    {
+      "source": "financial",
+      "split": "validation",
+      "label": 0,
+      "groups": 32
+    },
+    {
+      "source": "financial",
+      "split": "validation",
+      "label": 1,
+      "groups": 48
+    },
+    {
+      "source": "historical",
+      "split": "train",
+      "label": 0,
+      "groups": 2699
+    },
+    {
+      "source": "historical",
+      "split": "train",
+      "label": 1,
+      "groups": 345
+    },
+    {
+      "source": "historical",
+      "split": "validation",
+      "label": 0,
+      "groups": 899
+    },
+    {
+      "source": "historical",
+      "split": "validation",
+      "label": 1,
+      "groups": 122
+    },
+    {
+      "source": "imc25",
+      "split": "train",
+      "label": 1,
+      "groups": 11236
+    },
+    {
+      "source": "imc25",
+      "split": "validation",
+      "label": 1,
+      "groups": 1872
+    },
+    {
+      "source": "sms_history",
+      "split": "train",
+      "label": 0,
+      "groups": 43
+    },
+    {
+      "source": "sms_history",
+      "split": "train",
+      "label": 1,
+      "groups": 514
+    },
+    {
+      "source": "sms_history",
+      "split": "validation",
+      "label": 0,
+      "groups": 9
+    },
+    {
+      "source": "sms_history",
+      "split": "validation",
+      "label": 1,
+      "groups": 96
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "test",
+      "label": 0,
+      "groups": 1154
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "test",
+      "label": 1,
+      "groups": 5972
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "train",
+      "label": 0,
+      "groups": 1922
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "train",
+      "label": 1,
+      "groups": 9952
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "validation",
+      "label": 0,
+      "groups": 769
+    },
+    {
+      "source": "super_sms_2018_2023",
+      "split": "validation",
+      "label": 1,
+      "groups": 3982
+    }
+  ],
+  "test_predictions_during_preparation": 0,
+  "code_sha256": "d12e2f77ade24430876a4282a1987032b6fae7a02b9e4959d021278e545873bd",
+  "protocol_sha256": "572ce33f52126e183820fa3491c3cb0d4750a02ece6ba1aa891262a5d62f82fd"
+}

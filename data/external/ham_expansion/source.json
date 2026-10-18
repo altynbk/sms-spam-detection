@@ -1,0 +1,30 @@
+{
+  "name": "Super SMS Dataset: author temporal subset 2018–2023",
+  "authors": [
+    "Muhammad Salman",
+    "Muhammad Ikram",
+    "Mohamed Ali Kaafar"
+  ],
+  "paper_doi": "10.1109/ACCESS.2024.3364671",
+  "paper_url": "https://researchers.mq.edu.au/en/publications/investigating-evasive-techniques-in-sms-spam-filtering-a-comparat/",
+  "repository": "https://github.com/smspamresearch/spstudy",
+  "snapshot": "d83c99c6c3ae8c498b373e66b3a8129356a87b63",
+  "snapshot_date": "2023-08-23",
+  "filename": "DS_latest.csv",
+  "url": "https://raw.githubusercontent.com/smspamresearch/spstudy/d83c99c6c3ae8c498b373e66b3a8129356a87b63/Data/DS_latest.csv",
+  "bytes": 4006793,
+  "sha256": "ad37302ac769a8b1b87594701aad74a5011f906203abeedc25cb4aa14afd02d6",
+  "encoding": "ISO-8859-1 (lossless byte decoding; preserves publisher text without replacing invalid UTF-8 bytes)",
+  "schema": {
+    "SMSes": "message text",
+    "Labels": "0 ham; 1 spam"
+  },
+  "temporal_provenance": "Author Data/README.md at this snapshot identifies DS_latest.csv as 2018–2023. Publication describes 2,325 ham collected from consenting volunteers October 2021–June 2023 in the combined corpus. Individual receipt dates, volunteer membership and sender IDs are unavailable; do not assign those dates to every row.",
+  "rights": "Authors publicly offer the corpus for research and request citation. Repository has no explicit standard data license. Raw messages are acquired locally, excluded from Git, and not redistributed here; check upstream terms for other uses.",
+  "limitations": [
+    "Mixed component corpora; some component dates may describe dataset release rather than receipt.",
+    "Manual author labels use broad spam rules and may differ from recipient consent.",
+    "Not evidence about representative 2025–2026 SMS or Russian/Kazakh messages.",
+    "Source-independent of previous project corpora after text screening, but new train/validation/test share this author corpus; new test is a held-out group sample, not an entirely unseen provider."
+  ]
+}

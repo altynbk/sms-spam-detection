@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "seed": 20261019,
+  "input_sha256": {
+    "data/smshamspam.csv": "bbcb13af6558d89e007094a1d62a982ce2b03ce679f89cd88625de3c71cea76a",
+    "results/full/splits.csv": "f8a07310b5815e64d559797952f6db340d61d485b664e620ecfc9e2bde210ded",
+    "data/external/imc25/final_dataset_output.csv": "1bbd1e9e82c3ea023112207b80da268a5c4a07d2353c2b0898360ab037fa9a64",
+    "data/external/adaptation/financial.csv": "58ec802e4de8768643e3be0badbaedb3ae5017a273e8f3898e72f6a29cbc96ad",
+    "data/external/adaptation/text-messages.csv": "a3724dca065ee8ed23eb18fb6382657e2559f2b0c0364aaf9c14277af1974e32",
+    "data/external/ham_expansion/DS_latest.csv": "ad37302ac769a8b1b87594701aad74a5011f906203abeedc25cb4aa14afd02d6",
+    "data/external/ham_expansion/source.json": "89963331d63be9ee7c6663e28f476a3451127256aca3ed1c5a3065a45ae02e89",
+    "results/adaptation/protocol/membership.csv": "f00604b843f9005a1a5807a1f1ba65c16006b81438178f91659ef448c94c37fa",
+    "spam_detector/adaptation.py": "cbe92135d065d0125534b7a2c65b96e51c1de57603774d49622217cd3dc26dfd",
+    "spam_detector/adaptation_data.py": "2bec0787e9a6ddac2609fe45563baf989405298692e6c84ef1bf066786300545",
+    "spam_detector/adaptation_protocol.py": "e2ff99d0ffee7ac85638335fc00c57d031b5ccf641f97b2446e614e0b6a93784"
+  },
+  "fresh_source_fractions": {
+    "train": 0.5,
+    "validation": 0.2,
+    "test": 0.3
+  },
+  "decontamination": "Remove campaign and fixed hashed character-5-gram cosine >= .85 matches against all earlier acquired historical, financial, IMC and eligible SMS-history messages. Remove conflicting labels and normalized duplicate texts. Compute .85 near-copy connected components within the new corpus before stratified splitting; remove conflicting components. No fitted model consulted.",
+  "previous_test_policy": "Prior financial test retired and unused; prior SMS-history test explicitly retired and partitioned 80/20 into development. Historical train/validation preserved. Old reported tests never described as independent evidence again.",
+  "candidate_features": [
+    "word_char"
+  ],
+  "candidate_C": [
+    0.5,
+    1.0
+  ],
+  "ham_weight_multipliers": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "word_features": 5000,
+  "char_features": 10000,
+  "base_weight": "Equal class mass, source mass within class and campaign-group mass within source/class; multiply ham by declared factor then normalize all weights to mean 1.",
+  "max_validation_fpr": 0.01,
+  "selection": "For each of six refitted candidates, maximize macro spam recall over validation sources subject to empirical FPR <= 1% separately for every ham source. Ties: lower mean FPR, then higher threshold. Select candidate by higher macro recall then lower mean FPR; remaining ties by declared C then ham multiplier order. No refit on validation.",
+  "controls": "Evaluate frozen original baseline, frozen previous adapted model, and the previous adapted model with its threshold recalibrated on this validation set by the identical rule. Threshold-only control is not eligible for candidate selection.",
+  "baseline": {
+    "path": "results/full/models/linear_svc_word_gentle.joblib",
+    "sha256": "39f6f5593959ca1ecd85f485e27ffd8a1594af099cfa34e1a79f876b14bd95f6",
+    "threshold": -0.08620419778818611
+  },
+  "previous": {
+    "path": "results/local/modern-adaptation/models/adapted_word_char_c1.joblib",
+    "sha256": "260be7cf3190356cfb8d14373e76a7d5f345290fdbcaa408ba2269c79261180a",
+    "threshold": 0.64907808395485
+  },
+  "test_rule": "Score untouched test once, only selected candidate and three declared controls; publish all outcomes. No further tuning after inspection.",
+  "promotion_rule": "Candidate test FPR <= 1% and <= original baseline FPR; paired group-bootstrap upper 95% bound on FPR change versus previous adapted model < 0; lower 95% bound on recall change >= -0.03 versus both original and previous adapted models. Passing only permits considering deployment, not a production safety claim.",
+  "uncertainty": {
+    "draws": 5000,
+    "seed": 20261019,
+    "method": "paired class-stratified whole connected-component bootstrap; conditional on models and observed source"
+  },
+  "source_audit": "No model scores used to choose source, rows or split."
+}
