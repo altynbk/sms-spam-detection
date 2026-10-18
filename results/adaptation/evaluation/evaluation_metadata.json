@@ -1,0 +1,13 @@
+{
+  "training_metadata_sha256": "9a9dbef00ab421c5cb0cce9c393df68c7f76cd33531737d8d9c041f837df2311",
+  "baseline_sha256": "39f6f5593959ca1ecd85f485e27ffd8a1594af099cfa34e1a79f876b14bd95f6",
+  "selected_model": "adapted_word_char_c1",
+  "promotion_gate_passed": false,
+  "deployment_status": "research_candidate; demo unchanged",
+  "test_rows": 832,
+  "output_sha256": {
+    "test_scores.csv": "42d3386f3ebdc1fec493a89214dfcfb5f95f1c698f08e3b878392438e9c537ad",
+    "test_metrics.csv": "438d8c5827154a59dcff7bb40d8bc8c5b68f2d4a4b8882c169cbad67620d8fa6",
+    "test_intervals.json": "97aaea1599957a154db7c479b29dc19548ff3a156908fc4e749e8be92be25935"
+  }
+}

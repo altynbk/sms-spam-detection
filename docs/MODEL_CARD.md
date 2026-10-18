@@ -104,6 +104,28 @@ OOV inputs remain in the research denominator, unlike the demo's UI abstention.
 The [external report](EXTERNAL_EVALUATION.md) records selection, source licensing,
 all decision rules, verification and the protocol frozen before prediction.
 
+## Modern-message adaptation candidate
+
+A separate follow-up refits six pipelines using historical development data,
+previously inspected IMC reports and a licensed 2025 financial-message corpus
+containing both scam and ordinary messages. The final 78-message financial
+holdout and a new 754-message SMS source were reserved before fitting. The
+source, group splits, near-copy exclusions and selection rule were merged before
+training; IMC is development data for this follow-up, not an independent test.
+
+Validation selects `adapted_word_char_c1` with threshold 0.64907808395485. On the
+financial holdout, F1 rises from 0.6400 to 0.8605, FP falls from 5 to 3 of 32 ham,
+and FN from 22 to 9 of 46 spam. On the independent SMS source, recall rises from
+42.63% to 58.66% and F1 from 0.5913 to 0.7270, but FP rises from 11 to 19 of 55
+ham (FPR 20.00% to 34.55%). ROC-AUC falls from 0.6979 to 0.6466. The paired
+conditional 95% interval for the FPR increase is +1.79 to +28.07 percentage points.
+
+The predeclared replacement gate **fails**. The candidate is a research artifact,
+not the demo default. Ordinary financial messages are mixed-channel and lack
+receipt dates; the independent SMS source is mixed-language, one recipient and
+has government PSAs as its only retained ham class. A higher spam F1 does not
+establish reliable general filtering. See the [complete follow-up](MODERN_ADAPTATION.md).
+
 ## Artifacts, reproducibility and release considerations
 
 The authoritative settings and exact versions are in
@@ -122,8 +144,9 @@ would require its own access, privacy and operational review.
 
 For broader use, obtain independent modern ham and new spam with reliable dates,
 define the false-positive cost and target languages, and reserve a new final
-holdout. The external sample has now been inspected and must not be repeatedly
-used to select a model or defense. Keep the current results frozen.
+holdout. The reported external samples have now been inspected. IMC may support further
+development, but a new untouched test is required for another independent claim.
+Keep the historical and follow-up results frozen.
 
 ## Template sensitivity
 

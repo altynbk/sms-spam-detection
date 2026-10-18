@@ -151,4 +151,60 @@ python -m spam_detector.adaptation_protocol --output results/local/adaptation-pr
 ```
 
 Raw messages and fitted model binaries stay outside Git. Training and evaluation
-results will be recorded as a separate change after this protocol is merged.
+were performed only after the protocol was merged in PR #11.
+
+## Measured outcome
+
+The frozen protocol selected `adapted_word_char_c1`, using word and character
+TF-IDF with C=1 and threshold **0.64907808395485**. It was fitted on 15,172 rows;
+3,034 separate validation rows selected the candidate and threshold. Validation
+macro recall was 0.8131; false positives were 0/33 financial ham and 3/900
+historical ham. These small-sample validation constraints did not transfer.
+
+| New evaluation set | Model | Spam recall | Spam F1 | False positives / ham | Misses / spam |
+|---|---|---:|---:|---:|---:|
+| Financial holdout | Original | 52.17% | 0.6400 | 5 / 32 | 22 / 46 |
+| Financial holdout | Adapted | 80.43% | 0.8605 | 3 / 32 | 9 / 46 |
+| Independent SMS history | Original | 42.63% | 0.5913 | 11 / 55 | 401 / 699 |
+| Independent SMS history | Adapted | 58.66% | 0.7270 | 19 / 55 | 289 / 699 |
+
+The adapted model finds 112 additional spam messages in the independent source,
+but falsely flags eight additional PSAs. Its FPR there is **34.55%**, versus
+20.00% for the original. Paired conditional 95% group-bootstrap intervals for
+the change are **+0.0998 to +0.1721 F1**, **+11.99 to +20.12 percentage points
+recall**, and **+1.79 to +28.07 percentage points FPR**. A higher spam F1 on this
+spam-heavy sample does not establish safer filtering. Ranking quality also
+falls on this source: ROC-AUC 0.6979 to 0.6466 and average precision 0.9667 to
+0.9580. The apparent improvement is specific to the selected operating point.
+
+On the smaller financial holdout, the paired F1 change interval is +0.1102 to
++0.3457. The FPR change interval includes zero (-18.75 to +6.25 percentage points);
+32 ham examples cannot support a precise false-positive claim. This is an
+unseen same-source, mixed-channel holdout, not a second independent SMS source.
+
+**The preregistered promotion criterion failed.** The adapted artifact remains
+an experimental candidate; the default model and demo are unchanged. Neither
+model is suitable for automatic blocking on the measured modern samples. No
+candidate, weight or threshold was changed after these test results were seen.
+Further development needs more diverse real ordinary SMS, especially public
+warnings and legitimate service messages, and a new untouched final test.
+The two reported test sets are now inspected evidence, not reusable selection
+sets with an independent-test claim.
+
+Reproduce the frozen follow-up in an unused local directory:
+
+```bash
+python -m spam_detector.adaptation fit --output results/local/modern-adaptation
+python -m spam_detector.adaptation evaluate --output results/local/modern-adaptation
+python scripts/verify_adaptation.py --run results/local/modern-adaptation
+```
+
+The baseline artifact must exist at its recorded path and hash. Evaluation checks
+all six training artifact hashes, runtime versions, source code, validation
+outputs and the saved threshold before scoring the selected candidate. A run
+with existing test predictions cannot be silently overwritten. The verifier
+reconstructs all candidate validation scores and thresholds, both test-model
+scores, confusion matrices, metrics and paired bootstrap intervals without
+fitting a model. Published evidence is in
+[`results/adaptation/evaluation`](../results/adaptation/evaluation); binaries
+remain in the ignored local run.

@@ -1,0 +1,9 @@
+{
+  "model": "adapted_word_char_c1",
+  "feature": "word_char",
+  "C": 1.0,
+  "threshold": 0.64907808395485,
+  "macro_recall": 0.8130932474471654,
+  "macro_fpr": 0.0016666666666666668,
+  "max_source_fpr": 0.0033333333333333335
+}

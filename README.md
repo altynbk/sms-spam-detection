@@ -37,6 +37,14 @@ recall. See the [external evaluation](docs/EXTERNAL_EVALUATION.md) for provenanc
 frozen protocol, complete results and limitations. Russian/Kazakh and production
 traffic remain untested.
 
+**Adaptation follow-up:** refitting with newer spam and ordinary financial
+messages raises recall on a new independent SMS source from **42.63% to 58.66%**,
+but increases false positives on government notifications from **11/55 to 19/55**.
+The candidate failed the predeclared replacement criterion and remains
+experimental. A separate financial holdout improves from F1 0.6400 to 0.8605.
+See the [adaptation protocol and results](docs/MODERN_ADAPTATION.md) for the
+limited data scope, frozen splits and paired comparisons.
+
 ![Mean spam recall under character edits](paper/figures/robustness.png)
 
 The figure compares three LinearSVC feature sets at their own fixed validation
