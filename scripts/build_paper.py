@@ -71,6 +71,18 @@ def main():
     for name, digest in adapted_meta["output_sha256"].items():
         assert hashlib.sha256((ROOT / "results/adaptation/evaluation" / name).read_bytes()).hexdigest() == digest
 
+    ham = read_csv("ham_expansion/evaluation", "test_metrics.csv")
+    ham_meta = read_json("ham_expansion/evaluation", "evaluation_metadata.json")
+    ham_check = read_json("ham_expansion/evaluation", "verification.json")
+    assert ham_check["status"] == "passed"
+    assert ham_meta["selected_model"] == "ham_word_char_c1_w1"
+    assert ham_meta["promotion_gate"]["passed"] is False
+    assert ham_check["output_sha256"] == ham_meta["output_sha256"]
+    for name, digest in ham_meta["output_sha256"].items():
+        assert hashlib.sha256((ROOT / "results/ham_expansion/evaluation" / name).read_bytes()).hexdigest() == digest
+    candidate = next(r for r in ham if r["model"] == "candidate")
+    assert (int(candidate["fp"]), int(candidate["fn"]), int(candidate["n_ham"]), int(candidate["n_spam"])) == (14, 340, 1178, 7109)
+
     doc = Document()
     section = doc.sections[0]
     section.page_width, section.page_height = Inches(8.5), Inches(11)
@@ -171,7 +183,7 @@ def main():
     p(doc.core_properties.title, "Title")
     p("Kabiyev Altynbek\nAstana IT University, Kazakhstan")
     h("Abstract")
-    p("This study evaluates eleven sparse classifiers on the historical English SMS Spam Collection, separating training search, validation thresholds and final testing. After deduplication, 5,171 messages remain in grouped splits. The selected word TF-IDF LinearSVC achieves spam F1 0.9531, with four false positives and eight misses among 1,034 test messages. Its conditional 95% group-bootstrap F1 interval is 0.9249 to 0.9769. Separator insertion lowers mean recall from 0.9385 to 0.6035. On 372 independent English reports with explicit 2023–2024 years, the unchanged model detects 176: recall " + primary_recall + ". We then refit with newer spam and ordinary financial messages under a separate frozen protocol. On another independent source, recall rises from 42.63% to 58.66%, but false positives on government notifications rise from 11/55 to 19/55. A separate financial holdout improves from F1 0.6400 to 0.8605. The adapted candidate fails the predeclared replacement criterion. Higher historical or spam-class F1 does not establish reliable transfer or acceptable harm to legitimate messages.")
+    p("This study evaluates eleven sparse classifiers on the historical English SMS Spam Collection, separating training search, validation thresholds and final testing. The selected word TF-IDF LinearSVC achieves spam F1 0.9531, with four false positives and eight misses among 1,034 test messages. Its conditional 95% group-bootstrap F1 interval is 0.9249 to 0.9769. Separator insertion lowers mean recall from 0.9385 to 0.6035. On 372 independent English reports dated 2023–2024, the unchanged model detects 176: recall " + primary_recall + ". A first adaptation improves independent SMS recall but increases false positives on government notifications from 11/55 to 19/55. A second study adds 1,968 ordinary training SMS from an author corpus covering 2018–2023. On its new group holdout, false positives change from 17 to 14 of 1,178 ham, while recall rises from 73.26% to 95.22% on 7,109 spam messages. The FPR difference is statistically inconclusive and 1.19% exceeds the 1% target. Both candidates fail their replacement criteria. These findings distinguish improved spam detection from demonstrated protection of legitimate communication.")
     p("Keywords: SMS spam, TF-IDF, grouped evaluation, external evaluation, character obfuscation.")
     h("1 Introduction")
     p("SMS filtering must detect unwanted messages without suppressing legitimate communication. Class imbalance makes accuracy an incomplete measure: on this test set, always predicting ham achieves 87.43% accuracy but detects no spam. We therefore report spam precision, recall and F1 together with false-positive and false-negative counts. We also separate clean-text quality from sensitivity to character edits that can disrupt a vocabulary-based classifier.")
@@ -276,10 +288,25 @@ def main():
     p("The independent source gains 112 spam detections but eight additional false positives. Paired conditional 95% group-bootstrap intervals are +0.0998 to +0.1721 for F1 change and +1.79 to +28.07 percentage points for FPR change (5,000 resamples, seed 20261018). ROC-AUC falls from 0.6979 to 0.6466. The financial holdout's F1 change interval is +0.1102 to +0.3457; its FPR-change interval includes zero. The predeclared replacement criterion requires a positive 95% lower bound for independent F1 improvement and FPR no worse than baseline and <=1% on each new test source. It fails. The candidate remains experimental and the default is unchanged. Small, narrow ham samples and source/language differences limit generalization.")
 
     page()
-    h("12 Reproducibility and conclusion")
-    p("The repository supplies split/CV manifests, all 84 search results, validation and test metrics, attack realizations, error ledgers, intervals and fitted-pipeline export. Dataset, source code and artifacts have SHA-256 records. Both historical protocols were independently verified, including all 7,920 attack metric rows per run. Python 3.12.14, scikit-learn 1.9.1 and exact dependencies are recorded. scripts/verify_external.py reconstructs the separate IMC scores, decisions and summaries from the original fitted pipeline. Verification requires hash-matched local models; binaries are excluded from Git and runs cannot silently overwrite frozen outputs.")
-    p("The adaptation follow-up records six fitted candidates, 18,204 validation scores and 1,664 test scores. scripts/verify_adaptation.py independently checks thresholds by exhaustive search, metrics and paired intervals by resampling message rows through whole groups. No model fitting occurs during verification. docs/MODERN_ADAPTATION.md documents the sources, fixed protocol, failed replacement criterion and reproduction commands.")
-    p("The word model combines high historical F1 with sensitivity to separator edits and limited source transfer. Refitting on newer messages improves spam recall and same-source financial F1, but increases false positives on independent government notifications. This measured tradeoff prevents replacing the default. Further progress needs more diverse genuine ordinary SMS and a new untouched test; the reported holdouts must not be reused as independent evidence after tuning on these findings.")
+    h("12 Expanding ordinary SMS to reduce false positives")
+    p("We next use Salman et al.'s Super SMS Dataset [12], specifically the author-labeled 2018–2023 subset: 4,028 ham and 25,375 spam before screening. The paper describes 2,325 ham collected from consenting volunteers during October 2021–June 2023, but their rows and receipt dates are not individually identified. The authors offer research access without a standard data license; raw messages are not redistributed. This is not representative 2025–2026 traffic.")
+    p("The protocol and membership were merged before fitting (PR #14). We remove duplicates, conflicts and similarity >=0.85 overlaps with every previously acquired source, then form near-copy connected components before a stratified 50/20/30 group split. New training adds 1,968 ham and 11,860 spam; new validation has 787 ham and 4,497 spam. The previous SMS-history test becomes development and cannot supply independent evidence again. Total training has 29,593 messages and validation 8,443. Six word/character candidates vary C in {0.5, 1} and ham weighting in {1, 2, 4}; source and group balancing remain explicit. Validation selects C=1, multiplier=1 and threshold 0.48587418949350525 under separate 1% FPR constraints per ham source.")
+    rows = []
+    for name, label in [("baseline", "Original"), ("previous", "Previous adaptation"),
+                        ("threshold_only", "Threshold only"), ("candidate", "Expanded data")]:
+        r = next(r for r in ham if r["model"] == name)
+        rows.append([label, f'{r["fp"]} / {r["n_ham"]}', f'{100*float(r["fpr"]):.2f}%',
+                     f'{r["fn"]} / {r["n_spam"]}', f'{100*float(r["recall"]):.2f}%', f'{float(r["f1"]):.4f}'])
+    table(["Model", "FP / ham", "FPR", "FN / spam", "Recall", "Spam F1"], rows,
+          [1.65, 1.1, .8, 1.35, 1, 1.1], "Table 7. All four operating points on the same untouched 8,287-message group holdout.")
+    p("The new model corrects ten earlier ham errors and introduces seven. The FPR change versus the previous adaptation is -0.25 percentage points, with a paired conditional 95% interval of -1.02 to +0.51 points; the decrease is not established. Candidate FPR is 1.19% (interval 0.59–1.94%), exceeding the 1% gate. Recall improves by 21.96 points (interval +20.64 to +23.30), with ROC-AUC 0.9946. Recalibrating only the previous model's threshold on the same validation set yields zero FP but 4.88% recall. The refit remains experimental, with no further tuning after test inspection.")
+    p("This is a held-out component sample from the same author corpus as added development data, not an unseen-provider or chronological test. Recipient consent, sender identity, individual dates, label ambiguity and occasional transliteration/encoding artifacts limit inference. Precision and F1 depend on the spam-heavy mix. The comparison does not isolate ham's causal contribution because spam and PSA development also change.")
+
+    page()
+    h("13 Reproducibility and conclusion")
+    p("The repository supplies split/CV manifests, all search results, predictions, attack realizations and conditional intervals. Data, code and artifacts have SHA-256 records. Both historical protocols were independently verified, including all 7,920 attack metric rows per run. Python 3.12.14, scikit-learn 1.9.1 and dependencies are pinned. Hash-matched binaries remain local; completed runs cannot silently be overwritten.")
+    p("Separate verification scripts reconstruct external scores and independently check adaptation thresholds, metrics and paired intervals without fitting. The first adaptation records 18,204 validation and 1,664 test scores. The ham expansion records 59,101 validation and 33,148 test scores, including the threshold-only control and three 5,000-draw comparisons. The source audits, frozen rules and reproduction commands are documented in docs/MODERN_ADAPTATION.md and docs/HAM_EXPANSION.md.")
+    p("The word model has high historical F1 but limited source transfer. Broader training improves spam recall; the latest FPR decrease remains statistically uncertain and FPR exceeds the chosen limit. Neither adaptation replaces the default. Further evaluation needs dated ordinary SMS from an unseen provider, with consent context and a new untouched test. Inspected holdouts cannot support another independent claim after tuning.")
     p("Code and experiment artifacts: https://github.com/altynbk/sms-spam-detection")
     h("References")
     refs = [
@@ -294,6 +321,7 @@ def main():
         "[9] S. Agarwal, A. Papasavva, G. Suarez-Tangil and M. Vasek. Fishing for Smishing: Understanding SMS Phishing Infrastructure and Strategies by Mining Public User Reports. ACM IMC, 2025. DOI: 10.1145/3730567.3764431. Dataset: https://github.com/reportsmishing/Smishing-Dataset-IMC25",
         "[10] A. R. Ahmed and G. F. Islam. Financial scams detection dataset. Mendeley Data, version 2, 22 October 2025. CC BY 4.0. DOI: 10.17632/znsk27yk3h.2. https://data.mendeley.com/datasets/znsk27yk3h/2",
         "[11] S. L. Chua. Spam of the Times: spam and marketing SMS. CC BY 4.0. Snapshot ad50c348c53f738645f78ee8baa8be5082a1de91, 20 August 2026. https://github.com/scottleechua/data/tree/ad50c348c53f738645f78ee8baa8be5082a1de91/spam-and-marketing-sms",
+        "[12] M. Salman, M. Ikram and M. A. Kaafar. Investigating Evasive Techniques in SMS Spam Filtering: A Comparative Analysis of Machine Learning Models. IEEE Access, vol. 12, pp. 24306–24324, 2024. DOI: 10.1109/ACCESS.2024.3364671. Data: https://github.com/smspamresearch/spstudy (2018–2023 subset, snapshot d83c99c6c3ae8c498b373e66b3a8129356a87b63).",
     ]
     for ref in refs:
         para = p(ref)

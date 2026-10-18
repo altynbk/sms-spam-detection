@@ -45,6 +45,14 @@ experimental. A separate financial holdout improves from F1 0.6400 to 0.8605.
 See the [adaptation protocol and results](docs/MODERN_ADAPTATION.md) for the
 limited data scope, frozen splits and paired comparisons.
 
+**Broader ordinary-SMS follow-up:** adding 1,968 training ham from the authors'
+2018–2023 Super SMS subset yields **14 instead of 17 false positives / 1,178 ham**
+on a new group holdout, while spam recall rises **73.26% → 95.22%**. The small FPR
+decrease is not statistically established, and **1.19% FPR exceeds the 1% target**.
+The new candidate remains experimental. This test shares its author corpus with
+the new training data; it is not an unseen-provider or 2025–2026 evaluation.
+See the [protocol, controls and results](docs/HAM_EXPANSION.md).
+
 ![Mean spam recall under character edits](paper/figures/robustness.png)
 
 The figure compares three LinearSVC feature sets at their own fixed validation

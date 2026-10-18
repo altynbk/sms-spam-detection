@@ -8,15 +8,16 @@ implementation history remains in Git and the [original audit](AUDIT.md).
 
 | Check | Result |
 |---|---|
-| Regression, integration and application suite | **134 tests passed**; warnings are errors |
+| Regression, integration and application suite | **149 tests passed**; warnings are errors |
 | Installed dependencies | `python -m pip check` passed |
-| Notebook | Format valid; all **13 code cells** executed in a fresh kernel without cell errors |
+| Notebook | Format valid; all **14 code cells** executed in a fresh kernel without cell errors |
 | Default full experiment (9 October) | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
 | Template full experiment (9 October) | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
 | Historical conditional intervals (9 October) | Both runs' 5,000-draw estimates and source hashes reproduced |
 | External reported SMS | **31,806 prediction rows / 63,612 decisions**, eight metric rows, 72 category rows and all conditional intervals recomputed |
 | Modern adaptation | All six candidates' **18,204 validation scores**, **1,664 test scores** on 832 messages, 18 validation and four test metric rows independently checked; thresholds and paired intervals reproduced |
-| Manuscript | Historical, external and adaptation metrics present in the eight-page PDF, six editable Word tables and two figures; every rendered page inspected |
+| Ordinary-SMS expansion | **59,101 validation scores**, **33,148 test scores** on 8,287 messages, seven exhaustive threshold choices, 35 validation/four test metric rows and three paired 5,000-draw comparisons independently checked |
+| Manuscript | Historical, external and both adaptation studies present in the nine-page PDF, seven editable Word tables and two figures; every rendered page inspected |
 | Repository | Local links checked; published source and result files retained |
 
 Independent verification also reconstructs both protocols' split/CV membership,
@@ -78,14 +79,25 @@ demo's validation. Predictions and reconstructed scores agreed with local
 inference. Application tests use synthetic fixtures to check behavior, not to
 estimate spam-detection accuracy.
 
-The current manuscript describes both full protocols, the external reported-SMS
-evaluation and the adaptation follow-up. It reports the increased false-positive
-rate on independent government notifications and the failed replacement criterion.
-The Word source and PDF were rebuilt in place on 18 October. All eight rendered
-pages were inspected; the external and adaptation tables match the saved metric
-rows. The builder checks external artifact identity, result hashes and verification
-records before incorporating results. The notebook includes a comparison chart
-showing both spam recall and false positives with the cohort denominators.
+The current manuscript describes both historical protocols, external reported-SMS
+evaluation and both adaptation studies. It retains the first adaptation's higher
+false-positive rate on PSAs and the latest study's uncertain FPR decrease and
+failed 1% criterion. Word and PDF were rebuilt in place on 18 October; all nine
+rendered pages were inspected. Seven editable tables match the reported metrics.
+The builder verifies result hashes and verification records before incorporating
+the new results. The notebook's new section compares all four operating points
+and paired intervals without loading or refitting any model.
+
+## Ordinary-SMS expansion verification
+
+The [verification record](../results/ham_expansion/evaluation/verification.json)
+checks all six fitted candidates and the threshold-only control. It reconstructs
+source membership, hash-matched decision scores and exhaustive validation
+threshold choices. A separate row-resampling implementation reproduces all
+three 5,000-draw paired component-bootstrap comparisons and the failed replacement
+gate. Regression tests cover near-copy chains, whole-component conflict exclusion,
+class/source weighting, absence of test access during selection, and recall
+safeguards. No test outcome was used to change a candidate or threshold.
 
 ## Reproduce checks locally
 
@@ -109,6 +121,9 @@ python scripts/verify_external.py --run results/external/imc25/evaluation
 # Requires the frozen source CSVs and matching local adaptation artifacts.
 # See MODERN_ADAPTATION.md to reproduce a new run first.
 python scripts/verify_adaptation.py --run results/local/modern-adaptation
+
+# Requires the frozen new source and matching ham-expansion artifacts.
+python scripts/verify_ham_expansion.py --run results/local/ham-expansion
 ```
 
 After a fresh clone, model binaries are absent. Follow the
@@ -139,4 +154,8 @@ study measures F1/FPR on two new holdouts, but the financial sample mixes channe
 without receipt dates, and independent SMS ham consists only of 55 government
 notifications from one recipient. These results do not establish acceptable FPR
 on a representative modern inbox or accuracy for a particular new language.
+The later ham-expansion holdout is larger but shares its author corpus with new
+development data. It has no individual receipt dates and is not an unseen-provider
+test. Its 14 / 1,178 false positives do not meet the 1% criterion; the FPR decrease
+versus the previous model is statistically inconclusive.
 See the [model card](MODEL_CARD.md) and [research priorities](ROADMAP.md).

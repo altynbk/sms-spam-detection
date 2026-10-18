@@ -1,5 +1,10 @@
 # Adaptation to newer messages
 
+This report preserves the first adaptation's frozen results. The later
+[ordinary-SMS expansion](HAM_EXPANSION.md) explicitly retires this inspected
+SMS-history test into development and evaluates a new group holdout. These
+earlier holdouts are not independent evidence for that later model.
+
 ## Data checkpoint before training
 
 The existing historical model and its published results remain frozen. The
