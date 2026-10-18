@@ -8,14 +8,15 @@ implementation history remains in Git and the [original audit](AUDIT.md).
 
 | Check | Result |
 |---|---|
-| Regression, integration and application suite | **115 tests passed**; warnings are errors |
+| Regression, integration and application suite | **134 tests passed**; warnings are errors |
 | Installed dependencies | `python -m pip check` passed |
-| Notebook | Format valid; all **12 code cells** executed in a fresh kernel without cell errors |
+| Notebook | Format valid; all **13 code cells** executed in a fresh kernel without cell errors |
 | Default full experiment (9 October) | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
 | Template full experiment (9 October) | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
 | Historical conditional intervals (9 October) | Both runs' 5,000-draw estimates and source hashes reproduced |
 | External reported SMS | **31,806 prediction rows / 63,612 decisions**, eight metric rows, 72 category rows and all conditional intervals recomputed |
-| Manuscript | Historical and external metrics present in the seven-page PDF, five editable Word tables and two figures; every rendered page inspected |
+| Modern adaptation | All six candidates' **18,204 validation scores**, **1,664 test scores** on 832 messages, 18 validation and four test metric rows independently checked; thresholds and paired intervals reproduced |
+| Manuscript | Historical, external and adaptation metrics present in the eight-page PDF, six editable Word tables and two figures; every rendered page inspected |
 | Repository | Local links checked; published source and result files retained |
 
 Independent verification also reconstructs both protocols' split/CV membership,
@@ -45,6 +46,24 @@ whole-group resampling, rejection of substituted artifacts and deliberate ledger
 corruption, and the absence of misleading two-class metrics on positive-only data.
 Synthetic fixtures require neither a network download nor the original model.
 
+## Adaptation evaluation
+
+The [adaptation verification](../results/adaptation/evaluation/verification.json)
+checks the six saved pipelines against their artifact hashes and independently
+recomputes their validation decision scores. Exhaustive threshold search agrees
+with the selected operating points and validation-only candidate choice. The
+financial and independent SMS holdouts contain 78 and 754 messages respectively.
+Both original and selected pipelines' test scores and confusion counts agree
+with the published records. A separate implementation resamples message rows
+through whole class-stratified groups, reproducing all paired intervals with
+5,000 draws per source and the failed replacement criterion.
+
+Tests cover source parsing, overlap filtering, class/source/campaign weighting,
+separate source FPR constraints, rejection of changed artifacts and the absence
+of test data from fitting and selection. The inspected IMC reports are development
+data for this follow-up. The original default model remains unchanged; no threshold
+was retuned after the new test outcomes were inspected.
+
 ## Application and manuscript
 
 Inference tests check serialization, artifact changes, version/threshold mismatch
@@ -59,12 +78,14 @@ demo's validation. Predictions and reconstructed scores agreed with local
 inference. Application tests use synthetic fixtures to check behavior, not to
 estimate spam-detection accuracy.
 
-The current manuscript describes both full protocols and the external reported-SMS
-evaluation, including its low recall and positive-only limitations. The Word
-source and PDF were rebuilt in place on 18 October. All seven rendered pages
-were inspected; the external table matches the saved metric rows. The builder
-checks the external artifact identity, result hashes and verification record
-before incorporating the results.
+The current manuscript describes both full protocols, the external reported-SMS
+evaluation and the adaptation follow-up. It reports the increased false-positive
+rate on independent government notifications and the failed replacement criterion.
+The Word source and PDF were rebuilt in place on 18 October. All eight rendered
+pages were inspected; the external and adaptation tables match the saved metric
+rows. The builder checks external artifact identity, result hashes and verification
+records before incorporating results. The notebook includes a comparison chart
+showing both spam recall and false positives with the cohort denominators.
 
 ## Reproduce checks locally
 
@@ -84,6 +105,10 @@ python -m spam_detector.uncertainty --run results/template
 
 # Requires the pinned external CSV and original matching default model.
 python scripts/verify_external.py --run results/external/imc25/evaluation
+
+# Requires the frozen source CSVs and matching local adaptation artifacts.
+# See MODERN_ADAPTATION.md to reproduce a new run first.
+python scripts/verify_adaptation.py --run results/local/modern-adaptation
 ```
 
 After a fresh clone, model binaries are absent. Follow the
@@ -108,7 +133,10 @@ status and logs are available at the workflow link above.
 
 Recomputation establishes consistency of the recorded experiment. The intervals
 condition on fitted models and observed groups; attack-seed variation does not
-measure training uncertainty. The template study is exploratory. External recall
-is conditional on a positive-only, pseudonymized convenience sample; no modern
-F1/FPR or new-language performance is established.
+measure training uncertainty. The template study is exploratory. IMC recall is
+conditional on a positive-only, pseudonymized convenience sample. The adaptation
+study measures F1/FPR on two new holdouts, but the financial sample mixes channels
+without receipt dates, and independent SMS ham consists only of 55 government
+notifications from one recipient. These results do not establish acceptable FPR
+on a representative modern inbox or accuracy for a particular new language.
 See the [model card](MODEL_CARD.md) and [research priorities](ROADMAP.md).
