@@ -1,0 +1,102 @@
+{
+  "financial": {
+    "baseline_f1": {
+      "lower": 0.5074626865671642,
+      "upper": 0.7560975609756098
+    },
+    "baseline_recall": {
+      "lower": 0.3695652173913043,
+      "upper": 0.6739130434782609
+    },
+    "baseline_fpr": {
+      "lower": 0.03125,
+      "upper": 0.28125
+    },
+    "baseline_precision": {
+      "lower": 0.7037037037037037,
+      "upper": 0.9545454545454546
+    },
+    "candidate_f1": {
+      "lower": 0.7764705882352941,
+      "upper": 0.9318181818181818
+    },
+    "candidate_recall": {
+      "lower": 0.6739130434782609,
+      "upper": 0.9130434782608695
+    },
+    "candidate_fpr": {
+      "lower": 0.0,
+      "upper": 0.21875
+    },
+    "candidate_precision": {
+      "lower": 0.85,
+      "upper": 1.0
+    },
+    "delta_f1": {
+      "lower": 0.11020714960717098,
+      "upper": 0.3457053319628559
+    },
+    "delta_recall": {
+      "lower": 0.13043478260869568,
+      "upper": 0.43478260869565216
+    },
+    "delta_fpr": {
+      "lower": -0.1875,
+      "upper": 0.0625
+    },
+    "delta_precision": {
+      "lower": -0.011212831286360659,
+      "upper": 0.21278445272137447
+    }
+  },
+  "sms_history": {
+    "baseline_f1": {
+      "lower": 0.548487855146205,
+      "upper": 0.6322982201557175
+    },
+    "baseline_recall": {
+      "lower": 0.3840779639533683,
+      "upper": 0.46939064987697204
+    },
+    "baseline_fpr": {
+      "lower": 0.09259259259259259,
+      "upper": 0.3090909090909091
+    },
+    "baseline_precision": {
+      "lower": 0.9449509648845302,
+      "upper": 0.9822485207100592
+    },
+    "candidate_f1": {
+      "lower": 0.6891184644371173,
+      "upper": 0.7608129800379335
+    },
+    "candidate_recall": {
+      "lower": 0.5404246429206424,
+      "upper": 0.6309893655883427
+    },
+    "candidate_fpr": {
+      "lower": 0.2222222222222222,
+      "upper": 0.4727272727272727
+    },
+    "candidate_precision": {
+      "lower": 0.939613121291703,
+      "upper": 0.9710860750695087
+    },
+    "delta_f1": {
+      "lower": 0.09975847462999561,
+      "upper": 0.17209938659247084
+    },
+    "delta_recall": {
+      "lower": 0.11993950938709214,
+      "upper": 0.20116639481469115
+    },
+    "delta_fpr": {
+      "lower": 0.01785714285714285,
+      "upper": 0.2807017543859649
+    },
+    "delta_precision": {
+      "lower": -0.02874760357785642,
+      "upper": 0.010935814785442411
+    }
+  }
+}

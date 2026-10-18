@@ -1,0 +1,39 @@
+{
+  "python": "3.12.14",
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+  },
+  "selected_model": "adapted_word_char_c1",
+  "source_sha256": {
+    "spam_detector/adaptation.py": "cbe92135d065d0125534b7a2c65b96e51c1de57603774d49622217cd3dc26dfd",
+    "spam_detector/adaptation_data.py": "2bec0787e9a6ddac2609fe45563baf989405298692e6c84ef1bf066786300545",
+    "spam_detector/adaptation_protocol.py": "e2ff99d0ffee7ac85638335fc00c57d031b5ccf641f97b2446e614e0b6a93784",
+    "spam_detector/modeling.py": "e8a9610b766c01d872f09a2db37ca57a9060f600b78af1b75298cb9e20025586",
+    "spam_detector/preprocessing.py": "f25e755261f52866cee2aadea2d81f952eb79667438c4d191cc4302d303e933b",
+    "spam_detector/evaluation.py": "7c6c3e17f11f35543211ae86ad5327dc4f82479c358e988b53f8e684c5092a2c",
+    "data/external/adaptation/protocol.json": "c994566024a0894bc3dd1dd6755adc260ea4483ed18485687c92537669b5744f",
+    "results/adaptation/protocol/membership.csv": "f00604b843f9005a1a5807a1f1ba65c16006b81438178f91659ef448c94c37fa"
+  },
+  "artifacts": {
+    "adapted_word_c0.5": "2e89d566be1e9c87a2eed7cd15bc8113ef7865e0b6c56eb8a8d6910efb95d2a6",
+    "adapted_word_c1": "daeb335a3f9b9b5c7946e562b49734639e03a5e4f33a4e0d69b7a38f0680ed42",
+    "adapted_char_c0.5": "25f71136f5a8e46392d7377445f8fbb4b97e7a08347d260084c8234eefb580ba",
+    "adapted_char_c1": "8202b78778780fe1b3dbfb02f3de8e4d3b9fc26e98ce6046ccacf2b9514a2486",
+    "adapted_word_char_c0.5": "428ce98bb34c69a6d8ce9509ec8d068d7e2fbffc9671e9a27af6ed96ff3b0046",
+    "adapted_word_char_c1": "260be7cf3190356cfb8d14373e76a7d5f345290fdbcaa408ba2269c79261180a"
+  },
+  "output_sha256": {
+    "candidates.csv": "6034d6a663a6b4e54081af4ffdccd017854ec151844b804a10f9883d766dcf73",
+    "validation_metrics.csv": "87bebb451102b1acfa86621fcf9e1788ce0a923aa0774995c976ca62163ffca0",
+    "validation_scores.csv": "08072fc28a3f9f9ca9867d695eea1dc8e657a881e15ce301fba1f10cf3e61f5b",
+    "selection.json": "1ef08d02a7f6e64bc98b9df79bf76e623e569f7e25d5bd6694bc4ad5a85e335f",
+    "training_weights.csv": "307e9c381d30d9e6556b1559ac51610a1eb4994f9933b1adfe35144e10662eb9"
+  },
+  "train_rows": 15172,
+  "validation_rows": 3034,
+  "test_predictions_during_selection": 0
+}
