@@ -15,7 +15,7 @@ implementation history remains in Git and the [original audit](AUDIT.md).
 | Template full experiment (9 October) | All **7,920 attack rows**, 360 attack datasets and 11 model artifacts verified |
 | Historical conditional intervals (9 October) | Both runs' 5,000-draw estimates and source hashes reproduced |
 | External reported SMS | **31,806 prediction rows / 63,612 decisions**, eight metric rows, 72 category rows and all conditional intervals recomputed |
-| Manuscript | Current metrics present in the six-page PDF and four editable Word tables |
+| Manuscript | Historical and external metrics present in the seven-page PDF, five editable Word tables and two figures; every rendered page inspected |
 | Repository | Local links checked; published source and result files retained |
 
 Independent verification also reconstructs both protocols' split/CV membership,
@@ -59,10 +59,12 @@ demo's validation. Predictions and reconstructed scores agreed with local
 inference. Application tests use synthetic fixtures to check behavior, not to
 estimate spam-detection accuracy.
 
-The current manuscript describes both full protocols and their limitations.
-Its six rendered pages were inspected when the manuscript was synchronized.
-The present review rechecked the PDF's result text and Word table structure;
-neither file was changed.
+The current manuscript describes both full protocols and the external reported-SMS
+evaluation, including its low recall and positive-only limitations. The Word
+source and PDF were rebuilt in place on 18 October. All seven rendered pages
+were inspected; the external table matches the saved metric rows. The builder
+checks the external artifact identity, result hashes and verification record
+before incorporating the results.
 
 ## Reproduce checks locally
 
