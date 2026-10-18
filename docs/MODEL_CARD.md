@@ -126,6 +126,37 @@ receipt dates; the independent SMS source is mixed-language, one recipient and
 has government PSAs as its only retained ham class. A higher spam F1 does not
 establish reliable general filtering. See the [complete follow-up](MODERN_ADAPTATION.md).
 
+## Broader ordinary-SMS candidate
+
+The [ham-expansion study](HAM_EXPANSION.md) adds 1,968 training ham and 11,860
+training spam from the authors' 2018–2023 Super SMS subset. Another 787 ham and
+4,497 spam form validation; 1,178 ham and 7,109 spam are held out in near-copy
+connected components before fitting. Text overlaps with all earlier acquired
+sources are removed. The previous SMS-history test is explicitly retired into development.
+The new test is independent of fitting/selection but shares its author corpus
+with new training data. Receipt dates, senders and component provenance are
+unavailable per row; this is not an evaluation on representative 2025–2026 SMS.
+
+Validation selects `ham_word_char_c1_w1`, threshold **0.48587418949350525**,
+from six C/ham-weight combinations. On the new test, FP changes **17 → 14**
+versus the previous adaptation (FPR 1.44% → 1.19%); spam recall changes
+**73.26% → 95.22%**, FN 1,901 → 340, and F1 0.8445 → 0.9745. The original
+historical model gives 15 FP and 49.91% recall on this same test. A validation-only
+threshold adjustment to the previous model gives zero FP but just 4.88% recall.
+
+The new FPR difference versus the previous model has a paired conditional 95%
+interval of **−1.02 to +0.51 percentage points**, including zero. The 1% test FPR
+criterion also fails. Thus the candidate **does not replace the historical demo**.
+The artifact is available locally at
+`results/local/ham-expansion/models/ham_word_char_c1_w1.joblib`; reproducible
+training, selection, scores and verification are recorded in
+`results/ham_expansion/evaluation/`. Raw source messages and binaries are ignored.
+No further tuning used this now-inspected test.
+
+Author labels, occasional transliteration/encoding artifacts, unknown recipient
+consent and the spam-heavy test mix limit generalization. The source offers data
+for research without a standard data license; raw messages are not redistributed.
+
 ## Artifacts, reproducibility and release considerations
 
 The authoritative settings and exact versions are in

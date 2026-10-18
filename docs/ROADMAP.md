@@ -15,11 +15,17 @@ notifications. The predeclared replacement criterion fails, so the original mode
 remains the default. The financial holdout improves, but is from the same source
 as the additional training data and mixes SMS with other channels.
 
-The next improvements should add evidence where the current study is weakest.
+The [ordinary-SMS expansion](HAM_EXPANSION.md) adds 1,968 training ham from an
+author corpus covering 2018–2023. On its untouched group holdout, FP changes
+17 → 14 / 1,178 ham and spam recall 73.26% → 95.22%. The FPR decrease is not
+statistically established and 1.19% exceeds the 1% target. Six candidate fits and
+a threshold-only control are complete; the new model remains experimental.
+
+The next improvements should address the remaining evidence gaps.
 
 | Priority | Work | Completion criterion |
 |---|---|---|
-| 1 | Diverse ordinary SMS and lower false-positive cost | Add licensed, independently labeled personal, service, transaction and public-notification SMS with trustworthy dates. Separate related templates, sources and time periods. Freeze a new untouched test before using the reported failures for development; measure both FP/FN and uncertainty on representative ham. The current two holdouts are now inspected. |
+| 1 | Dated ordinary SMS from an unseen provider | Add licensed, independently labeled service, transaction and personal SMS with receipt dates and consent context. Separate related templates, senders and time periods; freeze a new test before changing calibration. Demonstrate lower FPR with uncertainty and preserved spam recall. All currently reported holdouts are now inspected. |
 | 2 | Variation across training splits | Predefine repeated development splits and repeat fitting/search. Report dispersion while preserving a new independent final holdout. |
 | 3 | Stronger attacks and tested defenses | Define perturbation budgets and meaning/readability checks. Keep attack families and examples used to develop a defense separate from final evaluation. |
 | Conditional | Russian/Kazakh evaluation | Collect independently labeled data for each target language, including code-switching. Report per-language errors; translating the interface or corpus does not establish accuracy. |

@@ -74,7 +74,71 @@ First acquire the preceding study's inputs as described in
 
 ```bash
 python -m spam_detector.ham_data --download --output results/local/ham-protocol
+python -m spam_detector.ham_expansion fit --output results/local/ham-expansion-repeat
+python -m spam_detector.ham_expansion evaluate --output results/local/ham-expansion-repeat
+python scripts/verify_ham_expansion.py --run results/local/ham-expansion-repeat
 ```
 
 The command verifies source hashes and prepares partitions without loading a
 classifier. Frozen source text and model binaries are never committed.
+Fitting requires the hash-matched original and previous adapted artifacts at the
+paths recorded in the protocol. A changed artifact requires a separately declared
+comparison; do not rewrite the frozen hashes to make an unmatched run pass.
+
+## Observed results
+
+Preparation removes 99 normalized duplicates, 1,790 overlaps with earlier sources
+and 115 rows in two conflicting near-copy components. The new corpus retains
+**3,933 ham and 23,466 spam**. Membership was merged in PR #14 before training.
+
+| New source partition | Ham | Spam | Ham groups | Spam groups |
+|---|---:|---:|---:|---:|
+| Train | 1,968 | 11,860 | 1,922 | 9,952 |
+| Validation | 787 | 4,497 | 769 | 3,982 |
+| Test | 1,178 | 7,109 | 1,154 | 5,972 |
+
+Including preceding development sources, training uses 29,593 rows and validation
+8,443. Validation selects **`ham_word_char_c1_w1`**, C=1, ham multiplier=1 and
+threshold **0.48587418949350525**. Its macro source recall is 88.77%; each ham
+source has validation FPR below 1%. Increasing the extra ham weight did not win
+selection. The previous model's threshold-only control requires threshold
+2.087479952703472 under the same per-source constraints. Selection and validation
+evidence were committed before final scoring in PR #15.
+
+| Model on the same untouched test | FP / 1,178 ham | FPR | FN / 7,109 spam | Spam recall | Spam F1 |
+|---|---:|---:|---:|---:|---:|
+| Original historical model | 15 | 1.27% | 3,561 | 49.91% | 0.6649 |
+| Previous adapted model | 17 | 1.44% | 1,901 | 73.26% | 0.8445 |
+| Previous model, threshold only | 0 | 0.00% | 6,762 | 4.88% | 0.0931 |
+| New expanded-data model | **14** | **1.19%** | **340** | **95.22%** | **0.9745** |
+
+Against the previous adapted model, the new candidate corrects ten ham errors but
+introduces seven new ones. Its FPR difference is **−0.25 percentage points**,
+with a paired conditional 95% interval of **−1.02 to +0.51 points**. This does
+**not establish a reduction**. The candidate's FPR interval is 0.59–1.94%; the
+observed 1.19% exceeds the predeclared 1% limit. The replacement gate fails.
+The historical demo stays unchanged; the newly trained artifact is experimental.
+
+Spam recall improves by **21.96 points** versus the preceding adaptation
+(paired interval +20.64 to +23.30 points); F1 improves by 0.1300 (interval
++0.1211 to +0.1390). Candidate ROC-AUC is 0.9946 and AP 0.9991. Its spam precision
+is 99.79%, but precision and F1 depend on this deliberately spam-heavy corpus
+and do not predict precision in a typical inbox. The threshold-only control
+shows why lowering false positives by suppressing almost all detections is not
+an adequate solution. The comparison does not isolate the effect of ham alone:
+the new fit also adds spam and previously inspected PSA development messages.
+
+Post-test inspection found remaining errors among delivery, registration and
+event messages, plus advertising labeled ham by the authors. Some text is
+transliterated or has encoding artifacts despite the authors' English filtering.
+Recipient consent and sender identity are unavailable. Labels and test membership
+were kept unchanged; no threshold or model was tuned after this inspection.
+
+The [independent verification](../results/ham_expansion/evaluation/verification.json)
+reconstructs 59,101 validation scores, 33,148 test scores, seven exhaustive
+threshold choices, 35 validation and four test metric rows, and all three paired
+5,000-draw comparisons. Full [metrics](../results/ham_expansion/evaluation/test_metrics.csv),
+[intervals](../results/ham_expansion/evaluation/test_intervals.json) and
+[gate criteria](../results/ham_expansion/evaluation/evaluation_metadata.json)
+remain frozen. Future changes need a new untouched evaluation source with more
+dated ordinary SMS, especially service and transaction messages.
