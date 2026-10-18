@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "defined_on": "2026-10-18",
+  "base_commit": "120f7c6d127cbb47880cc1c11709351a5533c63b",
+  "model_run": "results/full",
+  "model_id": "linear_svc_word_gentle",
+  "model_sha256": "39f6f5593959ca1ecd85f485e27ffd8a1594af099cfa34e1a79f876b14bd95f6",
+  "model_metadata_sha256": "069d5534b91d676f00118a596bd4c06796d0d3bbf3d5266ffd2925f3a930a537",
+  "validation_threshold": -0.08620419778818611,
+  "reference_sha256": "bbcb13af6558d89e007094a1d62a982ce2b03ce679f89cd88625de3c71cea76a",
+  "primary_cohort": "recent_2023_2024",
+  "supplementary_cohort": "all_english",
+  "language": "English as labeled by the publisher; original text only, no translated texts",
+  "recent_years": [
+    2023,
+    2024
+  ],
+  "year_rule": "Exactly one distinct explicit four-digit 20xx year in the time field; never infer missing years",
+  "exclusion": "Blank text; normalized or template-key match against the entire original corpus, including held-out data",
+  "deduplication": "One first-row representative per lowercase/whitespace-normalized text within each eligible cohort",
+  "input_views": [
+    "published",
+    "placeholders_removed"
+  ],
+  "decision_rules": [
+    "validation",
+    "default"
+  ],
+  "primary_result": "recent_2023_2024 / published / validation",
+  "metrics": [
+    "detected",
+    "missed",
+    "recall",
+    "miss_rate"
+  ],
+  "unavailable_metrics": [
+    "precision",
+    "f1",
+    "accuracy",
+    "false_positive_rate",
+    "roc_auc",
+    "average_precision"
+  ],
+  "bootstrap": {
+    "grouping": "existing template_key on the original published text",
+    "draws": 5000,
+    "seed": 42,
+    "confidence": 0.95,
+    "method": "whole-group percentile bootstrap; fixed model and observed external cohort"
+  },
+  "subgroups": "Publisher scam category; descriptive counts and recall without selection or tuning",
+  "no_fit": true,
+  "no_threshold_selection": true,
+  "no_external_model_comparison": true
+}
