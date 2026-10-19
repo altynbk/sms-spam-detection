@@ -1,10 +1,14 @@
 # Validation
 
-Updated on **18 October 2026**, using Python 3.12.14 on macOS arm64 and the
+Updated on **19 October 2026**, using Python 3.12.14 on macOS arm64 and the
 committed dependency locks. This report describes the current state; earlier
 implementation history remains in Git and the [original audit](AUDIT.md).
 
 ## Executed checks
+
+The local application workflow and test suite were rechecked on 19 October.
+Research, notebook and manuscript checks below retain their earlier validation
+results; they were not rerun or rebuilt for this application check.
 
 | Check | Result |
 |---|---|
@@ -87,6 +91,29 @@ rendered pages were inspected. Seven editable tables match the reported metrics.
 The builder verifies result hashes and verification records before incorporating
 the new results. The notebook's new section compares all four operating points
 and paired intervals without loading or refitting any model.
+
+### Local workflow acceptance — 19 October 2026
+
+The [README launch instructions](../README.md#interactive-demo) were checked in
+the existing Python 3.12 environment. Activation worked, the offline dependency
+dry run found all pinned application packages installed, and `pip check` passed.
+This was not a fresh-environment installation test.
+
+| Scenario | Verification and result |
+|---|---|
+| Default launch | `python -m streamlit run app.py` opened at `http://127.0.0.1:8501` with the saved default model. |
+| Message checking | In the browser, the everyday and promotion examples matched direct model predictions (Ham and Spam). The displayed score and feature contributions agreed with inference; blank and out-of-vocabulary input produced guidance. |
+| Existing interactive views | The browser displayed original/edited predictions, saved metrics and attack curves. AppTest additionally checked all three edit types and both decision rules against the committed result tables. |
+| Missing model | The selected artifact was temporarily moved out of its load path. After reloading, both prediction buttons were disabled, setup guidance appeared, and saved results remained available. |
+| Model restored | The original file was restored with an unchanged SHA-256; reloading enabled predictions again. |
+| Run selection | AppTest loaded both `results/full` and `results/template` through `SMS_SPAM_RUN` and matched their saved-model predictions and metrics. A nonexistent directory produced the setup error without a traceback or file creation. |
+| Browser CSV download | Not verified: the browser permission policy denied downloading from localhost. This does not establish an application defect. |
+
+All 13 focused inference/application tests and the complete 149-test suite passed.
+No reproducible application failure was found in the checked scenarios, so no
+implementation change was needed. No study was retrained, no threshold changed,
+and published data and results remained untouched. The illustrative messages
+check application behavior, not detection accuracy on new evaluation data.
 
 ## Ordinary-SMS expansion verification
 

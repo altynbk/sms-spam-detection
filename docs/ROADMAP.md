@@ -21,10 +21,11 @@ source provenance and limitations when simplifying the main documentation.
 
 - [x] Simplify the README around the existing study, results and local launch;
   replace open-ended research priorities with this completion plan.
-- [ ] Verify the documented local workflow from environment setup to opening the
+- [x] Verify the documented local workflow from environment setup to opening the
   app, checking a message and viewing saved results. Check behavior with and
   without local model files, and make the required preparation and error messages
-  clear. Fix confirmed obstacles within the existing functionality.
+  clear. Fix confirmed obstacles within the existing functionality. See the
+  [acceptance results and verification limits](VALIDATION.md#local-workflow-acceptance--19-october-2026).
 - [ ] Align the README, model card, notebook and manuscript: distinguish the
   default model from experimental candidates, check reported metrics against
   saved tables, and keep detailed follow-up studies in their supporting reports.
