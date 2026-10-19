@@ -12,7 +12,8 @@ held-out data measure clean and attacked performance. Labels are **ham = 0, spam
 
 ## Results at a glance
 
-The selected word TF-IDF LinearSVC at its frozen validation threshold:
+The default model, `linear_svc_word_gentle` (word TF-IDF LinearSVC), at its
+frozen validation threshold:
 
 | Measure | Historical test |
 |---|---:|

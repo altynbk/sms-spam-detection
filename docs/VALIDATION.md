@@ -6,9 +6,9 @@ implementation history remains in Git and the [original audit](AUDIT.md).
 
 ## Executed checks
 
-The local application workflow and test suite were rechecked on 19 October.
-Research, notebook and manuscript checks below retain their earlier validation
-results; they were not rerun or rebuilt for this application check.
+The local application workflow, test suite, notebook and manuscript were checked
+on 19 October. Research verification rows retain their earlier results; the
+documentation review used saved outputs without retraining or rerunning studies.
 
 | Check | Result |
 |---|---|
@@ -86,11 +86,33 @@ estimate spam-detection accuracy.
 The current manuscript describes both historical protocols, external reported-SMS
 evaluation and both adaptation studies. It retains the first adaptation's higher
 false-positive rate on PSAs and the latest study's uncertain FPR decrease and
-failed 1% criterion. Word and PDF were rebuilt in place on 18 October; all nine
+failed 1% criterion. Word and PDF were rebuilt in place on 19 October; all nine
 rendered pages were inspected. Seven editable tables match the reported metrics.
 The builder verifies result hashes and verification records before incorporating
-the new results. The notebook's new section compares all four operating points
-and paired intervals without loading or refitting any model.
+the follow-up results. The notebook's final study section compares all four
+operating points and paired intervals from saved reports without model inference.
+
+### Documentation consistency — 19 October 2026
+
+The README, model card, notebook and manuscript were compared with the saved
+historical, external and adaptation outputs. They identify the same frozen
+default model and distinguish native classifier decisions from the validation
+threshold. Both failed adaptation criteria and source/date limitations remain
+explicit. The SMS-history holdout is described as independent for the first
+adaptation only; the later study reused it for development. Detailed follow-up
+methods remain in their supporting reports.
+
+The notebook's inference example now uses the same verified loader as the README
+and application. All 14 code cells executed in a fresh kernel with unchanged
+outputs; the missing-model branch was also exercised. The 149-test suite passed.
+The final text edit changed no code cells or stored outputs. The published
+uncertainty and follow-up sections explicitly identify their fixed report paths.
+
+The manuscript retained nine pages, seven editable tables and two figures.
+Every table cell matched the previous version except the clarified `Native F1`
+heading; all nine rendered pages were visually inspected. Local Markdown links
+in the reviewed documents were checked. No training data, model, threshold or
+published experiment output changed.
 
 ### Local workflow acceptance — 19 October 2026
 
