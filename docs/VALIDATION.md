@@ -6,9 +6,11 @@ implementation history remains in Git and the [original audit](AUDIT.md).
 
 ## Executed checks
 
-The local application workflow, test suite, notebook and manuscript were checked
-on 19 October. Research verification rows retain their earlier results; the
-documentation review used saved outputs without retraining or rerunning studies.
+The final audit on 19 October repeated the local application checks, test suite,
+notebook execution and manuscript consistency check. All five saved research
+evaluations were independently reverified against existing local artifacts, and
+both historical interval reports were recomputed. No study was retrained and no
+published output was changed; the experiment dates below identify the saved runs.
 
 | Check | Result |
 |---|---|
@@ -179,6 +181,25 @@ After a fresh clone, model binaries are absent. Follow the
 [reproduction commands](../README.md#reproduce-the-experiments) to train into
 `results/local/`, then verify those new directories. Never train over a completed
 published run.
+
+## Repository closeout — 19 October 2026
+
+The final audit covered all 170 tracked files, application and notebook entry
+points, dependency locks, saved research outputs and GitHub configuration.
+
+| Area | Final check |
+|---|---|
+| Code and dependencies | All 40 Python files compile; no unreferenced top-level definitions or unused imports were identified by the static scan. Every runtime, app and notebook lock entry belongs to the declared dependency graph and matches the installed version. `pip check` passed. |
+| Local application | The documented server command returned HTTP 200 for its page and health endpoint. All four tabs rendered in the app test harness; the real saved model's predictions matched direct inference. Simulating an unavailable model disabled prediction while preserving the reports. The temporary server was stopped. |
+| Regression suite and notebook | All 149 tests passed. All 14 notebook code cells executed in a fresh kernel with unchanged outputs. |
+| Frozen research results | Both historical protocols, including all 7,920 attack rows per run, the external evaluation and both adaptation studies were independently reverified. Every generated verification record exactly matched its committed record. Both historical interval reports also matched. Verification outputs were compared in memory without rewriting published files. |
+| Manuscript | An in-memory rebuild exactly matched the committed Word document body, including seven editable tables and two figures. The nine-page PDF and Word file are unchanged from the version whose every page was visually reviewed. The optional Word dependency was installed from the documented requirements file. |
+| Repository contents | All 99 local Markdown links and anchors resolve. Model binaries, caches and local experiment directories are excluded from tracked files. Historical figures and reports remain evidence; no further deletions were justified. `git fsck` passed. |
+| GitHub | `main` is the only permanent branch. All five required checks, up-to-date PRs, resolved review conversations, squash merging and automatic branch deletion are configured. Force pushes and main-branch deletion are disabled. There were no open issues or unfinished PRs at audit time. |
+
+The application checks here use the test harness and a local HTTP launch; they
+do not extend the earlier browser-download acceptance recorded above. Existing
+classification errors and source limitations remain part of the published study.
 
 ## GitHub checks
 
