@@ -26,9 +26,10 @@ source provenance and limitations when simplifying the main documentation.
   without local model files, and make the required preparation and error messages
   clear. Fix confirmed obstacles within the existing functionality. See the
   [acceptance results and verification limits](VALIDATION.md#local-workflow-acceptance--19-october-2026).
-- [ ] Align the README, model card, notebook and manuscript: distinguish the
+- [x] Align the README, model card, notebook and manuscript: distinguish the
   default model from experimental candidates, check reported metrics against
   saved tables, and keep detailed follow-up studies in their supporting reports.
+  See the [consistency review](VALIDATION.md#documentation-consistency--19-october-2026).
 - [ ] Remove confirmed unused code, duplicate instructions, unnecessary dependencies
   and broken references. Check callers and recorded provenance before removing
   anything. If a broken optional component cannot be repaired within the existing

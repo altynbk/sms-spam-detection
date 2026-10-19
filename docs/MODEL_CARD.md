@@ -15,6 +15,8 @@ The frozen train-CV choice is `linear_svc_word_gentle`: lowercase/whitespace cle
 word unigram/bigram TF-IDF and LinearSVC. The saved `SpamModel` includes the complete
 pipeline and the validation-selected threshold. Its input is the original SMS,
 without caller-side preprocessing. Labels are **ham = 0, spam = 1**.
+This is the default model in `results/full`. Both adaptation candidates described
+below failed their replacement criteria and remain experimental.
 
 At the validation threshold, score >= **-0.08620419778818611** predicts spam.
 `score()` returns a signed decision-function value, **not a probability or a
@@ -82,7 +84,18 @@ These are nonadaptive scenarios on the same 130 spam messages, not an adversaria
 security certification. Attack-seed SD is not uncertainty over new training sets.
 Human readability, semantic preservation and changes to ham were not evaluated.
 
-## Independent reported SMS
+## Template sensitivity
+
+The default split contains 13 crossing templates under a URL/digit masking rule,
+including six test messages with a training counterpart. A separate full search
+with template groups eliminates those crossings and selects the char/no-punctuation
+LinearSVC. On its different test set, native predictions give F1 0.9531 (2 FP, 10 FN);
+validation tuning gives F1 0.9288 (11 FP, 8 FN, FPR 1.22%). This does not replace the
+default model or establish that one representation is universally best. The
+analysis was introduced after inspecting the default run and is not an untouched
+confirmatory evaluation. See `results/template/` and each run's template audit.
+
+## External reported SMS
 
 The same frozen artifact and validation threshold were evaluated on the
 author-released IMC 2025 smishing dataset. The primary cohort contains 372
@@ -106,58 +119,45 @@ all decision rules, verification and the protocol frozen before prediction.
 
 ## Modern-message adaptation candidate
 
-A separate follow-up refits six pipelines using historical development data,
-previously inspected IMC reports and a licensed 2025 financial-message corpus
-containing both scam and ordinary messages. The final 78-message financial
-holdout and a new 754-message SMS source were reserved before fitting. The
-source, group splits, near-copy exclusions and selection rule were merged before
-training; IMC is development data for this follow-up, not an independent test.
+The first follow-up added the inspected IMC reports and a financial-message
+corpus published in 2025 to development data. Validation selected
+`adapted_word_char_c1`, threshold 0.64907808395485, before scoring two new holdouts.
+On the 78-message financial holdout, F1 rose from 0.6400 to 0.8605 and FP fell
+from 5 to 3 of 32 ham. On the separate 754-message SMS history, recall rose from
+42.63% to 58.66%, but FP rose from 11 to 19 of 55 ham (20.00% to 34.55% FPR).
+The paired conditional 95% interval for the FPR increase is +1.79 to +28.07
+percentage points. The replacement criterion **failed**.
 
-Validation selects `adapted_word_char_c1` with threshold 0.64907808395485. On the
-financial holdout, F1 rises from 0.6400 to 0.8605, FP falls from 5 to 3 of 32 ham,
-and FN from 22 to 9 of 46 spam. On the independent SMS source, recall rises from
-42.63% to 58.66% and F1 from 0.5913 to 0.7270, but FP rises from 11 to 19 of 55
-ham (FPR 20.00% to 34.55%). ROC-AUC falls from 0.6979 to 0.6466. The paired
-conditional 95% interval for the FPR increase is +1.79 to +28.07 percentage points.
-
-The predeclared replacement gate **fails**. The candidate is a research artifact,
-not the demo default. Ordinary financial messages are mixed-channel and lack
-receipt dates; the independent SMS source is mixed-language, one recipient and
-has government PSAs as its only retained ham class. A higher spam F1 does not
-establish reliable general filtering. See the [complete follow-up](MODERN_ADAPTATION.md).
+The financial messages mix SMS, chats and email without receipt dates. The SMS
+history spans 2022–2026, mixes languages, comes from one recipient and retains
+only government PSAs as ham. It was independent of development for this study;
+the later expansion explicitly reused it for development. The
+[complete follow-up](MODERN_ADAPTATION.md) retains source audits, selection rules,
+all metrics and verification records.
 
 ## Broader ordinary-SMS candidate
 
-The [ham-expansion study](HAM_EXPANSION.md) adds 1,968 training ham and 11,860
-training spam from the authors' 2018–2023 Super SMS subset. Another 787 ham and
-4,497 spam form validation; 1,178 ham and 7,109 spam are held out in near-copy
-connected components before fitting. Text overlaps with all earlier acquired
-sources are removed. The previous SMS-history test is explicitly retired into development.
-The new test is independent of fitting/selection but shares its author corpus
-with new training data. Receipt dates, senders and component provenance are
-unavailable per row; this is not an evaluation on representative 2025–2026 SMS.
+The second follow-up added development data from the authors' 2018–2023 Super SMS
+subset and reserved a new group holdout of **1,178 ham and 7,109 spam**. Overlaps
+with earlier acquired sources were removed. This holdout shares its author corpus
+with the added training data; it is not an unseen-provider or chronological test.
 
-Validation selects `ham_word_char_c1_w1`, threshold **0.48587418949350525**,
-from six C/ham-weight combinations. On the new test, FP changes **17 → 14**
-versus the previous adaptation (FPR 1.44% → 1.19%); spam recall changes
-**73.26% → 95.22%**, FN 1,901 → 340, and F1 0.8445 → 0.9745. The original
-historical model gives 15 FP and 49.91% recall on this same test. A validation-only
-threshold adjustment to the previous model gives zero FP but just 4.88% recall.
+Validation selected `ham_word_char_c1_w1`, threshold **0.48587418949350525**.
+Against the previous adaptation on this holdout, FP changed **17 → 14**
+(FPR 1.44% → 1.19%) and recall **73.26% → 95.22%**. The original default model
+gave 15 FP and 49.91% recall. Adjusting only the previous model's threshold gave
+zero FP but just 4.88% recall.
 
-The new FPR difference versus the previous model has a paired conditional 95%
-interval of **−1.02 to +0.51 percentage points**, including zero. The 1% test FPR
-criterion also fails. Thus the candidate **does not replace the historical demo**.
-The artifact is available locally at
-`results/local/ham-expansion/models/ham_word_char_c1_w1.joblib`; reproducible
-training, selection, scores and verification are recorded in
-`results/ham_expansion/evaluation/`. Raw source messages and binaries are ignored.
-No further tuning used this now-inspected test.
+The paired conditional 95% interval for the candidate's FPR change versus the
+previous adaptation is **−1.02 to +0.51 percentage points**, including zero.
+Its 1.19% test FPR also exceeds the 1% limit. The replacement criterion **failed**;
+no further tuning used this inspected test. Author labels, missing per-message
+dates and consent metadata, and the spam-heavy mix limit generalization.
+The source permits research access without a standard data license; raw messages
+are not redistributed. See the [complete study](HAM_EXPANSION.md) for the source
+audit, development counts, all four operating points and reproduction commands.
 
-Author labels, occasional transliteration/encoding artifacts, unknown recipient
-consent and the spam-heavy test mix limit generalization. The source offers data
-for research without a standard data license; raw messages are not redistributed.
-
-## Artifacts, reproducibility and release considerations
+## Artifacts and reproducibility
 
 The authoritative settings and exact versions are in
 [metadata.json](../results/full/metadata.json); decisions are frozen in
@@ -173,19 +173,6 @@ messages. Exact LinearSVC feature contributions plus the intercept reconstruct
 the score; these are associations, not causal explanations. Any hosted deployment
 would require its own access, privacy and operational review.
 
-For broader use, obtain independent modern ham and new spam with reliable dates,
-define the false-positive cost and target languages, and reserve a new final
-holdout. The reported external samples have now been inspected. IMC may support further
-development, but a new untouched test is required for another independent claim.
-Keep the historical and follow-up results frozen.
-
-## Template sensitivity
-
-The default split contains 13 crossing templates under a URL/digit masking rule,
-including six test messages with a training counterpart. A separate full search
-with template groups eliminates those crossings and selects the char/no-punctuation
-LinearSVC. On its different test set, native predictions give F1 0.9531 (2 FP, 10 FN);
-validation tuning gives F1 0.9288 (11 FP, 8 FN, FPR 1.22%). This does not replace the
-default model or establish that one representation is universally best. The
-analysis was introduced after inspecting the default run and is not an untouched
-confirmatory evaluation. See `results/template/` and each run's template audit.
+All historical and follow-up results remain frozen. The external samples have
+been inspected and cannot support another independent claim after tuning on them.
+The completed studies do not establish reliable filtering of a modern inbox.
