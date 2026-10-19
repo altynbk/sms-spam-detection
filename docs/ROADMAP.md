@@ -30,14 +30,18 @@ source provenance and limitations when simplifying the main documentation.
   default model from experimental candidates, check reported metrics against
   saved tables, and keep detailed follow-up studies in their supporting reports.
   See the [consistency review](VALIDATION.md#documentation-consistency--19-october-2026).
-- [ ] Remove confirmed unused code, duplicate instructions, unnecessary dependencies
-  and broken references. Check callers and recorded provenance before removing
+- [x] Review code, instructions, dependencies and references; remove confirmed
+  unused or broken material. Check callers and recorded provenance before removing
   anything. If a broken optional component cannot be repaired within the existing
   scope, remove it with its references and dependencies; retain published evidence.
-- [ ] Complete final verification: run relevant tests and dependency checks,
+  The final audit found no further justified deletions. All locked dependencies
+  are required by the declared entry points, and historical outputs retain their
+  documented provenance.
+- [x] Complete final verification: run relevant tests and dependency checks,
   execute the notebook, review manuscript consistency and layout, check local
   links, and confirm all five GitHub checks pass. Synchronize `main` and remove
-  merged temporary branches after confirming their changes are included.
+  merged temporary branches after confirming their changes are included. See the
+  [final audit](VALIDATION.md#repository-closeout--19-october-2026).
 
 Complete the items in order, using one focused pull request per correction and
 merging only after required checks pass. Record completed verification in the
@@ -51,5 +55,5 @@ failure blocks the declared use. The repository has a clear entry point, a clean
 `main` branch and passing required checks. Classification errors and limitations
 remain documented; software completion does not imply perfect SMS detection.
 
-Once the checklist is complete, this cleanup is finished. Additional research or
+This cleanup is complete as of **19 October 2026**. Additional research or
 features require a separate decision and do not block completion.
