@@ -1,38 +1,53 @@
-# Research priorities
+# Completion plan
 
-The current project includes grouped evaluation of eleven classical variants,
-validation-only thresholds, three character attacks, a template sensitivity study,
-conditional group-bootstrap intervals, an executed notebook, a current manuscript
-and an interactive local lab. Reproduction and application checks run in CI.
-An [external positive-report evaluation](EXTERNAL_EVALUATION.md) is complete:
-the frozen model detects 176 / 372 dated English reports (47.31% recall).
-It exposes limited transfer, but the source has no ham and cannot measure FPR.
+Finish and polish the existing educational SMS classification project. Completion
+covers the documented local workflow, consistent research materials and repository
+cleanup. No new features, datasets or model adaptation are planned. Existing
+regression and reproducibility checks remain part of validation.
 
-The [adaptation follow-up](MODERN_ADAPTATION.md) adds ordinary financial messages,
-refits six candidates and evaluates two new holdouts. Independent SMS recall rises
-from 42.63% to 58.66%, while false positives rise from 11/55 to 19/55 government
-notifications. The predeclared replacement criterion fails, so the original model
-remains the default. The financial holdout improves, but is from the same source
-as the additional training data and mixes SMS with other channels.
+## Retained scope
 
-The [ordinary-SMS expansion](HAM_EXPANSION.md) adds 1,968 training ham from an
-author corpus covering 2018–2023. On its untouched group holdout, FP changes
-17 → 14 / 1,178 ham and spam recall 73.26% → 95.22%. The FPR decrease is not
-statistically established and 1.19% exceeds the 1% target. Six candidate fits and
-a threshold-only control are complete; the new model remains experimental.
+Keep the classical classification pipeline, grouped evaluation, existing character
+attacks, local demo, notebook and manuscript. The current default model, its
+threshold and published experimental results remain frozen.
 
-The next improvements should address the remaining evidence gaps.
+The [external evaluation](EXTERNAL_EVALUATION.md),
+[modern-message adaptation](MODERN_ADAPTATION.md) and
+[ordinary-SMS expansion](HAM_EXPANSION.md) remain supporting reports. Both
+adaptation candidates failed their replacement criteria. Preserve those findings,
+source provenance and limitations when simplifying the main documentation.
 
-| Priority | Work | Completion criterion |
-|---|---|---|
-| 1 | Dated ordinary SMS from an unseen provider | Add licensed, independently labeled service, transaction and personal SMS with receipt dates and consent context. Separate related templates, senders and time periods; freeze a new test before changing calibration. Demonstrate lower FPR with uncertainty and preserved spam recall. All currently reported holdouts are now inspected. |
-| 2 | Variation across training splits | Predefine repeated development splits and repeat fitting/search. Report dispersion while preserving a new independent final holdout. |
-| 3 | Stronger attacks and tested defenses | Define perturbation budgets and meaning/readability checks. Keep attack families and examples used to develop a defense separate from final evaluation. |
-| Conditional | Russian/Kazakh evaluation | Collect independently labeled data for each target language, including code-switching. Report per-language errors; translating the interface or corpus does not establish accuracy. |
+## Ordered checklist
 
-The existing lab supports interactive use. Public hosting, a separate API, mobile
-clients and more complex models should follow a concrete user need. They are not
-required to complete the present research scope.
+- [x] Simplify the README around the existing study, results and local launch;
+  replace open-ended research priorities with this completion plan.
+- [ ] Verify the documented local workflow from environment setup to opening the
+  app, checking a message and viewing saved results. Check behavior with and
+  without local model files, and make the required preparation and error messages
+  clear. Fix confirmed obstacles within the existing functionality.
+- [ ] Align the README, model card, notebook and manuscript: distinguish the
+  default model from experimental candidates, check reported metrics against
+  saved tables, and keep detailed follow-up studies in their supporting reports.
+- [ ] Remove confirmed unused code, duplicate instructions, unnecessary dependencies
+  and broken references. Check callers and recorded provenance before removing
+  anything. If a broken optional component cannot be repaired within the existing
+  scope, remove it with its references and dependencies; retain published evidence.
+- [ ] Complete final verification: run relevant tests and dependency checks,
+  execute the notebook, review manuscript consistency and layout, check local
+  links, and confirm all five GitHub checks pass. Synchronize `main` and remove
+  merged temporary branches after confirming their changes are included.
 
-See the [model card](MODEL_CARD.md) for measured limits and the
-[contribution guide](../CONTRIBUTING.md) for the change workflow.
+Complete the items in order, using one focused pull request per correction and
+merging only after required checks pass. Record completed verification in the
+[validation report](VALIDATION.md). See [Contributing](../CONTRIBUTING.md) for
+commands and branch rules.
+
+## Definition of done
+
+The documented workflows work, research outputs agree, and no known reproducible
+failure blocks the declared use. The repository has a clear entry point, a clean
+`main` branch and passing required checks. Classification errors and limitations
+remain documented; software completion does not imply perfect SMS detection.
+
+Once the checklist is complete, this cleanup is finished. Additional research or
+features require a separate decision and do not block completion.
