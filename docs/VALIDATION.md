@@ -158,4 +158,4 @@ The later ham-expansion holdout is larger but shares its author corpus with new
 development data. It has no individual receipt dates and is not an unseen-provider
 test. Its 14 / 1,178 false positives do not meet the 1% criterion; the FPR decrease
 versus the previous model is statistically inconclusive.
-See the [model card](MODEL_CARD.md) and [research priorities](ROADMAP.md).
+See the [model card](MODEL_CARD.md) and [completion plan](ROADMAP.md).
